@@ -1,0 +1,4 @@
+.widget
+  .widget-title
+    i(class='fa fa-fei')= ' ' + __('archive')
+  != list_archives({show_count: theme.show_count, type: theme.archive_type})

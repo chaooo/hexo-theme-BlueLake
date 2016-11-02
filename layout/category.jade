@@ -1,0 +1,27 @@
+extends base
+
+block title
+  title= page.category + ' | ' + config.title
+block content
+  .post
+    if config.language === ('zh-CN'||'zh-TW')
+      h1.label-title= __('reading_before')
+        i.fa.fa-gui= page.category
+        = __('reading_after')
+    else if config.language === 'ko'
+      h1.label-title
+        i.fa.fa-gui= page.category
+        = __('reading_label') 
+    else
+      h1.label-title= __('reading_label')
+        i.fa.fa-gui= page.category 
+    .post-archive
+      .archive-wrap.tag-cat
+        each posts in _.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
+          ul.listing
+            for post in posts
+                li
+                  a(href=url_for(post.path), title=post.title)
+                    span.tite= post.date.format('YYYY/MM/DD') + '  '
+                      +title(post)             
+  include _partial/paginator.jade

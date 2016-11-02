@@ -1,0 +1,906 @@
+/* reset */
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,img,blockquote,button,pre,fieldset,form,input,select,option
+  margin: 0
+  padding: 0
+  border: 0
+h1,h2,h3,h4,h5,h6
+  font-weight: normal
+s,i,u,em
+  font-style: normal
+ol,ul,li
+  list-style: none
+img,button
+  border: none
+table,tr,th,td
+  border-spacing 0
+  cellspacing 0
+  cellpadding 0
+  padding 0
+form,input,select,option 
+  outline none
+input:-webkit-autofill
+    -webkit-box-shadow: 0 0 0px 1000px white inset
+/* iconfont */
+@font-face
+  font-family: "iconfont"
+  src: url('../iconfont/iconfont.eot?t=1478071541360')
+  src: url('../iconfont/iconfont.eot?t=1478071541360#iefix') format('embedded-opentype'), url('../iconfont/iconfont.woff?t=1478071541360') format('woff'), url('../iconfont/iconfont.ttf?t=1478071541360') format('truetype'), url('../iconfont/iconfont.svg?t=1478071541360#iconfont') format('svg')
+.fa:before
+  font-family: "iconfont"!important
+  font-size: 16px
+  font-style: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: auto
+.fa-home:before
+  content: "\e001"
+.fa-gui:before
+  content: "\e002"
+.fa-user:before
+  content: "\e003"
+.fa-rss:before
+  content: "\e004"
+.fa-rili:before
+  content: "\e005"
+.fa-commt:before
+  content: "\e006"
+.fa-sou:before
+  content: "\e007"
+.fa-biao:before
+  content: "\e008"
+.fa-archive:before
+  content: "\e009"
+.fa-fei:before
+  content: "\e00a"
+.fa-you:before
+  content: "\e00b"
+.fa-huo:before
+  content: "\e00c"
+.fa-hit:before
+  content: "\e00d"
+.fa-right:before
+  content: "\e00e"
+.fa-left:before
+  content: "\e00f"
+.fa-xie:before
+  content: "\e010"
+.fa-empty:before
+  content: "\e011"
+.fa-weibo:before
+  content: "\e012"
+.fa-weixin:before
+  content: "\e013"
+.fa-github:before
+  content: "\e014"
+.fa-email:before
+  content: "\e015"
+
+
+/* main styles */
+body
+  font-family: "Source Code Pro", Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei Light", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-size: 14px
+  color: #333
+  width:100%
+  height:100%
+  background: #D8E2EB url(../img/bg.jpg) no-repeat top center
+div
+  box-sizing: border-box
+a, button.submit
+  color: #40759b
+  text-decoration: none
+  -webkit-transition: all .1s ease-in
+  -moz-transition: all .1s ease-in
+  -o-transition: all .1s ease-in
+  transition: all .1s ease-in  
+a
+  &:focus
+    outline: none
+  &:hover,&:active
+    color: #40759b
+.clear
+  clear: both
+.hide 
+  display none
+  opacity: 0
+  height: 0px
+blockquote,.stressed
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  margin: 2.5em 0
+  padding: 0 0 0 50px
+  color: #555
+  border-left: none
+strong, b, em
+  font-weight: bold
+pre
+  margin: 2em 0
+.hidden1
+  display: none
+  
+/* layout */
+.layout-g 
+  letter-spacing: -.31em
+  *letter-spacing normal
+  word-spacing: -.43em
+  *word-spacing -.43em
+  text-rendering: optimizespeed
+  display: -webkit-flex
+  -webkit-flex-flow: row wrap
+  display: -ms-flexbox
+  -ms-flex-flow: row wrap
+  -ms-align-content: flex-start
+  -webkit-align-content: flex-start
+.layout-l,.layout-r
+  display: inline-block
+  *display: inline
+  zoom: 1
+  letter-spacing: normal
+  word-spacing: normal
+  vertical-align: top
+  text-rendering: auto  
+.layout-l   
+  width: 75%
+  *width: 74.969%
+.layout-r
+  width: 25%
+  *width: 24.969%
+@media screen and (max-width:48em)
+  .layout-l
+    width: 100%
+  .layout-r
+    width: 100%
+.body_container
+  padding: 0 50px
+  max-width: 1200px
+  margin: 0 auto
+.content_container
+  padding-right: 40px
+  .post
+    .post-content
+      h2
+        margin: 0
+        font-size: 18px
+        border:none
+      h3
+        margin: 0
+        font-size: 16px
+        border:none
+
+#header
+  text-align: left
+  position: relative
+  height:260px
+  .site-name
+    padding-top: 100px
+    h1
+      padding: 0
+      margin: 0
+      height: 0
+      overflow: hidden
+    .description
+      margin: 0.6em 0 0
+      color: #FFF
+      text-shadow: 1px 2px 3px #113f6e
+
+#logo
+  font: bold 42px/1.2 "宋体"
+  white-space nowrap
+  color: #FFF
+  text-shadow: 1px 3px 6px #113f6e
+    
+#nav-menu
+  margin: 20px 0
+  padding: 0
+  position: absolute
+  right: 0
+  top: 0
+  a
+    display: inline-block
+    padding: 3px 18px 3px
+    line-height: 30px
+    color: #FFF
+    font-size: 16px
+    border: 1px solid transparent
+    &:hover,&.current
+      border-bottom: 1px solid #fff
+      -webkit-box-shadow: 0 0 10px #adc2d7 inset
+      box-shadow: 0 0 10px #adc2d7 inset
+      
+#sidebar 
+  margin-top: 40px
+  word-wrap: break-word
+  .widget 
+    margin-bottom: 20px
+    padding: 10px 20px 20px 20px
+    border-radius: 4px
+    -webkit-box-shadow: 1px 2px 3px #adc2d7
+    box-shadow: 1px 2px 3px #adc2d7
+    border: 1px solid #adc2d7
+    background: #FFF
+    a 
+      color:#333
+      &:hover 
+        color: #40759b
+        text-decoration underline
+    .widget-title,.comments-title
+      color: #40759b
+      line-height: 2.7
+      margin-top: 0
+      font-size: 16px
+      border-bottom: 1px solid #d8e2eb
+      display: block
+      font-weight: normal
+      margin-bottom: -1px
+    .tagcloud
+      margin-top: 10px
+      a
+        line-height: 1.5
+        padding: 5px
+    ul
+      list-style: none
+      padding: 0
+      li
+        margin: 5px 0
+        line-height: 1.5
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+    .category-list-count
+      padding-left: 5px
+      color: #40759b
+      &:before
+        content: "("
+      &:after
+        content: ")"
+#search-form 
+  position: relative
+  padding-top 10px
+  label
+    position relative
+    display block
+    width 100%
+    height 100%
+    &:before  
+      font-family: "iconfont" !important
+      content: '\e007'
+      position: absolute
+      left: 8px
+      top: 8px
+  input
+    box-sizing border-box
+    padding: 7px 11px 7px 28px
+    line-height: 16px
+    border: 1px solid #d8e2eb
+    width: 100%
+    border-radius: 15px
+#result-wrap 
+  position: absolute
+  top: 56px
+  width: 120%;
+  left: -50px;
+  box-sizing content-box
+  padding 20px
+  background: #FFF
+  border-radius: 4px
+  -webkit-box-shadow: 1px 2px 3px #adc2d7
+  box-shadow: 1px 2px 3px #adc2d7
+  border: 1px solid #adc2d7
+  &:before
+    content ''
+    position: absolute
+    display: inline-block
+    border-width: 0 12px 12px 12px
+    border-style: solid
+    border-color: #adc2d7 transparent
+    left: 56px
+    top: -12px
+  &:after 
+    content ''
+    position: absolute
+    display: inline-block
+    border-width: 0 12px 12px 12px
+    border-style: solid
+    border-color: #FFF transparent
+    left: 56px
+    top: -10px    
+#result-mask
+  position: fixed
+  left:0 
+  top:0   
+#search-result
+  width:100%
+  box-sizing content-box
+  padding-right 20px
+  margin-right -20px
+  max-height: 400px
+  overflow-y auto
+  .tips
+    text-align center
+    .fa 
+      font-size: 60px
+      color: #B3D2EF
+  .item
+    border-top: 1px solid #d8e2eb
+    padding 8px 0
+    &:first-child
+      border-top none
+    a 
+      &:hover 
+        text-decoration none
+    .title
+      white-space: nowrap
+      line-height: 1.8
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      font-size: 14px
+      color: #40759b
+      &:hover 
+        text-decoration underline
+    .time
+      text-align: right
+      font-size 12px 
+    .tags
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      span 
+        display inline-block
+        margin-right 5px 
+        font-size 12px 
+        &:before
+          font-family: "iconfont" !important
+          content: '\e008'
+
+
+// title for search result or tagged posts
+.label-title
+  margin-top: 1.1em
+  font-size: 22px
+  color: #333
+  font-weight: bold
+  .fa 
+    display: inline-block
+    background: #F2F7FB
+    color #5483b1
+    padding: 0 10px
+    border-radius: 30px 0 0 30px
+    margin: 0 5px
+    font-size: 20px
+  
+.post
+  padding: 25px
+  background: #FFF
+  margin-top: 40px
+  border-radius: 4px
+  -webkit-box-shadow: 1px 2px 3px #ADC2D7
+  box-shadow: 1px 2px 3px #ADC2D7
+  border: 1px solid #ADC2D7
+  .post-title
+    margin: 0
+    color: #40759b
+    text-align: left
+    border-bottom: 1px solid #D8E2EB
+    padding-bottom: 10px
+    font-weight bold
+    font-size 22px 
+    line-height: 1.1
+    a
+      color: #40759B
+      &:hover 
+        text-decoration underline
+  .post-meta
+    padding: 0
+    margin: 10px 0 0
+    color: #40759b
+    float: left
+    display: inline
+    text-indent: .15em
+    .category
+      &:before
+        font-family: "iconfont"!important
+        content: "\e002"
+        padding-right: 0.3em
+    &:before
+      font-family: "iconfont"!important
+      content: "\e005"
+      padding-right: 0.3em
+    #busuanzi_value_page_pv
+      &:before
+        font-family: "iconfont"!important
+        content: "\e00d"
+        padding-right: 0.3em
+  .ds-thread-count
+    padding: 0
+    margin: 10px 0 0
+    color: #40759b
+    float: right
+    display: inline
+    text-indent: .15em
+    &:before
+      font-family: "iconfont"!important
+      content: "\e006"
+      padding-right: 0.3em
+    &:hover
+      border-bottom 1px solid #40759b
+  .disqus-comment-count
+    padding: 0
+    margin: 10px 0 0
+    color: #40759b
+    float: right
+    display: inline
+    text-indent: .15em
+    &:before
+      font-family: "iconfont"!important
+      content: "\f008"
+      padding-right: 0.3em
+    &:hover
+      color: #40759b
+  .post-content
+    clear: left
+    font-size: 15px
+    line-height: 1.77
+    color: #333
+    padding-top: 15px
+    text-align: justify
+    text-justify: distribute
+    word-break: normal
+    pre
+      code
+        padding: 0 2em
+    h3
+      margin: 1.4em 0 1.1em
+    h2
+      margin: 1.4em 0 1.1em
+      border-bottom: 1px solid #d8e2eb
+      overflow: hidden
+    p
+      margin: 0 0 1.234em
+      code
+        padding: 0 5px
+        background: #f7f8f8
+      a
+        color: #40759b
+        padding-bottom: 2px
+        word-break: break-all
+        &:hover
+          text-decoration: underline
+      .caption
+        color: #40759b
+        display: block
+        font-size: 0.9em
+        margin-top: 0.1em
+        position: relative
+        text-align: center
+    img
+      max-width: 100%
+      padding: 0.5em 0
+      margin: auto
+      display: block
+    hr
+      margin: 2.4em auto
+      border: none
+      border-top: 1px solid #d8e2eb
+      position: relative
+    ul,ol
+      border-radius: 3px
+      margin: 1em 0
+      code
+        display: inline-block
+        margin: 0 5px
+        padding: 0px 5px
+        background: #f7f8f8
+      ul
+        margin: 0
+      a 
+        color: #40759b
+        padding-bottom: 2px
+        word-break: break-all
+        &:hover
+          text-decoration: underline
+  .tags
+    padding-bottom: 1em
+    a
+      margin-right: .5em
+      &:before
+        font-family: "iconfont"!important
+        content: "\e008"
+        padding-right: 0.3em
+
+.page-navigator
+  list-style: none
+  margin-top: 25px
+  padding: 25px 0 0
+  font-size: 14px
+  text-align: center
+  .space
+    border: none
+    padding: 5px 5px
+  .current
+    background: #FFF
+    &:hover
+      border-bottom-color: #adc2d7;
+  .page-number,.extend
+    display: inline-block
+    margin: 0 5px 5px 0
+  a,span
+    display: inline-block
+    height: 25px
+    line-height: 25px
+    padding: 5px 9px
+    text-align: center
+    -webkit-box-shadow: 1px 2px 3px #adc2d7;
+    box-shadow: 1px 2px 3px #adc2d7;
+    border: 1px solid #adc2d7;
+    &:hover
+      border-bottom-color: #FFF
+    &.prev:before
+        font-family: "iconfont"!important
+        content: "\e00f"
+        padding-right: 0.3em
+    &.next:after
+        font-family: "iconfont"!important
+        content: "\e00e"
+        padding-left: 0.3em
+#footer
+  width 100%
+  margin-top: 50px;
+  padding: 30px 0;
+  .footer-info
+    line-height: 2
+    color: #333
+    text-align: center 
+    font-size .925em
+    a
+      color: #40759b
+      margin 0 6px
+    span
+      margin 0 6px 
+    .fa 
+      display inline-block
+      margin 0 6px 0 0
+      padding 0 2px
+      &.fa-github 
+        color #000
+        &:hover 
+          color:#4078c0
+      &.fa-weibo
+        color: #E6162D
+        &:hover 
+          color #FF9933
+      &.fa-email
+        color: #756E78
+        &:hover 
+          color #000
+    p
+      a 
+        margin 0
+
+    
+/*! for archive page starts*/
+.post-archive
+  font-size: 15px
+  line-height: 2
+  padding: 2em 0
+  h2
+    margin: 0 0 15px -51px
+    font-weight bold
+    font-size 24px 
+    letter-spacing: -1px;
+    background: #D8E2EB
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align center
+    line-height: 100px;
+    color: #5483B1
+    &:before 
+      font-family: "iconfont" !important;
+      font-weight normal
+      content: "\e005";
+      margin-right .1em
+.archive-wrap
+  position: relative
+  border-left: 2px solid #D8E2EB
+  margin-left: 140px
+  padding: 3em 0;
+  &.tag-cat
+    margin-left: 60px
+  &:before,&:after
+    content:''
+    position: absolute
+    left: -6px
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    background: #D8E2EB
+  &:before
+    top: 0
+  &:after
+    bottom 0
+  .listing
+    li 
+      margin-bottom 50px
+      position: relative
+      a
+        color #333
+        &:hover
+          color: #5483B1
+        &:before
+          content:''
+          position: absolute
+          z-index 1
+          left: -11px
+          bottom -10px
+          width: 20px
+          height: 20px
+          border-radius: 50%
+          background: #FFF 
+          border 1px solid #D8E2EB
+          -webkit-box-shadow: 0 0 4px #D8E2EB inset
+          box-shadow: 0 0 4px #D8E2EB inset
+        &:after
+          content:''
+          position: absolute
+          z-index 2
+          left: -5px
+          bottom -4px
+          width: 10px
+          height: 10px
+          border-radius: 50%
+          background: #D8E2EB
+          -webkit-box-shadow: 0 0 3px #D8E2EB inset
+          box-shadow: 0 0 3px #D8E2EB inset
+    li:hover 
+      a:before 
+        border 1px solid #5483B1
+        -webkit-box-shadow: 0 0 4px #5483B1 inset
+        box-shadow: 0 0 4px #5483B1 inset 
+      a:after
+        background: #5483B1
+      .tite 
+        border-bottom: 1px solid #5483B1
+        &:after
+          background: #5483B1
+      .date
+        border: 1px solid #5483B1     
+  .tite
+    position:relative
+    bottom: -4px
+    display: inline-block
+    border-bottom: 1px solid #D8E2EB
+    line-height: 1.2em
+    padding: 0 30px
+    max-width: 100%
+    box-sizing: border-box
+    &:after
+      content:''
+      position: absolute
+      right: 0
+      bottom -4px
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background: #D8E2EB
+  .date
+    position: absolute;
+    left: -112px;
+    width: 100px;
+    bottom: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px 30px 0 15px;
+    border: 1px solid #d8e2eb;
+    -webkit-box-shadow: 0 0 4px #D8E2EB inset
+    box-shadow: 0 0 4px #D8E2EB inset
+/*! for archive page ends */
+
+
+/*! middle*/
+@media print,screen and (max-width: 48em)
+  #sidebar
+    border-left-width: 0px
+  #nav-menu
+    position: relative
+    text-align: center
+    a
+      padding: 0 15px
+      line-height: 27px
+      height: 27px
+      font-size: 13px
+  .site-name
+    margin-bottom: 20px
+    text-align: center
+
+  .content_container
+    padding-right: 15px
+
+  .body_container
+    padding: 0 30px
+  .post
+   .post-title
+     font-size 20px
+  .hidden_mid_and_down
+    display: none !important
+  .post-archive
+    padding: 1em 0
+  .archive-wrap
+    margin-left: 110px
+    &.tag-cat
+      margin-left: 30px
+    .tite
+      padding: 0 20px
+/*! small*/
+@media print,screen and (max-width: 35.5em)
+  .content_container
+    padding-right: 0
+  .body_container
+    padding: 0 20px
+  .post-archive
+    padding: .6em 0
+  .archive-wrap
+    margin-left: 60px
+    &.tag-cat
+      margin-left: 10px
+    .listing
+      li 
+        margin-bottom: 30px
+    .tite 
+      padding: 0 15px
+      font-size 14px
+    .date
+      left: -62px
+      width: 60px
+      border-radius: 15px 15px 0 15px
+      font-size: 12px
+@media print,screen and (max-width: 25em) 
+  #nav-menu
+    a
+      padding: 0 10px 0 8px
+      i.fa 
+        font-size 14px
+  .post
+   .post-title
+     font-size 18px
+  .post-archive
+    padding: 0
+  .archive-wrap
+    margin-left: 56px
+    &.tag-cat
+      margin-left: 0px
+    .tite 
+      padding: 0 5px 0 10px
+/*! back-to-top */
+@media print,screen and (min-width: 48em)
+  #totop
+    position: fixed
+    right: 50px
+    bottom: 50px
+    display: block
+    visibility: hidden
+    width: 32px;
+    height: 54px;
+    line-height: 56px;
+    overflow: hidden
+    color: #40759b;
+    text-align center
+    text-shadow: 0px 2px 2px #40759b
+    opacity: 0
+    -webkit-transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335)
+    -moz-transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -moz-transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335)
+    transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335)
+    &:before
+      font-family: "iconfont"!important
+      content '\e00c'
+      font-size 54px
+      margin-left: -.2em
+    &.launch
+      opacity: 0
+      -webkit-transform: translateY(-500px)
+      -moz-transform: translateY(-500px)
+      -ms-transform: translateY(-500px)
+      transform: translateY(-500px)
+      pointer-events: none
+    &.show
+      visibility: visible
+      opacity: 1
+
+/*! read more*/
+.readmore
+  a
+    font-size: 14px
+    color: #40759b
+    margin: -20px 0 0
+    padding: 5px 10px
+    float: right
+    &:after
+      content: ">>"
+      padding-left: 0.15em
+    &:hover
+      -webkit-box-shadow: 0 -1px 4px #5483B1 inset
+      box-shadow: 0 -1px 4px #5483B1 inset
+      
+/*! post navigator*/
+.post-nav
+  overflow: hidden
+  margin-top: 15px
+  margin-bottom: 20px
+  padding: 10px
+  white-space: nowrap
+  border-top: 1px solid #d8e2eb
+  a
+    display: inline-block
+    line-height: 25px
+    font-size: 15px
+    color: #555
+    border-bottom: none
+    float: left
+    &.pre
+      float: left
+      &:before
+        font-family: "iconfont"!important
+        content: "\e00f"
+        padding-right: 0.3em
+    &:hover
+      color: #40759b
+    &.next
+      float: right
+      &:after
+        font-family: "iconfont"!important
+        content: "\e00e"
+        padding-left: 0.3em
+/*! toc*/
+.toc-title
+  font-size: 120%
+.toc-article
+  border: 1px solid #bbb
+  border-radius: 7px
+  margin: 1.1em 0 0 2em
+  padding: 0.7em 0.7em 0 0.7em
+  max-width: 40%
+#toc
+  line-height: 1em
+  float: right
+  .toc
+    padding: 0
+    margin: 0.5em
+    line-height: 1.8em
+    li
+      list-style-type: none
+  .toc-child
+    margin-left: 1em
+    padding-left: 0
+/*! table*/
+table
+  margin: auto auto 15px
+  width: 100%
+  background: transparent
+  border-collapse: collapse
+  border-spacing: 0
+  text-align: left
+  th
+    font-weight: bold
+    padding: 5px 10px
+    border-bottom: 2px solid #909ba2
+  tr
+    &:nth-child(2n)
+      background: #f7f8f8
+  td
+    padding: 5px 10px
+    
+/*! duoshuo style*/
+#ds-recent-comments
+  li.ds-comment
+    border-top: 1px dashed #d8e2eb !important
+#ds-reset
+  a
+    &:hover
+      color: #40759b !important
+  .ds-post-button 
+    background: #40759b !important
+    &:hover 
+      background: #608CB7 !important

@@ -1,0 +1,18 @@
+extends base
+
+block title
+  title= __('archive') + ' | ' + config.title
+block content
+  .post
+    .post-archive
+      .archive-wrap
+        each posts, year in _.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
+          h2= -year
+          ul.listing
+            for post in posts
+                li
+                  a(href=url_for(post.path), title=post.title)
+                    span.date= post.date.format('MM') + '月' + post.date.format('DD')+ '日'
+                    span.tite
+                      +title(post)              
+  include _partial/paginator.jade

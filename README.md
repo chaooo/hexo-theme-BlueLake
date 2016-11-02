@@ -71,12 +71,11 @@ links:
 # Miscellaneous
 duoshuo: chaooo ## Your duoshuo_shortname, e.g. username
 disqus: ## Your disqus_shortname, e.g. username
-json_search: true
 google_search: ## Use Google search, true/false.
 baidu_search: ## Use Baidu search, true/false.
 swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
 tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
-self_search: ## Use a jQuery-based local search engine, true/false.
+self_search: ## Use a javascript-based local search engine, true/false.
 google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
@@ -97,7 +96,7 @@ widgets_on_small_screens: false ## Set to true to enable widgets on small screen
 - baidu_search - Search engine for users in China.
 - swiftype - [Swiftype Search](https://swiftype.com) key.
 - tinysou - [Tiny Search](http://tinysou.com) key.
-- self_search - A jQuery-based [local search engine](http://hahack.com/codes/local-search-engine-for-hexo), with the dependency on the plugin [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search).
+- self_search - Use a javascript-based local search engine.
 - google_analytics - [Google Analytics](https://www.google.com/analytics/) tracking ID.
 - baIDu_analytics - [Baidu Analytics](http://tongji.baidu.com) tracking ID.
 - show_category_count - Show the count of categories in the sidebar widget.

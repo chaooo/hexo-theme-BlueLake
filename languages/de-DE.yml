@@ -1,4 +1,3 @@
-reading_label: Beiträge in %s
 blog: Blog
 albums: Alben
 categories: Kategorien
@@ -20,3 +19,4 @@ Readmore: Mehr lesen
 belongsto: kategorisiert in
 contents: Inhalte
 shareto: Aktie
+reading_label: Beiträge in

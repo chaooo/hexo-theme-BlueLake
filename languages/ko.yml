@@ -1,4 +1,3 @@
-reading_label: '%s 의 게시물 모음'
 blog: 블로그
 albums: 앨범
 categories: 카테고리
@@ -20,3 +19,4 @@ Readmore: 더보기
 belongsto: 분류됨
 contents: 컨텐츠
 shareto: 공유하기
+reading_label: 의 게시물 모음

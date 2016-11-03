@@ -1,4 +1,4 @@
-/* reset */
+/*!  reset */
 body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,img,blockquote,button,pre,fieldset,form,input,select,option
   margin: 0
   padding: 0
@@ -19,8 +19,42 @@ table,tr,th,td
 form,input,select,option 
   outline none
 input:-webkit-autofill
-    -webkit-box-shadow: 0 0 0px 1000px white inset
-/* iconfont */
+  -webkit-box-shadow: 0 0 0px 1000px white inset
+div
+  box-sizing: border-box
+a, button.submit
+  color: #40759b
+  text-decoration: none
+  -webkit-transition: all .1s ease-in
+  -moz-transition: all .1s ease-in
+  -o-transition: all .1s ease-in
+  transition: all .1s ease-in  
+a
+  &:focus
+    outline: none
+  &:hover,&:active
+    color: #40759b
+.clear
+  clear: both
+.hide 
+  display none
+  opacity: 0
+  height: 0px
+blockquote,.stressed
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  margin: 2.5em 0
+  padding: 0 0 0 50px
+  color: #555
+  border-left: none
+strong, b, em
+  font-weight: bold
+pre
+  margin: 2em 0
+.hidden1
+  display: none 
+  
+/*!  iconfont */
 @font-face
   font-family: "iconfont"
   src: url('../iconfont/iconfont.eot?t=1478071541360')
@@ -74,9 +108,8 @@ input:-webkit-autofill
   content: "\e014"
 .fa-email:before
   content: "\e015"
-
-
-/* main styles */
+  
+/*!  layout */
 body
   font-family: "Source Code Pro", Tahoma, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei Light", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif
   -webkit-font-smoothing: antialiased
@@ -86,41 +119,6 @@ body
   width:100%
   height:100%
   background: #D8E2EB url(../img/bg.jpg) no-repeat top center
-div
-  box-sizing: border-box
-a, button.submit
-  color: #40759b
-  text-decoration: none
-  -webkit-transition: all .1s ease-in
-  -moz-transition: all .1s ease-in
-  -o-transition: all .1s ease-in
-  transition: all .1s ease-in  
-a
-  &:focus
-    outline: none
-  &:hover,&:active
-    color: #40759b
-.clear
-  clear: both
-.hide 
-  display none
-  opacity: 0
-  height: 0px
-blockquote,.stressed
-  -moz-box-sizing: border-box
-  box-sizing: border-box
-  margin: 2.5em 0
-  padding: 0 0 0 50px
-  color: #555
-  border-left: none
-strong, b, em
-  font-weight: bold
-pre
-  margin: 2em 0
-.hidden1
-  display: none
-  
-/* layout */
 .layout-g 
   letter-spacing: -.31em
   *letter-spacing normal
@@ -147,11 +145,6 @@ pre
 .layout-r
   width: 25%
   *width: 24.969%
-@media screen and (max-width:48em)
-  .layout-l
-    width: 100%
-  .layout-r
-    width: 100%
 .body_container
   padding: 0 50px
   max-width: 1200px
@@ -168,7 +161,7 @@ pre
         margin: 0
         font-size: 16px
         border:none
-
+/*!  header */
 #header
   text-align: left
   position: relative
@@ -208,7 +201,7 @@ pre
       border-bottom: 1px solid #fff
       -webkit-box-shadow: 0 0 10px #adc2d7 inset
       box-shadow: 0 0 10px #adc2d7 inset
-      
+/*!  sidebar */      
 #sidebar 
   margin-top: 40px
   word-wrap: break-word
@@ -355,22 +348,7 @@ pre
           font-family: "iconfont" !important
           content: '\e008'
 
-
-// title for search result or tagged posts
-.label-title
-  margin-top: 1.1em
-  font-size: 22px
-  color: #333
-  font-weight: bold
-  .fa 
-    display: inline-block
-    background: #F2F7FB
-    color #5483b1
-    padding: 0 10px
-    border-radius: 30px 0 0 30px
-    margin: 0 5px
-    font-size: 20px
-  
+/*!  post */
 .post
   padding: 25px
   background: #FFF
@@ -510,76 +488,6 @@ pre
         content: "\e008"
         padding-right: 0.3em
 
-.page-navigator
-  list-style: none
-  margin-top: 25px
-  padding: 25px 0 0
-  font-size: 14px
-  text-align: center
-  .space
-    border: none
-    padding: 5px 5px
-  .current
-    background: #FFF
-    &:hover
-      border-bottom-color: #adc2d7;
-  .page-number,.extend
-    display: inline-block
-    margin: 0 5px 5px 0
-  a,span
-    display: inline-block
-    height: 25px
-    line-height: 25px
-    padding: 5px 9px
-    text-align: center
-    -webkit-box-shadow: 1px 2px 3px #adc2d7;
-    box-shadow: 1px 2px 3px #adc2d7;
-    border: 1px solid #adc2d7;
-    &:hover
-      border-bottom-color: #FFF
-    &.prev:before
-        font-family: "iconfont"!important
-        content: "\e00f"
-        padding-right: 0.3em
-    &.next:after
-        font-family: "iconfont"!important
-        content: "\e00e"
-        padding-left: 0.3em
-#footer
-  width 100%
-  margin-top: 50px;
-  padding: 30px 0;
-  .footer-info
-    line-height: 2
-    color: #333
-    text-align: center 
-    font-size .925em
-    a
-      color: #40759b
-      margin 0 6px
-    span
-      margin 0 6px 
-    .fa 
-      display inline-block
-      margin 0 6px 0 0
-      padding 0 2px
-      &.fa-github 
-        color #000
-        &:hover 
-          color:#4078c0
-      &.fa-weibo
-        color: #E6162D
-        &:hover 
-          color #FF9933
-      &.fa-email
-        color: #756E78
-        &:hover 
-          color #000
-    p
-      a 
-        margin 0
-
-    
 /*! for archive page starts*/
 .post-archive
   font-size: 15px
@@ -698,10 +606,47 @@ pre
     -webkit-box-shadow: 0 0 4px #D8E2EB inset
     box-shadow: 0 0 4px #D8E2EB inset
 /*! for archive page ends */
-
+/*! footer */
+#footer
+  width 100%
+  margin-top: 50px
+  padding: 30px 0
+  .footer-info
+    line-height: 2
+    color: #333
+    text-align: center 
+    font-size .925em
+    a
+      color: #40759b
+      margin 0 6px
+    span
+      margin 0 6px 
+    .fa 
+      display inline-block
+      margin 0 6px 0 0
+      padding 0 2px
+      &.fa-github 
+        color #000
+        &:hover 
+          color:#4078c0
+      &.fa-weibo
+        color: #E6162D
+        &:hover 
+          color #FF9933
+      &.fa-email
+        color: #756E78
+        &:hover 
+          color #000
+    p
+      a 
+        margin 0
 
 /*! middle*/
 @media print,screen and (max-width: 48em)
+  .layout-l
+    width: 100%
+  .layout-r
+    width: 100%
   #sidebar
     border-left-width: 0px
   #nav-menu
@@ -808,7 +753,56 @@ pre
     &.show
       visibility: visible
       opacity: 1
-
+/*! page navigator */
+.page-navigator
+  list-style: none
+  margin-top: 25px
+  padding: 25px 0 0
+  font-size: 14px
+  text-align: center
+  .space
+    border: none
+    padding: 5px 5px
+  .current
+    background: #FFF
+    &:hover
+      border-bottom-color: #adc2d7
+  .page-number,.extend
+    display: inline-block
+    margin: 0 5px 5px 0
+  a,span
+    display: inline-block
+    height: 25px
+    line-height: 25px
+    padding: 5px 9px
+    text-align: center
+    -webkit-box-shadow: 1px 2px 3px #adc2d7
+    box-shadow: 1px 2px 3px #adc2d7
+    border: 1px solid #adc2d7
+    &:hover
+      border-bottom-color: #FFF
+    &.prev:before
+        font-family: "iconfont"!important
+        content: "\e00f"
+        padding-right: 0.3em
+    &.next:after
+        font-family: "iconfont"!important
+        content: "\e00e"
+        padding-left: 0.3em
+/*! label title*/
+.label-title
+  margin-top: 1.1em
+  font-size: 22px
+  color: #333
+  font-weight: bold
+  .fa 
+    display: inline-block
+    background: #F2F7FB
+    color #5483b1
+    padding: 0 10px
+    border-radius: 30px 0 0 30px
+    margin: 0 5px
+    font-size: 20px
 /*! read more*/
 .readmore
   a
@@ -822,8 +816,7 @@ pre
       padding-left: 0.15em
     &:hover
       -webkit-box-shadow: 0 -1px 4px #5483B1 inset
-      box-shadow: 0 -1px 4px #5483B1 inset
-      
+      box-shadow: 0 -1px 4px #5483B1 inset   
 /*! post navigator*/
 .post-nav
   overflow: hidden
@@ -890,8 +883,7 @@ table
     &:nth-child(2n)
       background: #f7f8f8
   td
-    padding: 5px 10px
-    
+    padding: 5px 10px   
 /*! duoshuo style*/
 #ds-recent-comments
   li.ds-comment

@@ -1,4 +1,3 @@
-reading_label: 正在查看 %s 下的文章
 blog: 博客
 albums: 相册
 categories: 分类
@@ -20,3 +19,5 @@ Readmore: 阅读更多
 belongsto: 分类于
 contents: 文章目录
 shareto: 分享到
+reading_before: 正在查看
+reading_after: 下的文章

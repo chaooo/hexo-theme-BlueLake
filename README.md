@@ -3,6 +3,7 @@
 A simple theme for [Hexo](https://hexo.io/) with great performance on different devices .
 
 - [Preview](http://chaooo.github.io/)
+![template preview](http://obzf7z93c.bkt.clouddn.com/themeBlueLake.png)
 
 ## Installation
 
@@ -12,6 +13,11 @@ A simple theme for [Hexo](https://hexo.io/) with great performance on different 
 $ git clone https://github.com/chaooo/hexo-theme-BlueLake.git themes/BlueLake
 $ npm install hexo-renderer-jade --save
 $ npm install hexo-renderer-stylus --save
+```
+If you want to compress css,you can configure this plugin in `hexo/_config.yml`
+``` yml
+stylus:
+  compress: true
 ```
 
 ### Enable
@@ -135,6 +141,34 @@ highlight:
   tab_replace:
 ```
 
+
+#### Site Search
+If you want to use local site search,you must install the plug-in [hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content) for create the JSON search file, and then add config to `hexo/_config.yml`
+```shell
+$ hexo-generator-json-content --save
+```
+And then,you must configure this plugin in `hexo/_config.yml`
+```YAML
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
+```
+
 #### Math Equation
 Add
 ```YAML
@@ -172,6 +206,9 @@ Seven languages are available for this theme currently: Simplified Chinese (zh-C
 
 ## Browser Support
 ![Imgur](http://i.imgur.com/iO9L5ty.png)
+
+## License
+[MIT License](LICENSE)
 
 ## Contributing
 All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.

@@ -1,4 +1,3 @@
-reading_label: Reading articles in %s
 blog: Blog
 albums: Albums
 categories: Categories
@@ -20,3 +19,4 @@ Readmore: Read More
 belongsto: Categorized in
 contents: Contents
 shareto: Share
+reading_label: Reading articles in

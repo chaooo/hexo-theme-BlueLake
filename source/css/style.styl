@@ -59,13 +59,14 @@ pre
   font-family: "iconfont"
   src: url('../iconfont/iconfont.eot?t=1478071541360')
   src: url('../iconfont/iconfont.eot?t=1478071541360#iefix') format('embedded-opentype'), url('../iconfont/iconfont.woff?t=1478071541360') format('woff'), url('../iconfont/iconfont.ttf?t=1478071541360') format('truetype'), url('../iconfont/iconfont.svg?t=1478071541360#iconfont') format('svg')
-.fa:before
-  font-family: "iconfont"!important
+.fa
   font-size: 16px
   font-style: normal
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-rendering: auto
+  &:before
+    font-family: "iconfont"!important
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: auto
 .fa-home:before
   content: "\e001"
 .fa-gui:before

@@ -3,7 +3,9 @@
 A simple theme for [Hexo](https://hexo.io/) with great performance on different devices .
 
 - [Preview](http://chaooo.github.io/)
+
 ![template preview](http://obzf7z93c.bkt.clouddn.com/themeBlueLake.png)
+[![BlueLake template preview](http://obzf7z93c.bkt.clouddn.com/themeBlueLake.png "BlueLake template preview")](http://chaooo.github.io/)
 
 ## Installation
 

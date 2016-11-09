@@ -24,7 +24,7 @@
             xhr.open('GET', '/content.json', true);
             xhr.onload = function() {
                 if (this.status >= 200 && this.status < 300) {
-                    var res = JSON.parse(this.response);
+                    var res = JSON.parse(this.response||this.responseText);
                     searchData = res instanceof Array ? res : res.posts;
                     success(searchData);
                 } else {
@@ -39,11 +39,14 @@
             success(searchData);
         }
     }
-    function tpl(html, data) {
-        return html.replace(/\{\w+\}/g, function(str) {
-            var prop = str.replace(/\{|\}/g, '');
-            return data[prop] || '';
-        });
+    function matcher(post, regExp) {
+        return regtest(post.title, regExp) || post.tags.some(function(tag) {
+            return regtest(tag.name, regExp);
+        }) || regtest(post.text, regExp);
+    }
+    function regtest(raw, regExp) {
+        regExp.lastIndex = 0;
+        return regExp.test(raw);
     }
     function render(data) {
         var html = '';
@@ -63,18 +66,12 @@
         }
         searchResult.innerHTML = html;
     }
-
-    function regtest(raw, regExp) {
-        regExp.lastIndex = 0;
-        return regExp.test(raw);
+    function tpl(html, data) {
+        return html.replace(/\{\w+\}/g, function(str) {
+            var prop = str.replace(/\{|\}/g, '');
+            return data[prop] || '';
+        });
     }
-
-    function matcher(post, regExp) {
-        return regtest(post.title, regExp) || post.tags.some(function(tag) {
-            return regtest(tag.name, regExp);
-        }) || regtest(post.text, regExp);
-    }
-
     function hasClass(obj, cls) {
         return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
     }
@@ -114,5 +111,4 @@
         addClass(searchWrap, 'hide');
         addClass(searchMask, 'hide');
     };
-
 })();

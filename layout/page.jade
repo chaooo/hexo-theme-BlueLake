@@ -5,7 +5,23 @@ block content
   .post
     h1.post-title= page.title
     .post-content
-      != page.content
+      if page.content
+        != page.content
+      else
+        .author-page
+          a.photo(href="javascript:;")
+            img(src='#{theme.about.photo_url}')
+          p.author
+            i.fa.fa-user name：
+            | #{config.author}
+          p.author
+            i.fa.fa-email email：
+            a(href="mailto:#{theme.about.email}",target="_blank")= theme.about.email
+          p.author
+            i.fa.fa-weibo weibo：
+            a(href="#{theme.about.weibo_url}",target="_blank")= theme.about.weibo_name
+          p.author
+            i.fa.fa-github github：
+            a(href="#{theme.about.github_url}",target="_blank")= theme.about.github_name
     if page.comments
       include _partial/comments
-

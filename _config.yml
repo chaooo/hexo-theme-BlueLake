@@ -71,3 +71,12 @@ show_category_count: true ## If you want to show the count of categories in the 
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
+
+# About page 
+about:
+  photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
+  email: ## Your email e.g.  zhenggchaoo@gmail.com
+  weibo_url: ## weibo photo e.g.  http://weibo.com/zhengchaooo
+  weibo_name: ## Your weibo's name e.g.  秋过冬漫长
+  github_url: ## Your github'url e.g.  https://github.com/chaooo
+  github_name: ## Your github'name e.g.  chaooo

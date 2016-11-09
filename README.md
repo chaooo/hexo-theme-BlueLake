@@ -76,19 +76,28 @@ links:
     url: http://www.example3.com/
 
 # Miscellaneous
-duoshuo: chaooo ## Your duoshuo_shortname, e.g. username
+duoshuo: ## Your duoshuo_shortname, e.g. username
 disqus: ## Your disqus_shortname, e.g. username
+local_search: true ## Use a javascript-based local search engine, true/false.
 google_search: ## Use Google search, true/false.
 baidu_search: ## Use Baidu search, true/false.
 swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
 tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
-self_search: ## Use a javascript-based local search engine, true/false.
 google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
-show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
+show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
 shareto: true ## If you want to use the share button please set the value to true.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
-widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
+widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
+
+# About page 
+about:
+  photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
+  email: ## Your email e.g.  zhenggchaoo@gmail.com
+  weibo_url: ## weibo photo e.g.  http://weibo.com/zhengchaooo
+  weibo_name: ## Your weibo's name e.g.  秋过冬漫长
+  github_url: ## Your github'url e.g.  https://github.com/chaooo
+  github_name: ## Your github'name e.g.  chaooo
 ```
 
 - **version** - For automatic refresh of static files on CDN.
@@ -131,8 +140,25 @@ TOC in a post can be enabled by adding a `toc: true` item in `front-matter`.
 #### Comments
 Comment feature of each post and page can be enabled (default) and disabled by adding a `comments: true` or a `comments: false` in `front-matter`. This could be useful when you want comment feature for a guestbook page, but don't want comment feature for a about page.
 
+#### About Page 
+If you want to add about page,just run:
+``` shell
+$ hexo new page 'about'
+```
+And set the `highlight` option in `themes/_config.yml`
+```YAML
+# About page 
+about:
+  photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
+  email: ## Your email 
+  weibo_url: ## weibo photo 
+  weibo_name: ## Your weibo's name 
+  github_url: ## Your github'url 
+  github_name: ## Your github'name 
+```
+
 #### Syntax Highlighting
-Highlighted code showcase is supported, please set the `highlight` option in `_config.yml` of hexo directory like this:
+Highlighted code showcase is supported, please set the `highlight` option in `hexo/_config.yml` of hexo directory like this:
 
 ```YAML
 highlight:
@@ -141,7 +167,6 @@ highlight:
   line_number: true
   tab_replace:
 ```
-
 
 #### Site Search
 If you want to use local site search,you must install the plug-in [hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content) for create the JSON search file, and then add config to `hexo/_config.yml`

@@ -58,7 +58,7 @@ links:
     url: http://www.example3.com/
 
 # Miscellaneous
-duoshuo: chaooo ## Your duoshuo_shortname, e.g. username
+duoshuo: ## Your duoshuo_shortname, e.g. username
 disqus: ## Your disqus_shortname, e.g. username
 local_search: true ## Use a javascript-based local search engine, true/false.
 google_search: ## Use Google search, true/false.

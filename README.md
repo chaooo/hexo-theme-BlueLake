@@ -2,9 +2,9 @@
 
 A simple theme for [Hexo](https://hexo.io/) with great performance on different devices .
 
-- [Preview](http://chaooo.github.io/)
+- [Preview](http://chaoo.oschina.io/)
 
-[![BlueLake template preview](http://obzf7z93c.bkt.clouddn.com/themeBlueLake.png "BlueLake template preview")](http://chaooo.github.io/)
+[![BlueLake template preview](http://obzf7z93c.bkt.clouddn.com/themeBlueLake.png "BlueLake template preview")](http://chaoo.oschina.io/)
 
 ## Installation
 
@@ -156,6 +156,7 @@ about:
   github_url: ## Your github'url 
   github_name: ## Your github'name 
 ```
+[Preview the about page demo](http://chaoo.oschina.io/about/)
 
 #### Syntax Highlighting
 Highlighted code showcase is supported, please set the `highlight` option in `hexo/_config.yml` of hexo directory like this:

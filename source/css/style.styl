@@ -848,33 +848,53 @@ body
         padding-left: 0.3em
 /* about page */     
 .author-page
-  padding-top 60px
+  padding 40px 0 20px 0
+  text-align center
   &:after 
+    content ""
     clear both
+    display block
   .photo
-    float left
+    display inline-block
+    vertical-align top
     box-sizing content-box
-    margin: -20px 40px 0 40px
+    padding 0 30px 30px 30px
     width: 180px
     height: 180px
-    background: #608CB7
-    border-radius: 50%
-    -webkit-box-shadow: 1px 2px 3px #adc2d7
-    box-shadow: 1px 2px 3px #adc2d7
-    border: 1px solid #adc2d7
     img 
       width: 100%
       height: 100%
       padding 0
       margin 0
       border-radius: 50%
+      -webkit-box-shadow: 1px 2px 3px #adc2d7
+      box-shadow: 1px 2px 3px #adc2d7
   .author
     font-size 16px
-    padding-left: 222px
+    white-space: nowrap
+    display inline-block
+    vertical-align top
+    text-align left
     .fa
       margin-right .4em
       &:before 
         margin-right .2em
+@media print,screen and (max-width: 48em) 
+  .author-page
+    .author
+      font-size 14px
+  #result-wrap
+    width: 60%
+    left: 0
+@media print,screen and (max-width: 28em) 
+  .author-page
+    .author
+       font-size 12px
+    .photo
+      padding 0 0 30px 0
+  #result-wrap
+    width: 90%
+    left: 0
 /* toc*/
 .toc-title
   font-size: 120%

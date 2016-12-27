@@ -35,14 +35,15 @@ block content
          .ds-share-inline
             ul.ds-share-icons-16
               li(data-toggle='ds-share-icons-more')
-                a(class='ds-more' href='javascript:void(0);') 分享到：
+                a(href='javascript:void(0);').ds-more= __('shareto')
+                  | :
               li
-                a(class='ds-weibo' href='javascript:void(0);' data-service='weibo') 微博
+                a(href='javascript:void(0);' data-service='weibo').ds-weibo 微博
               li
-                a(class='ds-qzone' href='javascript:void(0);' data-service='qzone') QQ空间
+                a(href='javascript:void(0);' data-service='qzone').ds-qzone QQ空间
               li
-                a(class='ds-qqt' href='javascript:void(0);' data-service='qqt') 腾讯微博
+                a(href='javascript:void(0);' data-service='qqt').ds-qqt 腾讯微博
               li
-                a(class='ds-wechat' href='javascript:void(0);' data-service='wechat') 微信
+                a(href='javascript:void(0);' data-service='wechat').ds-wechat 微信
             .ds-share-icons-more
     include _partial/comments

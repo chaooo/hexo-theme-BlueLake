@@ -4,11 +4,12 @@ body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,img,blockquote,button,pre,fieldset,fo
   padding: 0
   border: 0
 h1,h2,h3,h4,h5,h6
-  font-weight: normal
+  font-weight: bold
+  overflow: hidden
 s,i,u,em
   font-style: normal
 ol,ul,li
-  list-style: none
+  list-style-type: none
 img,button
   border: none
 table,tr,th,td
@@ -43,10 +44,11 @@ a
 blockquote,.stressed
   -moz-box-sizing: border-box
   box-sizing: border-box
-  margin: 2.5em 0
-  padding: 0 0 0 50px
+  margin: 1.5em 0 1.5em 1em
+  padding: 10px
   color: #555
-  border-left: none
+  border: 1px solid #e6e6e6
+  border-left: 5px solid #40759b
 strong, b, em
   font-weight: bold
 pre
@@ -152,16 +154,7 @@ body
   margin: 0 auto
 .content_container
   padding-right: 40px
-  .post
-    .post-content
-      h2
-        margin: 0
-        font-size: 18px
-        border:none
-      h3
-        margin: 0
-        font-size: 16px
-        border:none
+
 /* header */
 #header
   text-align: left
@@ -429,17 +422,25 @@ body
     pre
       code
         padding: 0 2em
-    h3
-      margin: 1.4em 0 1.1em
     h2
-      margin: 1.4em 0 1.1em
-      border-bottom: 1px solid #d8e2eb
-      overflow: hidden
+      font-size: 18px        
+    h3
+      font-size: 16px
+    h4
+      font-size: 14px
+    h5
+      font-size: 13px
+    h6
+      font-size: 12px
     p
       margin: 0 0 1.234em
       code
+        margin 0 5px
         padding: 0 5px
-        background: #f7f8f8
+        font-family: Source Code Pro,Monaco,Menlo,Consolas,monospace
+        color: #4d4d4c
+        background: #eee
+        font-size: .95em
       a
         color: #40759b
         padding-bottom: 2px
@@ -453,6 +454,9 @@ body
         margin-top: 0.1em
         position: relative
         text-align: center
+    blockquote,.stressed
+      p 
+        margin: 0
     img
       max-width: 100%
       padding: 0.5em 0
@@ -463,9 +467,13 @@ body
       border: none
       border-top: 1px solid #d8e2eb
       position: relative
+    ul li
+      list-style-type: disc
+    ol li 
+      list-style-type: decimal
     ul,ol
-      border-radius: 3px
-      margin: 1em 0
+      list-style-position:inside
+      margin: 1em
       code
         display: inline-block
         margin: 0 5px

@@ -84,10 +84,10 @@ disqus: ## Your disqus_shortname, e.g. username
 # About page 
 about:
   photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
-  email: ## Your email e.g.  zhenggchaoo@gmail.com
-  weibo_url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
+  email: ## Your email(show for footer and about page) e.g.  zhenggchaoo@gmail.com
+  weibo_url: ## Your weibo's url(show for footer and about page) e.g.  http://weibo.com/zhengchaooo
   weibo_name: ## Your weibo's name e.g.  秋过冬漫长
-  github_url: ## Your github'url e.g.  https://github.com/chaooo
+  github_url: ## Your github'url(show for footer and about page) e.g.  https://github.com/chaooo
   github_name: ## Your github'name e.g.  chaooo
 
 # Friend link

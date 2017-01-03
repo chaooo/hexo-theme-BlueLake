@@ -5,7 +5,9 @@ figure.highlight,.codeblock
   line-height: 1.1em
   color: #333
   padding-top: 15px
-  overflow: hidden
+  margin: 1em 0
+  border-radius: 5px
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125)
   figcaption
     font-size: 13px
     padding: 0 15px 20px
@@ -14,13 +16,18 @@ figure.highlight,.codeblock
     color: #999999
     a
       float: right
-      color: #01579f
+      color: #40759b
+      font-weight: bold
   table
-    display: block
     width: 100%
+    margin: 0
+    padding-bottom: 10px
+    border-collapse: collapse
+    position: relative
+    overflow-x: auto
   pre,.gutter,.code,.tag
     background-color: inherit
-    font-family: Menlo, Consolas, monospace
+    font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace
     border: none
     padding: 0
     margin: 0
@@ -37,17 +44,13 @@ figure.highlight,.codeblock
     .line
       color: #aaaaaa
   .line
-    height: 1.3em
     font-size: 13px
   .code
     padding: 0.3em 15px 0.3em 1em
     width: 100%
-    pre
-      max-width: 700px
-      overflow-x: auto
-      overflow-y: hidden
+
 .gist .line,.gist .line-number
-  font-family: Menlo, Consolas, monospace
+  font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace
   font-size: 1em
   margin: 0 0 5px 0
 /* code highlight color*/

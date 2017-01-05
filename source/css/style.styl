@@ -12,17 +12,6 @@ ol,ul,li
   list-style-type: none
 img,button
   border: none
-table,tbody,tr
-  display block 
-  width 100% 
-table,tbody,tr,th,td
-  border-collapse: collapse
-  box-sizing border-box
-  border-spacing 0
-  cellspacing 0
-  cellpadding 0
-  padding 0
-  margin 0
 form,input,select,option 
   outline none
 input:-webkit-autofill
@@ -928,22 +917,31 @@ body
     margin-left: 1em
     padding-left: 0
 /* table*/
+table,tbody,tr,th,td
+  border-collapse: collapse
+  box-sizing border-box
+  border-spacing 0
+  cellspacing 0
+  cellpadding 0
+  padding 0
+  margin 0
 table
   margin: auto auto 15px
   width: 100%
   background: transparent
-  border-collapse: collapse
-  border-spacing: 0
-  text-align: left
+  overflow-x: auto
+  display: block
   th
     font-weight: bold
     padding: 5px 10px
-    border-bottom: 2px solid #909ba2
+    border: 1px solid #d8e2eb
+    border-bottom-width: 2px
   tr
     &:nth-child(2n)
-      background: #f7f8f8
+      background: #f4fcff
   td
-    padding: 5px 10px 
+    padding: 5px 10px
+    border 1px solid #d8e2eb
 /* duoshuo style*/
 #ds-recent-comments
   li.ds-comment

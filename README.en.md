@@ -134,6 +134,15 @@ You can set a **favicon.ico** for your website, please put it into  `source` fol
 
 You can add a website logo for apple devices, please put an image named **apple-touch-icon.png** into `source` folder of hexo directory, recommended size: 114px*114px.
 
+#### Keywords
+please set the `keywords` option in `hexo/_config.yml` of hexo directory like this:
+# Site
+title: Hexo
+subtitle: 
+description: 
+keywords: keywords1, keywords2, keywords3, ...
+```
+
 #### Abstract
 You can control the abstract of a post shown at index, by either filling a `description:` item in `front-matter` of the `post.md`, or just inserting a `<!--more-->` before your hidden content.
 

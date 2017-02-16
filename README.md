@@ -136,6 +136,18 @@ baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 
 您可以为苹果设备添加网站徽标，请将名为** apple-touch-icon.png **的图像放入hexo目录的“source”文件夹中，建议大小为：114px * 114px。
 
+#### 添加站点关键字
+请在hexo目录的“hexo/_config.yml”中添加`keywords`字段，如：
+```YAML
+# Site
+title: Hexo
+subtitle: 副标题
+description: 网站简要描述,如：Charles·Zheng's blog.
+keywords: 网站关键字, key, key1, key2, key3
+author: Charles
+language: zh-CN
+```
+
 #### 设置阅读全文
 您可以在文章的 front-matter 中添加 description，并提供文章摘录，或在文章中使用‘‘`<!--more-->`’’手动进行截断（Hexo推荐的方式）。
 

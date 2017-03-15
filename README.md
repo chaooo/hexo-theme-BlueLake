@@ -186,7 +186,7 @@ highlight:
 #### 本地搜索
 如果要使用本地站点搜索，您必须安装插件[hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content)来创建JSON搜索文件 ，然后将配置添加到`hexo/_config.yml`：
 ```shell
-$ npm install hexo-generator-json-content --save
+$ npm install hexo-generator-json-content@2.2.0 --save
 ```
 然后在`hexo/_config.yml`添加配置：
 ```YAML

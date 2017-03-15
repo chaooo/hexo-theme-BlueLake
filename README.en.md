@@ -181,7 +181,7 @@ highlight:
 #### Site Search
 If you want to use local site search,you must install the plug-in [hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content) for create the JSON search file, and then add config to `hexo/_config.yml`
 ```shell
-$ npm install hexo-generator-json-content --save
+$ npm install hexo-generator-json-content@2.2.0 --save
 ```
 And then,you must configure this plugin in `hexo/_config.yml`
 ```YAML

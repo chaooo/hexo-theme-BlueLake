@@ -37,5 +37,7 @@ block tocmodel
 
 block pageOnly
   if theme.toc.enable == true 
-    script(type='text/javascript', src=url_for(theme.js) + '/toc.js' + '?v=' + theme.version, async)
+    script(type='text/javascript', src=url_for(theme.js) + '/toctotop.js' + '?v=' + theme.version, async)
+  else 
+    script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
   include _partial/comments_js

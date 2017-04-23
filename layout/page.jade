@@ -30,4 +30,5 @@ block content
       #comments
         include _partial/comments
 block pageOnly
+  script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
   include _partial/comments_js

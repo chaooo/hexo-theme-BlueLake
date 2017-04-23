@@ -1,5 +1,17 @@
-if theme.duoshuo
+if theme.comment.duoshuo
   .ds-thread(data-thread-key=page.path, data-title=page.title, data-url=page.permalink, data-author-key='1')
-    
-if theme.disqus
+
+if theme.comment.disqus
   #disqus_thread
+
+if theme.comment.livere
+  #lv-container(data-id="city",data-uid=theme.comment.livere)
+
+if theme.comment.uyan
+  #uyan_frame
+
+if theme.comment.cloudTie
+  #cloud-tie-wrapper.cloud-tie-wrapper
+
+if theme.comment.changyan.appid && theme.comment.changyan.appkey
+  #SOHUCS(sid=page.path)

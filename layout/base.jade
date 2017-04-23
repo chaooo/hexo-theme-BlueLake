@@ -45,18 +45,23 @@ html(lang='#{config.language}')
         #nav-menu
           - for (var i in theme.menu)
             +a_with_current(theme.menu[i].directory, __(theme.menu[i].page), theme.menu[i].icon)
+        include _partial/search
 
       #layout.layout-g
         .layout-l: .content_container
           block content
         if theme.widgets_on_small_screens
           .layout-r: #sidebar
+            if theme.local_search == true
+              .search-pla
+              block tocmodel
             each item in theme.widgets
               != partial('_widget/' + item + '.jade')
         else
           .layout-r.hidden_mid_and_down: #sidebar
             each item in theme.widgets
               != partial('_widget/' + item + '.jade')
-      include _partial/totop
+      a#totop(href='#top')
       include _partial/footer
     include _partial/after_footer
+    block pageOnly

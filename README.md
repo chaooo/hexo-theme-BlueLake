@@ -41,8 +41,12 @@ git pull
 打开`themes/BlueLake/_config.yml`进行配置。
 
 ``` yml
+##########################
+## Site Config Settings ##
+##########################
+
 # Theme version
-version: 1.1.0
+version: 2.0.0
 
 # Header
 menu:
@@ -61,35 +65,75 @@ menu:
 
 # Sidebar
 widgets:
-  - search
+  - recent_posts
   - category
   - tag
   - archive
-  - recent_posts
-  - recent_comments
-  ##- weibo
-  ##- links
+  #- weibo
+  - links
+
+# Toc
+toc:
+  enable: true
+  number: false
 
 # Static files
 js: js
 css: css
 
+# Extensions
+Plugins:
+  hexo-generator-feed
+  hexo-generator-sitemap
+  hexo-generator-baidu-sitemap
+
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+#sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
 #Local search
 local_search: true ## Use a javascript-based local search engine, true/false.
-swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
-tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
 
 #Cmments
-duoshuo: ## Your duoshuo_shortname, e.g. username
-disqus: ## Your disqus_shortname, e.g. username
+comment:
+  duoshuo: #chaooo ## duoshuo_shortname
+  disqus: ## disqus_shortname
+  livere: ## 来必力(data-uid)
+  uyan: ## 友言(uid)
+  cloudTie: ## 网易云跟帖(productKey)
+  changyan: ## 畅言需在下方配置两个参数，此处不填。
+    appid: ## 畅言(appid)
+    appkey: ##畅言(appkey)
+
+#Share
+baidu_share: true ## 百度分享
+JiaThis_share: ##true ##JiaThis分享
+duoshuo_share: #true ##true 多说分享必须和多说评论一起使用。
+
+# Analytics
+google_analytics: ## Your Google Analytics tracking id, e.g. UA-42025684-2
+baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 1006843030519956000
+
+# Miscellaneous
+show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
+widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
+busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 
 # About page 
 about:
   photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
-  email: ## Your email(show for footer and about page) e.g.  zhenggchaoo@gmail.com
-  weibo_url: ## Your weibo's url(show for footer and about page) e.g.  http://weibo.com/zhengchaooo
+  email: ## Your email e.g.  zhenggchaoo@gmail.com
+  weibo_url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
   weibo_name: ## Your weibo's name e.g.  秋过冬漫长
-  github_url: ## Your github'url(show for footer and about page) e.g.  https://github.com/chaooo
+  github_url: ## Your github'url e.g.  https://github.com/chaooo
   github_name: ## Your github'name e.g.  chaooo
 
 # Friend link
@@ -100,26 +144,22 @@ links:
     url: http://www.example2.com/
   - title: site-name3
     url: http://www.example3.com/
-
-# Miscellaneous
-show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
-widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
-busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
-google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
-baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 ```
 
 - **version** - 用于自动刷新CDN上的静态文件。
 - **menu** - 导航菜单。
 - **widgets** - 侧边栏中的窗口小部件。
+- **Toc** - 文章目录
 - **Static files** - 静态文件目录，以方便CDN使用。
 - **Local search**
 - self_search - 默认本地JS搜索. 
-- tinysou - [Tiny Search](http://tinysou.com) key。
-- swiftype - [Swiftype Search](https://swiftype.com) key。
 - **Cmments**
 - duoshuo - 若使用[多说评论](http://duoshuo.com)，注册多说后在这填写short_name(用于评论与分享)。
 - disqus - 若使用[Disqus评论](https://disqus.com)，注册Disqus后在这填写short_name。
+- livere- 若使用[来必力评论](https://livere.com)，注册来必力,获得data-uid。
+- uyan - 若使用[友言评论](http://www.uyan.cc/)，注册友言,获得uid。
+- cloudTie - 若使用[网易云跟帖评论](https://gentie.163.com/info.html)，注册网易云跟帖,获得productKey。
+- changyan - 若使用[畅言评论](http://changyan.kuaizhan.com)，注册畅言，获得appid，appkey。
 - **About page** - 关于我页面(hexo new page 'about')。
 - **links** - 友情链接。
 - **Miscellaneous**

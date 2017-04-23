@@ -1,6 +1,8 @@
 extends base
+
 block title
   title= page.title + ' | ' + config.title
+
 block content
   .post
     h1.post-title= page.title
@@ -27,3 +29,5 @@ block content
     if page.comments
       #comments
         include _partial/comments
+block pageOnly
+  include _partial/comments_js

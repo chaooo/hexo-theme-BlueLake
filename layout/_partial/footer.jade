@@ -2,19 +2,26 @@
   .footer-info
     p
       a(href="/baidusitemap.xml") 网站地图
-      |  |
+      |  |  
       a(href="/atom.xml") 订阅本站
-      |  |
-      span 联系博主：
-        a.fa.fa-email(href="mailto:#{theme.about.email}",target="_blank") 
-        a.fa.fa-weibo(href="#{theme.about.weibo_url}",target="_blank")
-        a.fa.fa-github(href="#{theme.about.github_url}",target="_blank") 
+      |  |  
+      a(href="/about/") 联系博主
+      //- span 联系博主：
+      //-   a.fa.fa-email(href="mailto:#{theme.about.email}",target="_blank") 
+      //-   a.fa.fa-weibo(href="#{theme.about.weibo_url}",target="_blank")
+      //-   a.fa.fa-github(href="#{theme.about.github_url}",target="_blank") 
+    if theme.busuanzi == true
+      p 本站总访问量：
+        i#busuanzi_container_site_pv
+          i#busuanzi_value_site_pv
+        | 次
     p
       span  Copyright &copy;
-        a(href=url_for('.'), rel='nofollow')= config.author || config.title + '.'
+        a(href=url_for('.'), rel='nofollow')= (config.author || config.title) + '.'
+      span  Theme by
+        a(rel='nofollow', target='_blank', href='https://github.com/chaooo/hexo-theme-BlueLake')  BlueLake.
+      if theme.busuanzi == true
+        span  Count by
+          a(href="http://busuanzi.ibruce.info/")  busuanzi.
       span  Powered by
         a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
-      span
-        a(rel='nofollow', target='_blank', href='https://github.com/chaooo/hexo-theme-BlueLake')  Theme 
-        | by
-        a(rel='nofollow', target='_blank', href='https://github.com/chaooo')  Charles.

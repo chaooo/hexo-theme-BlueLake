@@ -1,5 +1,9 @@
+##########################
+## Site Config Settings ##
+##########################
+
 # Theme version
-version: 1.3.0
+version: 2.0.0
 
 # Header
 menu:
@@ -18,14 +22,17 @@ menu:
 
 # Sidebar
 widgets:
-  - search
+  - recent_posts
   - category
   - tag
   - archive
-  - recent_posts
-  - recent_comments
-  ##- weibo
-  ##- links
+  #- weibo
+  - links
+
+# Toc
+toc:
+  enable: true
+  number: false
 
 # Static files
 js: js
@@ -42,6 +49,7 @@ feed:
   type: atom
   path: atom.xml
   limit: 20
+
 #sitemap
 sitemap:
   path: sitemap.xml
@@ -50,12 +58,31 @@ baidusitemap:
 
 #Local search
 local_search: true ## Use a javascript-based local search engine, true/false.
-swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
-tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
 
 #Cmments
-duoshuo: ## Your duoshuo_shortname, e.g. username
-disqus: ## Your disqus_shortname, e.g. username
+comment:
+  duoshuo: #chaooo ## duoshuo_shortname
+  disqus: ## disqus_shortname
+  livere: ## 来必力(data-uid)
+  uyan: ## 友言(uid)
+  cloudTie: ## 网易云跟帖(productKey)
+  changyan: ## 畅言需在下方配置两个参数，此处不填。
+    appid: ## 畅言(appid)
+    appkey: ##畅言(appkey)
+
+#Share
+baidu_share: true ## 百度分享
+JiaThis_share: ##true ##JiaThis分享
+duoshuo_share: #true ##true 多说分享必须和多说评论一起使用。
+
+# Analytics
+google_analytics: ## Your Google Analytics tracking id, e.g. UA-42025684-2
+baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 1006843030519956000
+
+# Miscellaneous
+show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
+widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
+busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 
 # About page 
 about:
@@ -74,11 +101,3 @@ links:
     url: http://www.example2.com/
   - title: site-name3
     url: http://www.example3.com/
-
-
-# Miscellaneous
-show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
-widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
-busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
-google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
-baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000

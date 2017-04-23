@@ -1,0 +1,16 @@
+mixin comment-count(path)
+  if theme.comment
+    a.comment-count(href=url_for(path) + '#comments')
+      if theme.comment.duoshuo
+        i.ds-thread-count(data-thread-key=path)
+      if theme.comment.disqus
+        i.disqus-comment-count(data-disqus-identifier=path)
+      if theme.comment.uyan
+        a#uyan_count_unit(href=url_for(path))
+      if theme.comment.cloudTie
+        i.cloud-tie-join-count
+          i.join-count 0
+      if theme.comment.changyan.appid && theme.comment.changyan.appkey
+        i#changyan_parti_unit(data-xid=path)
+      = ' '+ __('guestbook')
+

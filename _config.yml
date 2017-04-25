@@ -42,7 +42,7 @@ css: css
 Plugins:
   hexo-generator-feed
   hexo-generator-sitemap
-  hexo-generator-baidu-sitemap
+  #hexo-generator-baidu-sitemap
 
 #Feed Atom
 feed:
@@ -53,8 +53,8 @@ feed:
 #sitemap
 sitemap:
   path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
+#baidusitemap:
+#  path: baidusitemap.xml
 
 #Local search
 local_search: true ## Use a javascript-based local search engine, true/false.
@@ -76,36 +76,36 @@ JiaThis_share: ##true ##JiaThis分享
 duoshuo_share: #true ##true 多说分享必须和多说评论一起使用。
 
 # Analytics
-google_analytics: ## Your Google Analytics tracking id, e.g. UA-42025684-2
+google_analytics: UA-50874848-1 ## Your Google Analytics tracking id, e.g. UA-42025684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 1006843030519956000
 
 # Miscellaneous
 show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
 widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
-busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+busuanzi: false ## If you want to use Busuanzi page views please set the value to true.
 
 # About page
 about:
-  photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
+  photo_url: /Huseyin_Kozan.jpg ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
   items:
   - label: email
     icon: fa-email
-    url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
-    title: ## Your email e.g.  zhenggchaoo@gmail.com
+    url: mailto:posta@huseyinkozan.com.tr
+    title: posta@huseyinkozan.com.tr
+  - label: twitter
+    icon: fa-twitter
+    url: https://twitter.com/huseyinkozan
+    title: huseyinkozan
   - label: github
     icon: fa-github
-    url: ## Your github'url e.g.  https://github.com/chaooo
-    title: ## Your github'name e.g.  chaooo
-#  - label: weibo
-#    icon: fa-weibo
-#    url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
-#    title: ## Your weibo's name e.g.  秋过冬漫长
+    url: https://github.com/huseyinkozan
+    title: huseyinkozan
 
 # Links widget. Empty links will hide widget.
 links:
-  - title: site-name1
-    url: http://www.example1.com/
-  - title: site-name2
-    url: http://www.example2.com/
-  - title: site-name3
-    url: http://www.example3.com/
+#  - title: site-name1
+#    url: http://www.example1.com/
+#  - title: site-name2
+#    url: http://www.example2.com/
+#  - title: site-name3
+#    url: http://www.example3.com/

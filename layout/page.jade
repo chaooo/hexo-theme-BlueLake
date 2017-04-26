@@ -17,15 +17,10 @@ block content
             p
               i.fa.fa-user name：
               | #{config.author}
-            p
-              i.fa.fa-email email：
-              a(href="mailto:#{theme.about.email}",target="_blank")= theme.about.email
-            p
-              i.fa.fa-weibo weibo：
-              a(href="#{theme.about.weibo_url}",target="_blank")= theme.about.weibo_name
-            p
-              i.fa.fa-github github：
-              a(href="#{theme.about.github_url}",target="_blank")= theme.about.github_name
+            each item in theme.about.items
+              p
+                i(class="fa "+item.icon) #{item.label}：
+                a(href=item.url,target="_blank")= item.title
     if page.comments
       #comments
         include _partial/comments

@@ -46,6 +46,6 @@ if theme.addToAny_share.length > 0
   .addToAny_share
     = __("shareto") + " : "
     each a2a_item in theme.addToAny_share
-      a(href="https://www.addtoany.com/add_to/"+a2a_item+"?linkurl="+url+"&amp;linkname="+page.title target="_blank")
+      a(href="https://www.addtoany.com/add_to/"+a2a_item+"?linkurl="+url+"&linkname="+page.title target="_blank")
         img(src="https://static.addtoany.com/buttons/"+a2a_item+".svg" width="16" height="16" style="vertical-align:middle")
       | &nbsp;

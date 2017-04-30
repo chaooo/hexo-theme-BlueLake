@@ -7,7 +7,7 @@ block content
   .post
     h1.post-title= page.title
     .post-meta
-      span.date= page.date.format('ll')
+      span.date= page.date.format(config.date_format)
       if page.categories.length > 0
         span.category
           for category in page.categories.toArray()

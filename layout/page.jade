@@ -20,9 +20,10 @@ block content
                 i(class="fa "+item.icon) #{item.label}：
                 a(href=item.url,target="_blank")= item.title
       != page.content
-    if page.comments
+    if theme.comment && page.comments
       #comments
         include _partial/comments
 block pageOnly
   script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
-  include _partial/comments_js
+  if theme.comment
+    include _partial/comments_js

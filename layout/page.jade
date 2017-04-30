@@ -7,9 +7,7 @@ block content
   .post
     h1.post-title= page.title
     .post-content
-      if page.content
-        != page.content
-      else
+      if page.is_about
         .author-page
           a.photo(href="javascript:;")
             img(src='#{theme.about.photo_url}')
@@ -21,6 +19,7 @@ block content
               p
                 i(class="fa "+item.icon) #{item.label}：
                 a(href=item.url,target="_blank")= item.title
+      != page.content
     if page.comments
       #comments
         include _partial/comments

@@ -74,6 +74,13 @@ comment:
 baidu_share: true ## 百度分享
 JiaThis_share: ##true ##JiaThis分享
 duoshuo_share: #true ##true 多说分享必须和多说评论一起使用。
+addToAny_share: # AddToAny share. Empty list hides. List items are service name at url. For ex: email for '<a href="https://www.addtoany.com/add_to/email?linkurl=...'
+#  - twitter
+#  - baidu
+#  - facebook
+#  - google_plus
+#  - linkedin
+#  - email
 
 # Analytics
 google_analytics: ## Your Google Analytics tracking id, e.g. UA-42025684-2
@@ -102,7 +109,7 @@ about:
     title: ## Your weibo's name e.g.  秋过冬漫长
   - label: twitter
     icon: fa-twitter
-    url: 
+    url:
     title:
   - label: facebook
     icon: fa-facebook

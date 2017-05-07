@@ -2,12 +2,12 @@
   .footer-info
     p
       if theme.baidusitemap
-        a(href=config.root+"/baidusitemap.xml")= __("baidusitemap")
+        a(href=config.root+"baidusitemap.xml")= __("baidusitemap")
         |  |  
       if theme.feed
-        a(href=config.root+"/atom.xml")= __("rss")
+        a(href=config.root+"atom.xml")= __("rss")
         |  |  
-      a(href=config.root+"/about/")= __("about")
+      a(href=config.root+"about/")= __("about")
       //- span 联系博主：
       //-   a.fa.fa-email(href="mailto:#{theme.about.email}",target="_blank") 
       //-   a.fa.fa-weibo(href="#{theme.about.weibo_url}",target="_blank")

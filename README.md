@@ -127,14 +127,30 @@ show_category_count: true ## If you want to show the count of categories in the 
 widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 
-# About page 
+# About page
 about:
   photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
-  email: ## Your email e.g.  zhenggchaoo@gmail.com
-  weibo_url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
-  weibo_name: ## Your weibo's name e.g.  秋过冬漫长
-  github_url: ## Your github'url e.g.  https://github.com/chaooo
-  github_name: ## Your github'name e.g.  chaooo
+  items:
+  - label: email
+    icon: fa-email
+    url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
+    title: ## Your email e.g.  zhenggchaoo@gmail.com
+  - label: github
+    icon: fa-github
+    url: ## Your github'url e.g.  https://github.com/chaooo
+    title: ## Your github'name e.g.  chaooo
+  - label: weibo
+    icon: fa-weibo
+    url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
+    title: ## Your weibo's name e.g.  秋过冬漫长
+  - label: twitter
+    icon: fa-twitter
+    url:
+    title:
+  - label: facebook
+    icon: fa-facebook
+    url:
+    title:
 
 # Friend link
 links:
@@ -152,7 +168,7 @@ links:
 - **Toc** - 文章目录
 - **Static files** - 静态文件目录，以方便CDN使用。
 - **Local search**
-- self_search - 默认本地JS搜索. 
+- self_search - 默认本地JS搜索.
 - **Cmments**
 - duoshuo - 若使用[多说评论](http://duoshuo.com)，注册多说后在这填写short_name(用于评论与分享)。
 - disqus - 若使用[Disqus评论](https://disqus.com)，注册Disqus后在这填写short_name。
@@ -193,7 +209,7 @@ language: zh-CN
 
 #### 自定义page页面
 在`source`文件夹中创建文件夹`index.md`来添加页面，并在`index.md`的`front-matter'中添加`layout：page`。
-Create folders inlcuding `index.md` in `source` folder to add pages, and add a `layout: page` in `front-matter` of `index.md`. 
+Create folders inlcuding `index.md` in `source` folder to add pages, and add a `layout: page` in `front-matter` of `index.md`.
 
 #### About页面
 此主题默认page页面是关于我页面的布局，生成一个关于我页面：
@@ -202,14 +218,30 @@ $ hexo new page 'about'
 ```
 配置照片地址、邮箱、微博链接、微博名、GitHub链接、Github名：
 ```YAML
-# About page 
+# About page
 about:
   photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
-  email: ## Your email 
-  weibo_url: ## weibo photo 
-  weibo_name: ## Your weibo's name 
-  github_url: ## Your github'url 
-  github_name: ## Your github'name 
+  items:
+  - label: email
+    icon: fa-email
+    url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
+    title: ## Your email e.g.  zhenggchaoo@gmail.com
+  - label: github
+    icon: fa-github
+    url: ## Your github'url e.g.  https://github.com/chaooo
+    title: ## Your github'name e.g.  chaooo
+  - label: weibo
+    icon: fa-weibo
+    url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
+    title: ## Your weibo's name e.g.  秋过冬漫长
+  - label: twitter
+    icon: fa-twitter
+    url:
+    title:
+  - label: facebook
+    icon: fa-facebook
+    url:
+    title:
 ```
 [点击预览About页面](http://chaoo.oschina.io/about/)
 

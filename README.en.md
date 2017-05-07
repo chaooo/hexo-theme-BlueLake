@@ -81,14 +81,30 @@ tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
 duoshuo: ## Your duoshuo_shortname, e.g. username
 disqus: ## Your disqus_shortname, e.g. username
 
-# About page 
+# About page
 about:
   photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
-  email: ## Your email(show for footer and about page) e.g.  zhenggchaoo@gmail.com
-  weibo_url: ## Your weibo's url(show for footer and about page) e.g.  http://weibo.com/zhengchaooo
-  weibo_name: ## Your weibo's name e.g.  秋过冬漫长
-  github_url: ## Your github'url(show for footer and about page) e.g.  https://github.com/chaooo
-  github_name: ## Your github'name e.g.  chaooo
+  items:
+  - label: email
+    icon: fa-email
+    url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
+    title: ## Your email e.g.  zhenggchaoo@gmail.com
+  - label: github
+    icon: fa-github
+    url: ## Your github'url e.g.  https://github.com/chaooo
+    title: ## Your github'name e.g.  chaooo
+  - label: weibo
+    icon: fa-weibo
+    url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
+    title: ## Your weibo's name e.g.  秋过冬漫长
+  - label: twitter
+    icon: fa-twitter
+    url:
+    title:
+  - label: facebook
+    icon: fa-facebook
+    url:
+    title:
 
 # Friend link
 links:
@@ -117,7 +133,7 @@ baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 - **Cmments**
 - duoshuo - [Duoshuo](http://duoshuo.com) shortname(Use for comments and sharing).
 - disqus - [Disqus](https://disqus.com) shortname.
-- **About page** - About page set。
+- **About page** - About page set.
 - **links** - Edit your blogroll here.
 - **Miscellaneous**
 - show_category_count - Show the count of categories in the sidebar widget.
@@ -137,9 +153,10 @@ You can add a website logo for apple devices, please put an image named **apple-
 #### Keywords
 please set the `keywords` option in `hexo/_config.yml` of hexo directory like this:
 # Site
+```
 title: Hexo
-subtitle: 
-description: 
+subtitle:
+description:
 keywords: keywords1, keywords2, keywords3, ...
 ```
 
@@ -147,23 +164,47 @@ keywords: keywords1, keywords2, keywords3, ...
 You can control the abstract of a post shown at index, by either filling a `description:` item in `front-matter` of the `post.md`, or just inserting a `<!--more-->` before your hidden content.
 
 #### Page
-Create folders inlcuding `index.md` in `source` folder to add pages, and add a `layout: page` in `front-matter` of `index.md`. 
+Create folders inlcuding `index.md` in `source` folder to add pages, and add a `layout: page` in `front-matter` of `index.md`.
 
-#### About Page 
-If you want to add about page,just run:
+#### About Page
+If you want to add about page, just create a page:
 ``` shell
 $ hexo new page 'about'
 ```
+And add `is_about: true` to front-matter:
+```
+title: about
+date: 2017-04-30 00:00:00
+is_about: true
+---
+Page content ...
+```
 And set the `about` option in `themes/_config.yml`
 ```YAML
-# About page 
+# About page
 about:
   photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
-  email: ## Your email 
-  weibo_url: ## weibo photo 
-  weibo_name: ## Your weibo's name 
-  github_url: ## Your github'url 
-  github_name: ## Your github'name 
+  items:
+  - label: email
+    icon: fa-email
+    url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
+    title: ## Your email e.g.  zhenggchaoo@gmail.com
+  - label: github
+    icon: fa-github
+    url: ## Your github'url e.g.  https://github.com/chaooo
+    title: ## Your github'name e.g.  chaooo
+  - label: weibo
+    icon: fa-weibo
+    url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
+    title: ## Your weibo's name e.g.  秋过冬漫长
+  - label: twitter
+    icon: fa-twitter
+    url:
+    title:
+  - label: facebook
+    icon: fa-facebook
+    url:
+    title:
 ```
 [Preview the about page demo](http://chaoo.oschina.io/about/)
 

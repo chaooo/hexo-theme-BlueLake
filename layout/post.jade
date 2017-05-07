@@ -17,16 +17,18 @@ block content
           i#busuanzi_container_page_pv
             i#busuanzi_value_page_pv
             i= ' ' + __('Hits')
-      include _partial/comment_count
-      +comment-count(page.path)
+      if theme.comment
+        include _partial/comment_count
+        +comment-count(page.path)
     .post-content
       != page.content
     include _partial/tag
     .post-share
       include _partial/share
     include _partial/post_nav
-    #comments
-      include _partial/comments
+    if theme.comment
+      #comments
+        include _partial/comments
 
 block tocmodel
   if theme.toc.enable == true 
@@ -40,4 +42,5 @@ block pageOnly
     script(type='text/javascript', src=url_for(theme.js) + '/toctotop.js' + '?v=' + theme.version, async)
   else 
     script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
-  include _partial/comments_js
+  if theme.comment
+    include _partial/comments_js

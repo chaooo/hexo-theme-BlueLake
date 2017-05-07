@@ -20,8 +20,9 @@ block content
           span.category
             for category in post.categories.toArray()
               a(href=url_for(category.path))= category.name
-        include _partial/comment_count
-        +comment-count(post.path)
+        if theme.comment
+          include _partial/comment_count
+          +comment-count(post.path)
       if post.description
         .post-content
           != post.description
@@ -43,5 +44,3 @@ block content
   
 block pageOnly
   script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
-
-

@@ -7,18 +7,17 @@ block content
   .post
     h1.post-title= page.title
     .post-content
-      if page.is_about
-        .author-page
-          a.photo(href="javascript:;")
-            img(src='#{theme.about.photo_url}')
-          .author
+      .author-page
+        a.photo(href="javascript:;")
+          img(src='#{theme.about.photo_url}')
+        .author
+          p
+            i.fa.fa-user name：
+            | #{config.author}
+          each item in theme.about.items
             p
-              i.fa.fa-user name：
-              | #{config.author}
-            each item in theme.about.items
-              p
-                i(class="fa "+item.icon) #{item.label}：
-                a(href=item.url,target="_blank")= item.title
+              i(class="fa fa-" + item.label) #{item.label}：
+              a(href=item.url,target="_blank")= item.title
       != page.content
     if theme.comment && page.comments
       #comments

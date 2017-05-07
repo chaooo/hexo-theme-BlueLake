@@ -12,7 +12,7 @@ block content
             for post in posts
                 li
                   a(href=url_for(post.path), title=post.title)
-                    span.date= post.date.format(config.date_format)
+                    span.date= post.date.format(theme.date_formats.archive)
                     span.tite
                       +title(post)              
   include _partial/paginator.jade

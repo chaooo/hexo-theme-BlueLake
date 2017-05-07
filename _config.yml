@@ -38,6 +38,13 @@ toc:
 js: js
 css: css
 
+# Date_formats
+date_formats:
+  archive: "MM月DD日"
+  category: "YYYY/MM/DD"
+  post: "MMM DD, YYYY"
+  tag: "YYYY/MM/DD"
+
 # Extensions
 Plugins:
   hexo-generator-feed

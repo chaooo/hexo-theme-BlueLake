@@ -7,28 +7,22 @@ block content
   .post
     h1.post-title= page.title
     .post-content
-      if page.content
-        != page.content
-      else
-        .author-page
-          a.photo(href="javascript:;")
-            img(src='#{theme.about.photo_url}')
-          .author
+      .author-page
+        a.photo(href="javascript:;")
+          img(src='#{theme.about.photo_url}')
+        .author
+          p
+            i.fa.fa-user name：
+            | #{config.author}
+          each item in theme.about.items
             p
-              i.fa.fa-user name：
-              | #{config.author}
-            p
-              i.fa.fa-email email：
-              a(href="mailto:#{theme.about.email}",target="_blank")= theme.about.email
-            p
-              i.fa.fa-weibo weibo：
-              a(href="#{theme.about.weibo_url}",target="_blank")= theme.about.weibo_name
-            p
-              i.fa.fa-github github：
-              a(href="#{theme.about.github_url}",target="_blank")= theme.about.github_name
-    if page.comments
+              i(class="fa fa-" + item.label) #{item.label}：
+              a(href=item.url,target="_blank")= item.title
+      != page.content
+    if theme.comment && page.comments
       #comments
         include _partial/comments
 block pageOnly
   script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
-  include _partial/comments_js
+  if theme.comment
+    include _partial/comments_js

@@ -50,8 +50,8 @@ strong, b, em
 /* iconfont */
 @font-face
   font-family: "iconfont"
-  src: url('../iconfont/iconfont.eot?t=1493225091034')
-  src: url('../iconfont/iconfont.eot?t=1493225091034#iefix') format('embedded-opentype'), url('../iconfont/iconfont.woff?t=1493225091034') format('woff'), url('../iconfont/iconfont.ttf?t=1493225091034') format('truetype'), url('../iconfont/iconfont.svg?t=1493225091034#iconfont') format('svg')
+  src: url('../iconfont/iconfont.eot?t=1478071541360')
+  src: url('../iconfont/iconfont.eot?t=1478071541360#iefix') format('embedded-opentype'), url('../iconfont/iconfont.woff?t=1478071541360') format('woff'), url('../iconfont/iconfont.ttf?t=1478071541360') format('truetype'), url('../iconfont/iconfont.svg?t=1478071541360#iconfont') format('svg')
 .fa
   font-size: 16px
   font-style: normal
@@ -102,10 +102,6 @@ strong, b, em
   content: "\e014"
 .fa-email:before
   content: "\e015"
-.fa-twitter:before
-  content: "\e016"
-.fa-facebook:before
-  content: "\e017"
   
 /* layout */
 body
@@ -380,23 +376,26 @@ body
   .post-meta
     padding: 0
     margin: 10px 0 0
-    color: #40759b
+    color: #333
     font-size 14px
-    min-height: 20px
+    line-height: 24px
+    min-height: 24px
     text-indent: .15em
     &:after
       content: ''
       display table
       clear:both
     span
-      float:left
-      height:16px;
-      line-height 16px;
-      display: inline
+      display: inline-block
+      height:16px
+      line-height 16px
+      margin-right: 2px
       &:after
-        content: ' | '
-      &:last-of-type:after
-        content: ' '
+        content: ' |  '
+      a 
+        color: #40759b
+      a:hover 
+        border-bottom: 1px solid #40759b
     .category
       &:before
         font-family: "iconfont"!important
@@ -408,23 +407,24 @@ body
         content: "\e005"
         padding-right: 0.3em
     #busuanzi_value_page_pv
-      height:16px;
-      line-height 16px;
+      height:16px
+      line-height 16px
       &:before
         font-family: "iconfont"!important
         content: "\e00d"
         padding-right: 0.3em
   .comment-count
-    float: right
-    display: inline
+    display: inline-block
+    line-height: 16px
     text-indent: .15em
     &:before
       vertical-align: bottom
       font-family: "iconfont"!important
       content: "\e006"
       padding-right: 0.3em
-    &:hover
-      border-bottom 1px solid #40759b
+    span:after
+        content: ''
+        display: none
   .post-content
     clear: left
     font-size: 15px
@@ -435,7 +435,7 @@ body
     text-justify: distribute
     word-break: normal
     h2
-      font-size: 18px        
+      font-size: 18px
     h3
       font-size: 16px
     h4
@@ -749,8 +749,9 @@ body
       float: left
       padding-left: 1.2em;
       &:before
-        position: absolute;
-        left: 0;
+        position: absolute
+        left: 0
+        top: 0
         font-family: "iconfont"!important
         content: "\e00f"
         padding-right: 0.3em
@@ -761,8 +762,9 @@ body
       text-align right
       padding-right: 1.2em;
       &:after
-        position: absolute;
-        right: 0;
+        position: absolute
+        right: 0
+        top: 0
         font-family: "iconfont"!important
         content: "\e00e"
         padding-left: 0.3em

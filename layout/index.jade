@@ -17,12 +17,15 @@ block content
       .post-meta
         span.date= post.date.format(config.date_format)
         if post.categories.length > 0
-          span.category
+          span
             for category in post.categories.toArray()
-              a(href=url_for(category.path))= category.name
-        if theme.comment
-          include _partial/comment_count
-          +comment-count(post.path)
+              a.category(href=url_for(category.path))= category.name
+        if theme.comment.changyan.appid && theme.comment.changyan.appkey
+          a.comment-count(href=url_for(post.path) + '#comments')
+            span.cy_cmt_count(id = 'url::' + config.url +'/'+ post.path)
+            = ''+ __('guestbook') + ','
+            span.cy_cmt_participate(id = 'url::' + config.url +'/'+ post.path)
+            = ''+ __('participate')
       if post.description
         .post-content
           != post.description
@@ -41,6 +44,7 @@ block content
         a(href=url_for(post.path))= __('Readmore')
 
   include _partial/paginator
-  
 block pageOnly
   script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
+  if theme.comment.changyan.appid && theme.comment.changyan.appkey
+    script(id="cy_cmt_num", src='http://changyan.sohu.com/upload/plugins/plugins.list.count.js' + '?clientId=' + theme.comment.changyan.appid)

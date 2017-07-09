@@ -9,9 +9,9 @@ block content
     .post-meta
       span.date= page.date.format(theme.date_formats.post)
       if page.categories.length > 0
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
+        span
+          for category in post.categories.toArray()
+            a.category(href=url_for(category.path))= category.name
       if theme.busuanzi == true
         span
           i#busuanzi_container_page_pv

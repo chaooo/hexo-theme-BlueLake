@@ -15,17 +15,18 @@ block content
         a(href=url_for(post.path))
           +title(post)
       .post-meta
-        span.date= post.date.format(config.date_format)
-        if post.categories.length > 0
-          span
-            for category in post.categories.toArray()
-              a.category(href=url_for(category.path))= category.name
         if theme.comment.changyan.appid && theme.comment.changyan.appkey
           a.comment-count(href=url_for(post.path) + '#comments')
             span.cy_cmt_count(id = 'url::' + config.url +'/'+ post.path)
             = ''+ __('guestbook') + ','
             span.cy_cmt_participate(id = 'url::' + config.url +'/'+ post.path)
             = ''+ __('participate')
+        p
+          span.date= post.date.format(config.date_format)
+          if post.categories.length > 0
+            span
+              for category in post.categories.toArray()
+                a.category(href=url_for(category.path))= category.name
       if post.description
         .post-content
           != post.description

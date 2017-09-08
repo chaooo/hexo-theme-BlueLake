@@ -1,0 +1,7 @@
+if theme.notices && theme.notices.length > 0
+  .widget
+    .widget-title
+      i(class='fa fa-fei')= ' ' + __('notice')
+    - for (var i in theme.notices)
+      ul
+      span #{theme.notices[i].content}

@@ -1,0 +1,7 @@
+if theme.recommends && theme.recommends.length > 0
+  .widget
+    .widget-title
+      i(class='fa fa-huo')= ' ' + __('recommend')
+    - for (var i in theme.recommends)
+      ul
+      a(href='#{theme.recommends[i].url}' title='#{theme.recommends[i].title}' target='_blank') #{theme.recommends[i].title}

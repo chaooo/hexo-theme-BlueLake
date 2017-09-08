@@ -22,10 +22,12 @@ menu:
 
 # Sidebar
 widgets:
+  - notice
+  - recommend
   - recent_posts
-  - category
-  - tag
-  - archive
+  #- category
+  #- tag
+  #- archive
   #- weibo
   - links
 
@@ -126,3 +128,14 @@ links:
     url: http://www.example2.com/
   - title: site-name3
     url: http://www.example3.com/
+
+## 公告
+notices:
+  - content: 本站最近由阿里云迁移到了Github上，因此，一些旧的文章连接可能会无法正常访问，可以通过查询来找到对应文章
+
+## 推荐
+recommends:
+  - title: Spring Data JPA系列教程及源码
+    url: https://github.com/icnws/spring-data-jpa-demo
+  - title: SpringForAll社区
+    url: http://www.spring4all.com

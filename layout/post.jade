@@ -21,6 +21,16 @@ block content
             i#busuanzi_container_page_pv
               i#busuanzi_value_page_pv
               i= '' + __('hits')
+        if theme.item_text == true
+          span
+            字数统计:
+            span.post-count= wordcount(page.content)
+            字
+        if theme.min2read == true
+          span
+            阅读时长≈
+            span.post-count= min2read(page.content)
+            分钟
     .post-content
       != page.content
     include _partial/tag

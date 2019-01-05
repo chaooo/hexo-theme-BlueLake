@@ -17,6 +17,21 @@
         i#busuanzi_container_site_pv
           i#busuanzi_value_site_pv
         | 次
+
+    p
+      if theme.busuanzi == true
+        本站总访问量:
+        i#busuanzi_container_site_pv
+          i#busuanzi_value_site_pv
+        | 次
+        本站总访问数:
+        i#busuanzi_container_site_uv
+          i#busuanzi_value_site_uv
+        | 人
+      if theme.word_count == true
+        博客全站共:
+        span.post-count= totalcount(site)
+        | 字
     p
       span  Copyright &copy;
         a(href=url_for('.'), rel='nofollow')= (config.author || config.title) + '.'

@@ -1,0 +1,375 @@
+/* syntax highlight*/
+pre 
+  width: 100%      
+  position: relative
+  border: none
+  padding: 0
+  margin: 0
+  code 
+    display block
+    box-sizing: border-box
+    overflow-x: auto
+    font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace
+    margin: 1.2em 0
+    padding 15px 15px 10px 15px
+    line-height: 1.2em
+    width: 100%
+    border-radius: 5px
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125)
+    font-size: 13px
+    color: #999
+    background: #f7f8f8
+figure.highlight,.codeblock
+  background:#021825
+  margin: 10px 0
+  line-height: 1.1em
+  padding-top: 15px
+  margin: 1em 0
+  border-radius: 5px
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125)
+  figcaption
+    font-size: 13px
+    padding: 0 15px 20px
+    margin: 0
+    background: #f7f8f8
+    color: #999999
+    a
+      float: right
+      color: #40759b
+      font-weight: bold
+  table
+    width: 100%
+    margin: 0
+    padding-bottom: 10px
+    border-collapse: collapse
+    position: relative
+    display block 
+    overflow-x: auto
+  pre,.gutter,.code,.tag
+    background-color: inherit
+    font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace
+    border: none
+    padding: 0
+    margin: 0
+    cursor: text
+  .gutter,.code
+    vertical-align: top
+  &.plain
+    .gutter
+      display: none
+  .gutter
+    border-right: 1px solid #40759b
+    padding: 0.3em 15px
+    .line
+      color: #aaaaaa
+  .line
+    font-size: 13px
+    color: #999
+    &.marked
+      background: #f5e3de
+
+  .code
+    padding: 0.3em 15px 0.3em 1em
+    width: 100%
+
+.gist .line,.gist .line-number
+  font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace
+  font-size: 1em
+  margin: 0 0 5px 0
+/* code highlight color*/
+.highlight
+  .comment
+  .title
+    color: #888
+  .meta 
+  .tag
+    color: #324977
+  .attr
+    color: #118a04
+  .string,
+  .value,
+  .inheritance,
+  .header,
+  .ruby .symbol,
+  .xml .cdatabody
+    color:  #920000
+  .keyword,
+  .javascript .function
+    color: #ec25ec
+  .number,
+  .preprocessor,
+  .built_in,
+  .literal,
+  .params,
+  .constant
+    color: #fb6a00
+  &.apacheconf
+    .code
+      .common,.nomarkup,.attribute,.variable,.cbracket,.keyword
+        color: #0086b3
+      .sqbracket
+        color: #df5000
+      .section,.tag
+        color: #63a35c
+  &.bash 
+    .code 
+      .literal,.built_in
+        color: #0086b3
+      .title
+        color: #795da3
+      .shebang
+        color: #969896
+      .variable
+        color: #999
+  &.coffeescript 
+    .code 
+      .subst,.regexp,.attribute
+        color: #df5000
+      .literal,.built_in,.number
+        color: #0086b3
+      .title
+        color: #795da3
+      .reserved,.attribute
+        color: #1d3e81
+  &.cpp,&.c
+    .code
+      .number,.built_in
+        color: #0086b3
+      .preprocessor
+        color: #df5000
+      .title
+        color: #795da3
+      .meta-keyword
+        color: #a71d5d
+  &.cs 
+    .code 
+      .preprocessor,.preprocessor .keyword
+        color: #999
+      .xmlDocTag,.doctag
+        color: #63a35c
+      .number,.built_in
+        color: #0086b3
+      .title
+        color: #795da3
+  &.css
+    .code 
+      .id,.class,.pseudo,.selector-pseudo
+        color: #795da3
+      .attr_selector,.value
+        color: #999
+      .attribute,.hexcolor,.number,.function
+        color: #0086b3
+      .at_rule,.important,.meta
+        color: #a71d5d    
+      .tag,.selector-tag
+        color: #63a35c   
+  &.diff
+    .code
+      .deletion
+        color: #bd2c00
+        background-color: #ffecec
+      .addition
+        color: #55a532
+        background-color: #eaffea
+  &.http
+    .code
+      .literal
+        color: #0086b3
+      .request
+        color: #a71d5d
+      .attribute,attr
+        color: #183691
+  &.ini
+    .code
+      .value,.keyword
+        color: #999
+      .setting,.attr
+        color: #a71d5d
+      .chunk,.meta
+        color: #795da3
+        font-weight: bold
+      .title,.section
+        color: #795da3
+  &.js
+    .code
+      .tag
+        .title
+          color: #999
+      .regexp
+        color: #df5000
+      .javadoc
+        color: #969896
+      .literal,.number
+        color: #0086b3
+      .built_in,.title
+        color: #795da3
+      .tag,.javadoctag
+        color: #a71d5d
+  &.java
+    .code
+      .title
+        color: #795da3
+      .number
+        color: #0086b3
+      .javadoc
+        color: #969896
+      .params
+        color: #1d3e81
+      .meta,.annotation,.javadoctag
+        color: #a71d5d
+  &.mak
+    .code
+      .title
+        color: #795da3
+      .constant
+        color: #999
+      .keyword,.meta-keyword
+        color: #0086b3        
+  &.json
+    .code
+      .attribute
+        color: #183691
+      .number,.literal
+        color: #0086b3
+  &.md
+    .code
+      .link_url,.link
+        text-decoration: underline
+      .link_reference,.symbol,.code
+        color: #0086b3
+      .value,.link_label,.strong,.emphasis,.blockquote,.quote,.section
+        color: #183691
+  &.nginx
+    .code
+      .title,.attribute
+        color: #a71d5d
+      .built_in,.literal
+        color: #0086b3
+      .regexp
+        color: #183691
+      .variable
+        color: #999
+  &.objectivec
+    .code
+      .title
+        color: #795da3
+      .preprocessor,.meta
+        color: #a71d5d
+        .title
+          color: #df5000
+      .literal,.number,.built_in
+        color: #0086b3
+      .meta-string
+        color: #183691
+  &.perl
+    .code
+      .title
+        color: #795da3
+      .regexp
+        color: #df5000
+      .sub
+        color: #795da3
+  &.php
+    .code
+      .title
+        color: #795da3
+      .regexp
+        color: #df5000
+      .phpdoc,.doctag
+        color: #a71d5d
+      .literal,.number
+        color: #0086b3
+  &.python
+    .code
+      .number
+        color: #0086b3
+      .decorator,.title,.meta
+        color: #795da3
+  &.ruby
+    .code
+      .prompt,.constant,.number,.subst .keyword,.symbol
+        color: #0086b3
+      .parent,.title
+        color: #795da3
+  &.sql
+    .code
+      .number
+        color: #0086b3
+      .built_in
+        color: #a71d5d
+  &.xml
+    .code
+      .tag
+        color: #999
+      .value
+        color: #183691
+      .title,.name
+        color: #63a35c
+      .attribute,.attr
+        color: #795da3
+  &.puppet
+    .code
+      .title
+        color: #795da3
+      .name
+        color: #a71d5d
+      .function
+        color: #0086b3
+      .attr
+        color: #0086b3
+  &.less
+    .code
+      .number,.hexcolor,.function,.attribute
+        color: #0086b3
+      .id,.pseudo,.class,.selector-id,.selector-class,.selector-tag
+        color: #795da3
+      .tag,.at_rule
+        color: #a71d5d
+      .built_in
+        color: #df5000
+  &.sass
+    .code
+      .number,.hexcolor,.function,.attribute
+        color: #0086b3
+      .tag,.selector-tag
+        color: #63a35c
+      .built_in
+        color: #df5000
+      .tag,.at_rule,.important
+        color: #a71d5d
+      .id,.pseudo,.class,.preprocessor,.selector-class,.selector-id
+        color: #795da3
+      .variable
+        color: #999
+  &.stylus
+    .code
+      .tag,.selector-tag
+        color: #63a35c
+      .at_rule
+        color: #a71d5d
+      .class,.id,.pseudo,.title,.selector-id,.selector-pseudo,.selector-class
+        color: #795da3
+      .number,.hexcolor,.attribute,.params
+        color: #0086b3
+  &.go
+    .code
+      .built_in,.constant
+        color: #0086b3
+      .typename
+        color: #a71d5d
+  &.swift
+    .code
+      .preprocessor
+        color: #a71d5d
+      .title
+        color: #795da3
+      .built_in,.number,.type
+        color: #0086b3
+  &.yml
+    .code
+      .number
+        color: #fb6a00
+      .line,.attr
+        color: #795da3
+      .line,.string,.type,.literal,.meta
+        color: #920000

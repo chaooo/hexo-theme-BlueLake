@@ -5,13 +5,9 @@
         a(href=config.root+"baidusitemap.xml")= __("baidusitemap")
         |  |  
       if theme.feed
-        a(href=config.root+"atom.xml")= __("rss")
+        a(href=config.root+"atom.xml")= __("footer_rss")
         |  |  
-      a(href=config.root+"about/")= __("about")
-      //- span 联系博主：
-      //-   a.fa.fa-email(href="mailto:#{theme.about.email}",target="_blank") 
-      //-   a.fa.fa-weibo(href="#{theme.about.weibo_url}",target="_blank")
-      //-   a.fa.fa-github(href="#{theme.about.github_url}",target="_blank") 
+      a(href=config.root+"about/")= __("contact_author")
     if theme.busuanzi == true
       p 本站总访问量：
         i#busuanzi_container_site_pv

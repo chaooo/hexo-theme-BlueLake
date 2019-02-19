@@ -49,6 +49,9 @@ git pull
 # Theme version
 version: 2.0.1
 
+# Theme tone
+dark: false #true/false  #Switch to true to experience dark themes
+
 # Header
 menu:
   - page: home

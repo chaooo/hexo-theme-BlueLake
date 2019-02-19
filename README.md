@@ -48,6 +48,9 @@ git pull
 # Theme version
 version: 2.0.1
 
+# Theme tone
+dark: false #true/false  #切换为true,即可体验深色主题
+
 # Header
 menu:
   - page: home

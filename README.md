@@ -46,7 +46,7 @@ git pull
 ##########################
 
 # Theme version
-version: 2.0.1
+version: 2.0.2
 
 # Theme tone
 dark: false #true/false  #切换为true,即可体验深色主题
@@ -117,7 +117,8 @@ comment:
     appkey: ##畅言(appkey)
 
 #Share
-baidu_share: true ## 百度分享
+local_share: true #本地分享
+baidu_share: #true ## 百度分享
 JiaThis_share: ##true ##JiaThis分享
 duoshuo_share: #true ##true 多说分享必须和多说评论一起使用。
 

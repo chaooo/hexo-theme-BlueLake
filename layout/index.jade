@@ -22,6 +22,8 @@ block content
             span.cy_cmt_participate(id = 'url::' + config.url +'/'+ post.path)
             = ''+ __('participate')
         p
+          if post.top
+            span= '【' + __('topped') + '】'
           span.date= post.date.format(config.date_format)
           if post.categories.length > 0
             span

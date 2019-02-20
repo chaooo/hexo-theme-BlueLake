@@ -3,7 +3,7 @@
 ##########################
 
 # Theme version
-version: 2.0.1
+version: 2.0.2
 
 # Theme tone
 dark: false #true/false
@@ -81,7 +81,8 @@ comment:
     appkey: ##畅言(appkey)
 
 #Share
-baidu_share: true ## 百度分享
+local_share: true ##本地分享
+baidu_share: #true ## 百度分享
 JiaThis_share: ##true ##JiaThis分享
 duoshuo_share: #true ##true 多说分享必须和多说评论一起使用。
 addToAny_share: # AddToAny share. Empty list hides. List items are service name at url. For ex: email for '<a href="https://www.addtoany.com/add_to/email?linkurl=...'

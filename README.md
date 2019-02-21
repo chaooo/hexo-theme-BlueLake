@@ -4,9 +4,9 @@
 
 一个简洁轻量化的响应式[Hexo](https://hexo.io/)博客主题。
 
-- [点击预览](http://chaoo.oschina.io/)
+- [点击预览](https://chaoo.oschina.io/)
 
-[![BlueLake template preview](http://obzf7z93c.bkt.clouddn.com/themeBlueLake.png "BlueLake template preview")](http://chaoo.oschina.io/)
+[![BlueLake template preview](http://obzf7z93c.bkt.clouddn.com/themeBlueLake.png "BlueLake template preview")](https://chaoo.oschina.io/)
 
 ## 安装
 

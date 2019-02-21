@@ -4,9 +4,9 @@
 
 A simple theme for [Hexo](https://hexo.io/) with great performance on different devices .
 
-- [Preview](http://chaoo.oschina.io/)
+- [Preview](https://chaoo.oschina.io/)
 
-[![BlueLake template preview](http://obzf7z93c.bkt.clouddn.com/themeBlueLake.png "BlueLake template preview")](http://chaoo.oschina.io/)
+[![BlueLake template preview](http://obzf7z93c.bkt.clouddn.com/themeBlueLake.png "BlueLake template preview")](https://chaoo.oschina.io/)
 
 ## Installation
 

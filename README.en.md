@@ -84,6 +84,7 @@ toc:
 # Static files
 js: js
 css: css
+share_path: share
 
 # Extensions
 Plugins:
@@ -105,6 +106,11 @@ baidusitemap:
 
 #Local search
 local_search: true ## Use a javascript-based local search engine, true/false.
+
+#Copyright
+copyright: 
+  enable: true #display article copyright information, true/false.
+  describe: #copyright description
 
 #Cmments
 comment:

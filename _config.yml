@@ -40,6 +40,7 @@ toc:
 # Static files
 js: js
 css: css
+share_path: share
 
 # Date_formats
 date_formats:
@@ -72,7 +73,7 @@ local_search: true ## Use a javascript-based local search engine, true/false.
 #Copyright
 copyright: 
   enable: true #display article copyright information, true/false.
-  describe: 转载请注明出处(必须保留原文作者署名原文链接) #copyright description
+  describe: #copyright description
 
 #Cmments
 comment:

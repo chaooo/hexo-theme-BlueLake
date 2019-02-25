@@ -110,6 +110,11 @@ local_search: true ## Use a javascript-based local search engine, true/false.
 copyright: 
   enable: true #display article copyright information, true/false.
   describe: #copyright description
+  
+# MathJax Support
+mathjax:
+  enable: false  #true/false.
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 #Cmments
 comment:

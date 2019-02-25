@@ -22,27 +22,13 @@ if theme.baidu_analytics
 if theme.local_search == true
   script(type='text/javascript', src=url_for(theme.js) + '/search.json.js' + '?v=' + theme.version)
 
-//- if theme.tinysou
-//-   script.
-//-     var option = {
-//-       engineKey: '#{theme.tinysou}'
-//-     };
-//-     (function(w,d,t,u,n,s,e){
-//-       s = d.createElement(t);
-//-       s.src = u;
-//-       s.async = 1;
-//-       w[n] = function(r){
-//-         w[n].opts = r;
-//-       };
-//-       e = d.getElementsByTagName(t)[0];
-//-       e.parentNode.insertBefore(s, e);
-//-     })(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
-//-     _ts(option);
-
-//- if theme.swiftype
-//-   script.
-//-     (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-//-     (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-//-     e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-//-     })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-//-     _st('install','#{theme.swiftype}','2.0.0');
+if theme.mathjax.enable
+  script(type='text/x-mathjax-config').
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  script(type='text/javascript', src=url_for(theme.mathjax.cdn), async)

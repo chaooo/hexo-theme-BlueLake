@@ -91,6 +91,16 @@ comment:
     appid: ## 畅言(appid)
     appkey: ##畅言(appkey)
 
+gitalk:
+  enable: false ## If you want to use Gitment comment system please set the value to true.
+  owner: ## Your GitHub ID, e.g. username
+  repo: ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
+  client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
+  admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
+  language: zh-CN ## Language
+  pagerDirection: last # Comment sorting direction, available values are last and first.
+
 #Share
 local_share: true ##本地分享
 baidu_share: #true ## 百度分享

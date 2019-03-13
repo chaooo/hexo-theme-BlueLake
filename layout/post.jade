@@ -29,7 +29,7 @@ block content
           p=  __("copyright_author") + ": " + config.author
           p= __("copyright_link") + ": " 
             a(href=url_for(config.url +'/'+ page.path))= config.url +'/'+ page.path
-          p= __("copyright_notice") + ": " + (theme.copyright.describe ? theme.copyright.describe : __("copyright_details"))
+          p!= __("copyright_notice") + ": " + (theme.copyright.describe ? theme.copyright.describe : __("copyright_details"))
     include _partial/tag
     .post-share
       include _partial/share

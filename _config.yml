@@ -125,7 +125,7 @@ busuanzi: true ## If you want to use Busuanzi page views please set the value to
 
 # About page
 about:
-  photo_url: http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
+  photo_url: http://cdn.chaooo.top/hexo/Avatar.jpg ## Your photo url
   items:
   - label: email
     url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com

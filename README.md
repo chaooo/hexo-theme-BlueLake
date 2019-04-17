@@ -6,7 +6,7 @@
 
 - [点击预览](https://chaoo.oschina.io/)
 
-[![BlueLake template preview](http://obzf7z93c.bkt.clouddn.com/themeBlueLake.png "BlueLake template preview")](https://chaoo.oschina.io/)
+[![BlueLake template preview](http://cdn.chaooo.top/hexo/BlueLake.jpg "BlueLake template preview")](https://chaoo.oschina.io/)
 
 ## 安装
 
@@ -144,7 +144,7 @@ busuanzi: true ## If you want to use Busuanzi page views please set the value to
 
 # About page
 about:
-  photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
+  photo_url: ## Your photo e.g. http://cdn.chaooo.top/hexo/Avatar.jpg
   items:
   - label: email
     url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
@@ -230,7 +230,7 @@ $ hexo new page 'about'
 ```YAML
 # About page
 about:
-  photo_url: ## Your photo e.g. http://obzf7z93c.bkt.clouddn.com/themeauthor.jpg
+  photo_url: ## Your photo e.g. http://cdn.chaooo.top/hexo/Avatar.jpg
   items:
   - label: email
     icon: fa-email

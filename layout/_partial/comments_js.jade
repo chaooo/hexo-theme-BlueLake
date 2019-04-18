@@ -115,7 +115,11 @@ if theme.comment.changyan.appid && theme.comment.changyan.appkey
       if(document.querySelector("#feedAv")){
         document.querySelector("[node-type=cmt-list]").appendChild(removeAD);
         document.querySelector("#removeAD").appendChild(document.querySelector("#feedAv"));
-        removeElement(document.querySelectorAll("#feedAv")[0]);
+        //- removeElement(document.querySelectorAll("#feedAv")[0]);
+        var feedAv = document.querySelector("#feedAv").children;
+        for( item of feedAv){
+          item.style.display = 'none'
+        }
         document.querySelector("#removeAD").style.display="none"
         clearInterval(adInterval1);
       }

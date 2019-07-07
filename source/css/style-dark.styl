@@ -276,6 +276,7 @@ body
       position: absolute
       left: 15px
       top: 9px
+      color: #40759b
   input
     box-sizing border-box
     height: 32px
@@ -309,16 +310,16 @@ body
     border-style: solid
     border-color: #adc2d7 transparent
     left: 56px
-    top: -12px
+    top: -13px
   &:after 
     content ''
     position: absolute
     display: inline-block
     border-width: 0 12px 12px 12px
     border-style: solid
-    border-color: #FFF transparent
+    border-color: rgba(0, 0, 0, 0.5) transparent
     left: 56px
-    top: -10px    
+    top: -12px    
 #result-mask
   position: fixed
   left:0 
@@ -556,13 +557,15 @@ body
     font-weight bold
     font-size 24px 
     letter-spacing: -1px;
-    background: #D8E2EB
+    background: #010302
     height: 100px;
     width: 100px;
     border-radius: 50%;
     text-align center
     line-height: 100px;
     color: #5483B1
+    -webkit-box-shadow: 0 0 10px #adc2d7 inset
+    box-shadow: 0 0 10px #adc2d7 inset
     &:before 
       font-family: "iconfont" !important;
       font-weight normal
@@ -570,7 +573,7 @@ body
       margin-right .1em
 .archive-wrap
   position: relative
-  border-left: 2px solid #D8E2EB
+  border-left: 2px solid #40759b
   margin-left: 140px
   padding: 3em 0;
   &.tag-cat
@@ -582,7 +585,7 @@ body
     width: 10px
     height: 10px
     border-radius: 50%
-    background: #D8E2EB
+    background: #40759b
   &:before
     top: 0
   &:after

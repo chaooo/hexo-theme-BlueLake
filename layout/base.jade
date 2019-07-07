@@ -24,7 +24,6 @@ html(lang='#{config.language}')
     meta(name='description', content=config.description)
     if config.keywords
       meta(name="keywords",content=config.keywords)
-    block title
     link(rel="stylesheet", type="text/css", href="//fonts.loli.net/css?family=Source+Code+Pro")
     if theme.dark
       link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/style-dark.css' + '?v=' + theme.version)
@@ -38,6 +37,9 @@ html(lang='#{config.language}')
     link(rel='apple-touch-icon-precomposed', href=url_for('apple-touch-icon.png'))
     if config.feed
       link(rel='alternate', type=feed_type, href=url_for(config.feed.path))
+    if theme.comment.gitalk.enable
+      link(rel='stylesheet', type='text/css', href="https://unpkg.com/gitalk/dist/gitalk.css?v=" + theme.version)
+    block title
 
   body
     .body_container

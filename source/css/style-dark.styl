@@ -129,6 +129,7 @@ body
   width:100%
   height:100%
   background: #010302 url(../img/bg-dark.jpg) no-repeat top center
+  background-attachment: fixed
 .layout-g 
   letter-spacing: -.31em
   *letter-spacing normal
@@ -219,6 +220,7 @@ body
     -webkit-box-shadow: 0 0 20px #adc2d7 inset
     box-shadow: 0 0 20px #adc2d7 inset
     border: 1px solid #adc2d7
+    background: rgba(0,0,0,0.8)
     a 
       color:#999
       &:hover 
@@ -351,7 +353,7 @@ body
       white-space: nowrap
       text-overflow: ellipsis
       font-size: 14px
-      color: #40759b
+      color: #b3d2ef
       &:hover 
         text-decoration underline
     .time
@@ -377,6 +379,7 @@ body
   box-shadow: 0 0 20px #adc2d7 inset
   border: 1px solid #adc2d7
   margin-bottom: 40px
+  background: rgba(0,0,0,0.8)
   .post-title
     margin: 0
     color: #40759b
@@ -677,6 +680,7 @@ body
     color: #999
     text-align: center 
     font-size .925em
+    background: rgba(0,0,0,0.8)
     a
       color: #40759b
       margin 0 6px
@@ -724,9 +728,10 @@ body
     line-height: 25px
     padding: 5px 9px
     text-align: center
-    -webkit-box-shadow: 0 0 10px #adc2d7 inset;
-    box-shadow: 0 0 10px #adc2d7 inset;
+    -webkit-box-shadow: 0 0 5px #adc2d7 inset;
+    box-shadow: 0 0 5px #adc2d7 inset;
     border: 1px solid #adc2d7
+    background: rgba(0,0,0,0.8)
     &:hover
       border-color: #5483b1;
     &.prev:before
@@ -942,22 +947,6 @@ table
     position: relative
     bottom: 0
     width: 100%
-    label 
-      color:#FFF
-    input 
-      color:#FFF
-      background: transparent
-      border: 1px solid #e2eaf1;
-      -webkit-box-shadow: 0 0 10px #adc2d7 inset;
-      box-shadow: 0 0 10px #adc2d7 inset;
-      &:-ms-input-placeholder
-        color: #FFF
-      &:-moz-placeholder
-        color: #FFF
-      &::-moz-placeholder
-        color: #FFF
-      &::-webkit-input-placeholder
-        color: #FFF
   #nav-menu
     position: relative
     text-align: center

@@ -82,14 +82,6 @@ mathjax:
 
 #Cmments
 comment:
-  duoshuo: #chaooo ## duoshuo_shortname
-  disqus: ## disqus_shortname
-  livere: ## 来必力(data-uid)
-  uyan: ## 友言(uid)
-  cloudTie: ## 网易云跟帖(productKey)
-  changyan: ## 畅言需在下方配置两个参数，此处不填。
-    appid: ## 畅言(appid)
-    appkey: ##畅言(appkey)
   gitalk:
     enable: false ## If you want to use Gitment comment system please set the value to true.
     owner: ## Your GitHub ID, e.g. username
@@ -99,6 +91,14 @@ comment:
     admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
     language: zh-CN ## Language
     pagerDirection: last # Comment sorting direction, available values are last and first.
+  duoshuo: ## duoshuo_shortname
+  disqus: ## disqus_shortname
+  livere: ## 来必力(data-uid)
+  uyan: ## 友言(uid)
+  cloudTie: ## 网易云跟帖(productKey)
+  changyan: ## 畅言需在下方配置两个参数，此处不填。
+    appid: ## 畅言(appid)
+    appkey: ##畅言(appkey)
 
 #Share
 share:
@@ -120,6 +120,8 @@ baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 1006843030519956000
 
 # Miscellaneous
 show_category_count: true ## If you want to show the count of categories in the sidebar widget please set the value to true.
+show_archive_count: true ## If you want to show the count of archives in the sidebar widget please set the value to true.
+show_archive_type: yearly ## defalut monthly
 widgets_on_small_screens: true ## Set to true to enable widgets on small screens.
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 

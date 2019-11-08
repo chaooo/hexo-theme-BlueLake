@@ -4,7 +4,7 @@
 
 一个简洁轻量化的响应式[Hexo](https://hexo.io/)博客主题。
 
-- [点击预览](https://chaooo.github.io/)
+- 点击预览[【深色主题】](https://chaooo.github.io/)、[【浅色主题】](https://chaoo.oschina.io/)
 
 [![BlueLake template preview](http://cdn.chaooo.top/hexo/BlueLake.jpg "BlueLake template preview")](https://chaooo.github.io/)
 

@@ -6,7 +6,7 @@
 
 - 点击预览[【深色主题】](https://chaooo.github.io/)、[【浅色主题】](https://chaoo.oschina.io/)
 
-[![BlueLake template preview](http://cdn.chaooo.top/hexo/BlueLake.jpg "BlueLake template preview")](https://chaooo.github.io/)
+[![BlueLake template preview](http://cdn.chaooo.top/hexo/BlueLake.jpg)](https://chaooo.github.io/)
 
 ## 安装
 
@@ -109,7 +109,7 @@ local_search: true ## Use a javascript-based local search engine, true/false.
 #Copyright
 copyright: 
   enable: true #display article copyright information, true/false.
-  describe: #copyright description
+  describe: 转载请注明出处 #copyright description
   
 # MathJax Support
 mathjax:

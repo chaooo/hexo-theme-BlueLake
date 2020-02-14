@@ -16,12 +16,17 @@
             event.stopPropagation();
         }, false);
         fixBox.addEventListener("click", () => {
-            fixBox.removeChild(newImg);
-            fixBox.classList.add('hide');
+            closeImg();
         }, false);
         fixBox.querySelector('.close').addEventListener("click", () => {
-            fixBox.removeChild(newImg);
-            fixBox.classList.add('hide');
+            closeImg();
         }, false);
+    }
+    function closeImg(){
+        const img = fixBox.querySelector('img');
+        if(img){
+            fixBox.removeChild(img);
+        }
+        fixBox.classList.add('hide');
     }
 })();

@@ -11,7 +11,7 @@ s,i,u,em
   font-style: normal
 img,button
   border: none
-form,input,select,option 
+form,input,select,option
   outline none
 input:-webkit-autofill
   -webkit-box-shadow: 0 0 0px 1000px white inset
@@ -23,7 +23,7 @@ a, button.submit
   -webkit-transition: all .1s ease-in
   -moz-transition: all .1s ease-in
   -o-transition: all .1s ease-in
-  transition: all .1s ease-in  
+  transition: all .1s ease-in
 a
   &:focus
     outline: none
@@ -31,10 +31,10 @@ a
     color: #40759b
 .clear
   clear: both
-.hide 
+.hide
   display none
   opacity: 0
-  height: 0px
+  height: 0
 blockquote,.stressed
   -moz-box-sizing: border-box
   box-sizing: border-box
@@ -46,8 +46,8 @@ blockquote,.stressed
 strong, b, em
   font-weight: bold
 .hidden1
-  display: none 
-  
+  display: none
+
 /* iconfont */
 @font-face
   font-family: "iconfont"
@@ -131,7 +131,7 @@ body
   height:100%
   background: #010302 url(../img/bg-dark.jpg) no-repeat top center
   background-attachment: fixed
-.layout-g 
+.layout-g
   letter-spacing: -.31em
   *letter-spacing normal
   word-spacing: -.43em
@@ -150,8 +150,8 @@ body
   letter-spacing: normal
   word-spacing: normal
   vertical-align: top
-  text-rendering: auto  
-.layout-l   
+  text-rendering: auto
+.layout-l
   width: 75%
   *width: 74.969%
 .layout-r
@@ -191,7 +191,7 @@ body
   white-space nowrap
   color: #FFF
   text-shadow: 1px 3px 6px #113f6e
-    
+
 #nav-menu
   margin: 20px 0
   padding: 0
@@ -209,12 +209,12 @@ body
       border-bottom: 1px solid #fff
       -webkit-box-shadow: 0 0 10px #adc2d7 inset
       box-shadow: 0 0 10px #adc2d7 inset
-/* sidebar */      
-#sidebar 
+/* sidebar */
+#sidebar
   word-wrap: break-word
   -webkit-transition: all .6s ease-in-out;
   transition: all .6s ease-in-out;
-  .widget 
+  .widget
     margin-bottom: 20px
     padding: 10px 20px 20px 20px
     border-radius: 4px
@@ -222,9 +222,9 @@ body
     box-shadow: 0 0 20px #adc2d7 inset
     border: 1px solid #adc2d7
     background: rgba(0,0,0,0.8)
-    a 
+    a
       color:#999
-      &:hover 
+      &:hover
         color: #40759b
         text-decoration underline
     .widget-title,.comments-title
@@ -258,9 +258,9 @@ body
       &:after
         content: ")"
   .search-pla
-    display block 
+    display block
     height:52px
-#search-form 
+#search-form
   position: absolute
   bottom: -52px
   right:0
@@ -273,7 +273,7 @@ body
     margin 0
     width 100%
     height 100%
-    &:before  
+    &:before
       font-family: "iconfont" !important
       content: '\e007'
       position: absolute
@@ -292,7 +292,7 @@ body
     -webkit-box-shadow: 0 0 20px #adc2d7 inset
     box-shadow: 0 0 20px #adc2d7 inset
     border: 1px solid #adc2d7
-#result-wrap 
+#result-wrap
   position: absolute
   top: 56px
   width: 120%;
@@ -314,7 +314,7 @@ body
     border-color: #adc2d7 transparent
     left: 56px
     top: -13px
-  &:after 
+  &:after
     content ''
     position: absolute
     display: inline-block
@@ -322,11 +322,11 @@ body
     border-style: solid
     border-color: rgba(0, 0, 0, 0.5) transparent
     left: 56px
-    top: -12px    
+    top: -12px
 #result-mask
   position: fixed
-  left:0 
-  top:0   
+  left:0
+  top:0
 #search-result
   width:100%
   box-sizing content-box
@@ -336,7 +336,7 @@ body
   overflow-y auto
   .tips
     text-align center
-    .fa 
+    .fa
       font-size: 60px
       color: #B3D2EF
   .item
@@ -344,8 +344,8 @@ body
     padding 8px 0
     &:first-child
       border-top none
-    a 
-      &:hover 
+    a
+      &:hover
         text-decoration none
     .title
       white-space: nowrap
@@ -355,22 +355,60 @@ body
       text-overflow: ellipsis
       font-size: 14px
       color: #b3d2ef
-      &:hover 
+      &:hover
         text-decoration underline
     .time
       text-align: right
-      font-size 12px 
+      font-size 12px
     .tags
       overflow: hidden
       white-space: nowrap
       text-overflow: ellipsis
-      span 
+      span
         display inline-block
-        margin-right 5px 
-        font-size 12px 
+        margin-right 5px
+        font-size 12px
         &:before
           font-family: "iconfont" !important
           content: '\e008'
+#fullscreen-img
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: 99999999
+  display: -webkit-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  background: rgba(0, 0, 0, .8)
+  cursor: -webkit-zoom-out
+  cursor: zoom-out
+  &.hide
+    display: none
+    opacity: 0
+    height: 0
+  img
+    width: auto
+    height: auto
+    max-width: 1200px
+    max-height: 100%
+    cursor: default
+  .close
+    position: absolute
+    right: 0
+    top: 0
+    width: 40px
+    height: 40px
+    line-height: 40px
+    text-align: center
+    border-radius: 50%
+    font-size: 22px
+    background: rgba(255, 255, 255, .6)
+    color: #021825
+    &:after
+      content:'\26CC';
 
 /* post */
 .post
@@ -388,11 +426,11 @@ body
     border-bottom: 1px solid #D8E2EB
     padding-bottom: 10px
     font-weight bold
-    font-size 22px 
+    font-size 22px
     line-height: 1.1
     a
       color: #40759B
-      &:hover 
+      &:hover
         text-decoration underline
   .post-meta
     padding: 0
@@ -426,7 +464,7 @@ body
         font-family: "iconfont"!important
         content: "\e002"
         padding-right: 0.3em
-    .date 
+    .date
       &:before
         font-family: "iconfont"!important
         content: "\e005"
@@ -496,13 +534,15 @@ body
         position: relative
         text-align: center
     blockquote,.stressed
-      p 
+      p
         margin: 0
     img
       max-width: 100%
       padding: 0.5em 0
       margin: auto
       display: block
+      cursor: -webkit-zoom-in
+      cursor: zoom-in
     hr
       margin: 2.4em auto
       border: none
@@ -523,7 +563,7 @@ body
         background: #050f1b
         font-size: .95em
         word-break: break-all
-      a 
+      a
         color: #40759b
         padding-bottom: 2px
         word-break: break-all
@@ -562,7 +602,7 @@ body
   h2
     margin: 0 0 15px -51px
     font-weight bold
-    font-size 24px 
+    font-size 24px
     letter-spacing: -1px;
     background: #010302
     height: 100px;
@@ -573,7 +613,7 @@ body
     color: #5483B1
     -webkit-box-shadow: 0 0 10px #adc2d7 inset
     box-shadow: 0 0 10px #adc2d7 inset
-    &:before 
+    &:before
       font-family: "iconfont" !important;
       font-weight normal
       content: "\e005";
@@ -598,7 +638,7 @@ body
   &:after
     bottom 0
   .listing
-    li 
+    li
       margin-bottom 50px
       position: relative
       a
@@ -614,7 +654,7 @@ body
           width: 20px
           height: 20px
           border-radius: 50%
-          background: #FFF 
+          background: #FFF
           border 1px solid #D8E2EB
           -webkit-box-shadow: 0 0 4px #D8E2EB inset
           box-shadow: 0 0 4px #D8E2EB inset
@@ -630,19 +670,19 @@ body
           background: #5483b1
           -webkit-box-shadow: 0 0 3px #D8E2EB inset
           box-shadow: 0 0 3px #D8E2EB inset
-    li:hover 
-      a:before 
+    li:hover
+      a:before
         border 1px solid #5483B1
         -webkit-box-shadow: 0 0 4px #5483B1 inset
-        box-shadow: 0 0 4px #5483B1 inset 
+        box-shadow: 0 0 4px #5483B1 inset
       a:after
         background: #5483B1
-      .tite 
+      .tite
         border-bottom: 1px solid #5483B1
         &:after
           background: #5483B1
       .date
-        border: 1px solid #5483B1     
+        border: 1px solid #5483B1
   .tite
     position:relative
     bottom: -4px
@@ -682,32 +722,32 @@ body
   .footer-info
     line-height: 2
     color: #999
-    text-align: center 
+    text-align: center
     font-size .925em
     background: rgba(0,0,0,0.8)
     a
       color: #40759b
       margin 0 6px
     span
-      margin 0 6px 
-    .fa 
+      margin 0 6px
+    .fa
       display inline-block
       margin 0 6px 0 0
       padding 0 2px
-      &.fa-github 
+      &.fa-github
         color #FFF
-        &:hover 
+        &:hover
           color:#4078c0
       &.fa-weibo
         color: #E6162D
-        &:hover 
+        &:hover
           color #FF9933
       &.fa-email
         color: #756E78
-        &:hover 
+        &:hover
           color #FFF
     p
-      a 
+      a
         margin 0
 /* page navigator */
 .page-navigator
@@ -718,6 +758,7 @@ body
   .space
     border: none
     padding: 5px 5px
+    margin: 0 5px 5px 0
   .current
     background: #0c364e;
     border-color: #5483b1;
@@ -752,7 +793,7 @@ body
   font-size: 22px
   color: #999
   font-weight: bold
-  .fa 
+  .fa
     display: inline-block
     background: rgba(0,0,0,0.8)
     color #5483b1
@@ -774,7 +815,7 @@ body
       padding-left: 0.15em
     &:hover
       -webkit-box-shadow: 0 -1px 4px #5483B1 inset
-      box-shadow: 0 -1px 4px #5483B1 inset   
+      box-shadow: 0 -1px 4px #5483B1 inset
 /* post navigator*/
 .post-nav
   overflow: hidden
@@ -854,7 +895,7 @@ body
 .author-page
   padding 40px 0 20px 0
   text-align center
-  &:after 
+  &:after
     content ""
     clear both
     display block
@@ -865,7 +906,7 @@ body
     padding 0 30px 30px 30px
     width: 180px
     height: 180px
-    img 
+    img
       width: 100%
       height: 100%
       padding 0
@@ -881,23 +922,23 @@ body
     text-align left
     .fa
       margin-right .4em
-      &:before 
+      &:before
         margin-right .2em
 /* toc*/
 #toc
-  li 
+  li
     font-weight bold
   .toc-child
     margin-left: .6em
     padding-left: 0
-    li 
+    li
       font-weight normal
     li:first-of-type
       margin-top 0
-    li:last-of-type 
+    li:last-of-type
       margin-bottom 0
 .fixed
-  position:fixed 
+  position:fixed
   top:0
 .fixed.scroll
   overflow-y: scroll
@@ -933,9 +974,9 @@ table
     padding: 0 30px
   .content_container
     padding-right: 20px
-  #sidebar .widget 
+  #sidebar .widget
     margin-bottom: 15px
-  .post 
+  .post
     padding: 20px
 /* middle*/
 @media print,screen and (max-width: 48em)
@@ -966,7 +1007,7 @@ table
     padding-right: 0
   .body_container
     padding: 0 20px
-  .post 
+  .post
     padding: 15px;
    .post-title
      font-size 20px
@@ -1003,9 +1044,9 @@ table
     &.tag-cat
       margin-left: 10px
     .listing
-      li 
+      li
         margin-bottom: 30px
-    .tite 
+    .tite
       padding: 0 15px
       font-size 14px
     .date
@@ -1013,11 +1054,11 @@ table
       width: 60px
       border-radius: 15px 15px 0 15px
       font-size: 12px
-@media print,screen and (max-width: 25em) 
+@media print,screen and (max-width: 25em)
   #nav-menu
     a
       padding: 0 10px 0 8px
-      i.fa 
+      i.fa
         font-size 14px
   .post
    .post-title
@@ -1028,7 +1069,7 @@ table
     margin-left: 56px
     &.tag-cat
       margin-left: 0px
-    .tite 
+    .tite
       padding: 0 5px 0 10px
   .author-page
     .author
@@ -1047,7 +1088,7 @@ table
   a
     &:hover
       color: #40759b !important
-  .ds-post-button 
+  .ds-post-button
     background: #40759b !important
-    &:hover 
+    &:hover
       background: #608CB7 !important

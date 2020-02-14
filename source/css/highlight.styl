@@ -1,11 +1,11 @@
 /* syntax highlight*/
-pre 
-  width: 100%      
+pre
+  width: 100%
   position: relative
   border: none
   padding: 0
   margin: 0
-  code 
+  code
     display block
     box-sizing: border-box
     overflow-x: auto
@@ -43,7 +43,7 @@ figure.highlight,.codeblock
     padding-bottom: 10px
     border-collapse: collapse
     position: relative
-    display block 
+    display block
     overflow-x: auto
   pre,.gutter,.code,.tag
     background-color: inherit
@@ -65,7 +65,7 @@ figure.highlight,.codeblock
       color: #aaaaaa
   .line
     font-size: 13px
-    color: #333
+    color: #000
     &.marked
       background: #f5e3de
 
@@ -80,9 +80,10 @@ figure.highlight,.codeblock
 /* code highlight color*/
 .highlight
   .comment
+    color: #aeaeae
   .title
     color: #888
-  .meta 
+  .meta
   .tag
     color: #324977
   .attr
@@ -112,8 +113,8 @@ figure.highlight,.codeblock
         color: #df5000
       .section,.tag
         color: #63a35c
-  &.bash 
-    .code 
+  &.bash
+    .code
       .literal,.built_in
         color: #0086b3
       .title
@@ -122,8 +123,8 @@ figure.highlight,.codeblock
         color: #969896
       .variable
         color: #333
-  &.coffeescript 
-    .code 
+  &.coffeescript
+    .code
       .subst,.regexp,.attribute
         color: #df5000
       .literal,.built_in,.number
@@ -142,8 +143,8 @@ figure.highlight,.codeblock
         color: #795da3
       .meta-keyword
         color: #a71d5d
-  &.cs 
-    .code 
+  &.cs
+    .code
       .preprocessor,.preprocessor .keyword
         color: #333
       .xmlDocTag,.doctag
@@ -153,7 +154,7 @@ figure.highlight,.codeblock
       .title
         color: #795da3
   &.css
-    .code 
+    .code
       .id,.class,.pseudo,.selector-pseudo
         color: #795da3
       .attr_selector,.value
@@ -161,9 +162,9 @@ figure.highlight,.codeblock
       .attribute,.hexcolor,.number,.function
         color: #0086b3
       .at_rule,.important,.meta
-        color: #a71d5d    
+        color: #a71d5d
       .tag,.selector-tag
-        color: #63a35c   
+        color: #63a35c
   &.diff
     .code
       .deletion
@@ -225,7 +226,7 @@ figure.highlight,.codeblock
       .constant
         color: #333
       .keyword,.meta-keyword
-        color: #0086b3        
+        color: #0086b3
   &.json
     .code
       .attribute

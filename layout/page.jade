@@ -23,6 +23,9 @@ block content
       #comments
         include _partial/comments
 block pageOnly
+  #fullscreen-img.hide
+     span.close
+  script(type='text/javascript', src=url_for(theme.js) + '/imgview.js' + '?v=' + theme.version, async)
   script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
   if theme.comment
     include _partial/comments_js

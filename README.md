@@ -338,6 +338,9 @@ comment:
     pagerDirection: last # Comment sorting direction, available values are last and first.
 ```
 
+## 更多配置
+更多详细配置请移步：[【Hexo博客折腾】BlueLake博客主题的详细配置](https://chaooo.github.io/article/20161229.html)
+
 
 ## Solutions
 - 检查您当前的hexo的根目录，是否包含`source /`，`themes /`等。

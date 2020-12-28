@@ -144,6 +144,13 @@
   line-height: line-height
   margin: 0 article-padding article-padding
 
+.article-tag-wrap
+  margin-top: 30px
+  padding-bottom: 15px
+  border-bottom: 1px solid #d8e2eb;
+  .article-tag-list-item
+    float: right
+
 .article-tag-list-item
   float: left
   margin-right: 10px
@@ -157,19 +164,14 @@
   &:before
     content: "#"
 
-// .article-comment-link
-//   float: right
-//   &:before
-//     content: "\f075"
-//     font-family: font-icon
-//     padding-right: 8px
-
+.article-comment-link
+  float: right
 
 #article-nav
   clearfix()
   position: relative
+  margin: 10px 0 30px
   @media mq-normal
-    margin: block-margin 0
     &:before
       absolute-center(8px)
       content: ""
@@ -182,14 +184,14 @@
   text-shadow: 0 1px #fff
   color: color-grey
   box-sizing: border-box
-  margin-top: block-margin
+  margin-bottom: block-margin
   text-align: center
   display: block
   &:hover
     color: color-default
   @media mq-normal
     width: 50%
-    margin-top: 0
+    margin-bottom: 0
 
 #article-nav-newer
   @media mq-normal

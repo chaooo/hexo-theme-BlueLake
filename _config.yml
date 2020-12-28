@@ -25,6 +25,12 @@ banner: "images/banner.jpg"
 # Content
 excerpt_link: Read More
 fancybox: true
+copyright:
+  enable: true #display article copyright information, true/false.
+  describe: '转载请注明出处.' #copyright description
+share:
+  local_share: true
+  baidu_share: false
 
 
 # Sidebar
@@ -35,7 +41,6 @@ widgets:
 - category
 - archive
 - tag
-
 
 
 # display widgets at the bottom of index pages (pagination == 2)
@@ -60,9 +65,9 @@ fb_app_id:
 
 # valine comment system. https://valine.js.org
 valine:
-  enable: false # if you want use valine,please set this value is true
-  appId:  # leancloud application app id
-  appKey:  # leancloud application app key
+  enable: true # if you want use valine,please set this value is true
+  appId: vLPzzKBu42xSePsXQ9SMFMnu-gzGzoHsz # leancloud application app id
+  appKey: SXT5mro1fOk42Qd9iF4lqApa # leancloud application app key
   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
   verify: false # valine verify code (true/false)
   pageSize: 10 # comment list page size

@@ -12,6 +12,12 @@
       <% } %>
       <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
       <%- partial('post/category') %>
+      <% if (post.comments && theme.valine.enable && theme.valine.appId && theme.valine.appKey ){ %>
+        <a href="<%- url_for(post.path) %>#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="<%- url_for(post.path) %>" itemprop="commentCount"></span>
+          <i class="fa fa-commt"></i>
+        </a>
+      <% } %>
     </div>
     <div class="e-content article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
@@ -21,21 +27,38 @@
       <% } %>
     </div>
     <footer class="article-footer">
-      <!-- <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" data-title="<%= post.title %>" class="article-share-link"><%= __('share') %></a>
-      <% if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
-      <% } %>
-      <% if (post.comments && theme.valine.enable && theme.valine.appId && theme.valine.appKey ){ %>
-        <a href="<%- url_for(post.path) %>#comments" class="article-comment-link">
-          <span class="post-comments-count valine-comment-count" data-xid="<%- url_for(post.path) %>" itemprop="commentCount"></span>
-          <%= __('comment') %>
-        </a>
-      <% } %> -->
-      <%- partial('post/tag') %>
-      <% if (post.excerpt && theme.excerpt_link){ %>
+      <% if (post.excerpt && index && theme.excerpt_link){ %>
+        <%- partial('post/tag') %>
         <p class="article-more-link">
           <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
         </p>
+      <% } else { %>
+        <div class="article-tag-wrap">
+          <%- partial('post/tag') %>
+          
+          <% if (theme.share.local_share){ %>
+            <div class="social-share">
+              <span><%= __('shareto') %>:</span>
+            </div>
+          <% } %>
+          
+          <% if (theme.share.baidu_share){ %>
+            <div class="bdsharebuttonbox">
+              <span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod"><%= __('shareto') %>:</span>
+              <a href="#" class="bds_more" data-cmd="more"></a>
+              <a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享"></a>
+              <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+              <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+              <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+              <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+              <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+              <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+              <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+              <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            </div>
+          <% } %>
+          
+        </div>
       <% } %>
     </footer>
   </div>
@@ -44,15 +67,6 @@
   <% } %>
 </article>
 
-<% if (!index && post.comments && config.disqus_shortname){ %>
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-<% } %>
 <% if (!index && post.comments && theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
-  <section id="comments" class="vcomment">
-
-  </section>
+  <section id="comments" class="vcomment"></section>
 <% } %>

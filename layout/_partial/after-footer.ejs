@@ -21,13 +21,23 @@
 <% if (theme.busuanzi){ %>
   <%- js('https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js') %>
 <% } %>
+<% if (theme.share.local_share){ %>
+  <%- js('localshare/js/social-share.js') %>
+  <%- js('localshare/js/qrcode.js') %>
+<% } %>
+<% if (theme.share.baidu_share){ %>
+  <script>
+    window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+  </script>
+<% } %>
+
 
 <%- js('js/script') %>
 <%- partial('gauges-analytics') %>
 
 <% if(theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
   <%- js('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js') %>
-<script>
+  <script>
     var GUEST_INFO = ['nick','mail','link'];
     var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
         return GUEST_INFO.indexOf(item) > -1
@@ -45,5 +55,5 @@
         avatar:'<%= theme.valine.avatar %>',
         lang:'<%= theme.valine.lang %>'
     });
-</script>
+  </script>
 <% } %>

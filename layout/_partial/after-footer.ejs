@@ -18,6 +18,9 @@
 <% if (theme.fancybox){ %>
   <%- js('fancybox/jquery.fancybox.min.js') %>
 <% } %>
+<% if (theme.busuanzi){ %>
+  <%- js('https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js') %>
+<% } %>
 
 <%- js('js/script') %>
 <%- partial('gauges-analytics') %>

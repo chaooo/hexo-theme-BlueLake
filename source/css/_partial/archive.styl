@@ -48,14 +48,44 @@
 #page-nav
   clearfix()
   margin: block-margin auto
-  background: #fff
-  box-shadow: 1px 2px 3px #ddd
-  border: 1px solid color-border
-  border-radius: 3px
   text-align: center
   color: color-grey
   overflow: hidden
-  a, span
+  .current
+    background: #FFF
+    &:hover
+      border-bottom-color: #adc2d7
+  .page-number,.extend
+    display: inline-block
+    margin: 0 5px 5px 0
+  .space
+    border: none
+    padding: 5px 5px
+    margin: 0 5px 5px 0
+  a,.page-number
+    display: inline-block
+    height: 25px
+    line-height: 25px
+    padding: 5px 10px
+    text-align: center
+    color: #40759b;
+    -webkit-box-shadow: 1px 2px 3px #adc2d7
+    box-shadow: 1px 2px 3px #adc2d7
+    border: 1px solid #adc2d7
+    text-decoration: none
+    &.prev:before
+        font-family: "iconfont"!important
+        content: "\e00f"
+        padding-right: 0.3em
+    &.next:after
+        font-family: "iconfont"!important
+        content: "\e00e"
+        padding-left: 0.3em
+  a:hover
+    text-decoration: underline
+
+  
+/*  a, span
     padding: 10px 20px
     line-height: 1
     height: 2ex
@@ -77,4 +107,4 @@
     color: color-default
     font-weight: bold
   .space
-    color: color-border
+    color: color-border */

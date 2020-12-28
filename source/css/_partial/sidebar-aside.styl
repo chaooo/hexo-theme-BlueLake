@@ -4,7 +4,10 @@
 
 .widget-wrap
   @extend $block
-  margin: block-margin 0
+  margin: 20px 0
+  padding: 10px 20px 20px 20px
+  &:first-child
+    margin-top: block-margin
 
 .widget-title
   @extend $block-caption
@@ -12,11 +15,11 @@
 .widget
   color: color-sidebar-text
   text-shadow: 0 1px #fff
-  background: color-widget-background
-  box-shadow: 0 -1px 4px color-widget-border inset
-  border: 1px solid color-widget-border
-  padding: 15px
-  border-radius: 3px
+  li 
+    padding-top: 2px
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
   a
     color: color-link
     text-decoration: none

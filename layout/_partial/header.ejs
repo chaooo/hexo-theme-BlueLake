@@ -13,7 +13,7 @@
     <div id="header-inner" class="inner">
       <nav id="main-nav">
         <% for (var i in theme.menu){ %>
-          <a class="main-nav-link" href="<%- url_for(theme.menu[i].directory) %>"><i class="fa <%= theme.menu[i].icon %>"></i><%= __(theme.menu[i].page) %></a>
+          <a class="main-nav-link" href="<%- url_for(theme.menu[i].directory) %>"><i class="fa <%= theme.menu[i].icon %>"></i> <%= __(theme.menu[i].page) %></a>
         <% } %>
       </nav>
     </div>

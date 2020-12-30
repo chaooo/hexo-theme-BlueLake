@@ -51,7 +51,7 @@ index_widgets:
 
 # Widget behavior
 archive_type: 'monthly'
-show_count: false
+show_count: true
 recent_posts_limits: 5
 
 # Miscellaneous

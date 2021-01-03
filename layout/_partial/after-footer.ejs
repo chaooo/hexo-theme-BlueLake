@@ -1,17 +1,3 @@
-<% if (config.disqus_shortname){ %>
-<script>
-  var disqus_shortname = '<%= config.disqus_shortname %>';
-  <% if (page.permalink){ %>
-  var disqus_url = '<%= page.permalink %>';
-  <% } %>
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.async = true;
-    dsq.src = 'https://' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<% } %>
 
 <%- js('js/jquery-3.4.1.min.js') %>
 <%- js('js/search.json.js') %>
@@ -23,6 +9,10 @@
 <% if (theme.fancybox){ %>
   <%- js('fancybox/jquery.fancybox.min.js') %>
 <% } %>
+
+<%- js('js/script') %>
+<%- partial('gauges-analytics') %>
+
 <% if (theme.busuanzi){ %>
   <%- js('https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js') %>
 <% } %>
@@ -36,49 +26,4 @@
   </script>
 <% } %>
 
-
-<%- js('js/script') %>
-<%- partial('gauges-analytics') %>
-
-<% if(theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
-  <%- js('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js') %>
-  <script>
-    var GUEST_INFO = ['nick','mail','link'];
-    var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
-        return GUEST_INFO.indexOf(item) > -1
-    });
-    var notify = '<%= theme.valine.notify %>' == true;
-    var verify = '<%= theme.valine.verify %>' == true;
-    new Valine({
-        el: '.vcomment',
-        notify: notify,
-        verify: verify,
-        appId: "<%= theme.valine.appId %>",
-        appKey: "<%= theme.valine.appKey %>",
-        placeholder: "<%= theme.valine.placeholder %>",
-        pageSize:'<%= theme.valine.pageSize %>',
-        avatar:'<%= theme.valine.avatar %>',
-        lang:'<%= theme.valine.lang %>'
-    });
-  </script>
-<% } %>
-  
-<% if (theme.gitalk.enable && theme.gitalk.client_id && theme.gitalk.client_secret){ %>
-  <%- js('https://unpkg.com/gitalk/dist/gitalk.min.js') %>
-  <%- js('//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js') %>
-  <script>
-    var gitalk = new Gitalk({
-      clientID: '#{theme.comment.gitalk.client_id}',
-      clientSecret: '#{theme.comment.gitalk.client_secret}',
-      repo: '#{theme.comment.gitalk.repo}',
-      owner: '#{theme.comment.gitalk.owner}',
-      admin: ['#{theme.comment.gitalk.admin}'],
-      id: md5(window.location.pathname),
-      distractionFreeMode: false,
-      language: '#{theme.comment.gitalk.language}',
-      pagerDirection: '#{theme.comment.gitalk.pagerDirection}'
-    });
-    gitalk.render('comments');
-  </script>
-<% } %>
- 
+<%- partial('commonts-script') %>

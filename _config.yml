@@ -18,9 +18,9 @@ menu:
   - page: archive
     directory: archives/
     icon: fa-archive
-  # - page: about
-  #   directory: about/
-  #   icon: fa-user
+  - page: about
+    directory: about/
+    icon: fa-user
   - page: rss
     directory: atom.xml
     icon: fa-rss
@@ -70,7 +70,27 @@ fb_admins:
 fb_app_id:
 
 
-# Cmments
+
+# About page
+about:
+  photo_url: http://cdn.chaooo.top/blog/themeauthor.jpg ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
+  items:
+  - label: email
+    url: mailto:zhenggchaoo@gmail.com ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
+    title: zhenggchaoo@gmail.com ## Your email e.g.  zhenggchaoo@gmail.com
+  - label: github
+    url: https://github.com/chaooo ## Your github'url e.g.  https://github.com/chaooo
+    title: chaooo ## Your github'name e.g.  chaooo
+  - label: weibo
+    url: http://weibo.com/zhengchaooo ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
+    title: 秋过冬漫长 ## Your weibo's name e.g.  秋过冬漫长
+
+
+
+
+
+
+# Gitalk Cmments
 gitalk:
   enable: false ## If you want to use Gitment comment system please set the value to true.
   owner: ## Your GitHub ID, e.g. username
@@ -94,3 +114,12 @@ valine:
   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
   guest_info: nick,mail,link #valine comment header info
 
+# Other Cmments
+comment:
+  disqus: ## disqus_shortname
+  livere: ## 来必力(data-uid)
+  uyan: ## 友言(uid)
+  cloudTie: ## 网易云跟帖(productKey)
+  changyan: ## 畅言需在下方配置两个参数，此处不填。
+    appid: ## 畅言(appid)
+    appkey: ##畅言(appkey)

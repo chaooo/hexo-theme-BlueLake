@@ -2,21 +2,19 @@
   <meta charset="utf-8">
   <%- partial('google-analytics') %>
   <%
-  var title = page.title;
-
-  if (is_archive()){
-    title = __('archive_a');
-
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
+    var title = page.title;
+    if (is_archive()){
+      title = __('archive_a');
+      if (is_month()){
+        title += ': ' + page.year + '/' + page.month;
+      } else if (is_year()){
+        title += ': ' + page.year;
+      }
+    } else if (is_category()){
+      title = __('category') + ': ' + page.category;
+    } else if (is_tag()){
+      title = __('tag') + ': ' + page.tag;
     }
-  } else if (is_category()){
-    title = __('category') + ': ' + page.category;
-  } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
-  }
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,6 +38,6 @@
     <%- css('localshare/css/share.css') %>
   <% } %>
   <% if (theme.gitalk.enable){ %>
-    <%- css('https://unpkg.com/gitalk/dist/gitalk.css?v=' + theme.version') %>
+    <%- css('https://unpkg.com/gitalk/dist/gitalk.css') %>
   <% } %>
 </head>

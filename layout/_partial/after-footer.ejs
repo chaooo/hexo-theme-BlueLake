@@ -27,3 +27,16 @@
 <% } %>
 
 <%- partial('commonts-script') %>
+
+<% if (theme.mathjax.enable){ %>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+  <script src="<%= theme.mathjax.cdn %>" async type="text/javascript"></script>
+<% } %>

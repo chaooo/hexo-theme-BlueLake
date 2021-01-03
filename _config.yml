@@ -70,7 +70,6 @@ fb_admins:
 fb_app_id:
 
 
-
 # About page
 about:
   photo_url: http://cdn.chaooo.top/blog/themeauthor.jpg ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
@@ -84,10 +83,6 @@ about:
   - label: weibo
     url: http://weibo.com/zhengchaooo ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
     title: 秋过冬漫长 ## Your weibo's name e.g.  秋过冬漫长
-
-
-
-
 
 
 # Gitalk Cmments
@@ -123,3 +118,8 @@ comment:
   changyan: ## 畅言需在下方配置两个参数，此处不填。
     appid: ## 畅言(appid)
     appkey: ##畅言(appkey)
+    
+# MathJax Support
+mathjax:
+  enable: false  #true/false.
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML

@@ -52,9 +52,9 @@
   color: color-grey
   overflow: hidden
   .current
-    background: #FFF
+    background: color-block-background
     &:hover
-      border-bottom-color: #adc2d7
+      border-bottom-color: color-shadow
   .page-number,.extend
     display: inline-block
     margin: 0 5px 5px 0
@@ -68,18 +68,17 @@
     line-height: 25px
     padding: 5px 10px
     text-align: center
-    color: #40759b;
-    -webkit-box-shadow: 1px 2px 3px #adc2d7
-    box-shadow: 1px 2px 3px #adc2d7
-    border: 1px solid #adc2d7
-    text-decoration: none
+    color: color-link;
+    -webkit-box-shadow: block-shadow
+    box-shadow: block-shadow
+    border: 1px solid color-shadowdecoration: none
     &.prev:before
         font-family: "iconfont"!important
-        content: "\e00f"
+        content: "\e00c"
         padding-right: 0.3em
     &.next:after
         font-family: "iconfont"!important
-        content: "\e00e"
+        content: "\e00b"
         padding-left: 0.3em
   a:hover
     text-decoration: underline

@@ -38,8 +38,8 @@ $logo-text
   text-decoration: none
   font: bold 42px/1.2 "宋体"
   white-space nowrap
-  color: #FFF
-  text-shadow: 1px 3px 6px #113f6e
+  color: color-nav
+  text-shadow: 1px 3px 6px color-link-shadow
 
 #logo
   @extend $logo-text
@@ -74,7 +74,7 @@ $nav-link
   font-size: 16px
   border: 1px solid transparent
   text-decoration: none
-  text-shadow: 1px 3px 6px #113f6e
+  text-shadow: 1px 3px 6px color-link-shadow
   .fa 
     font-size: 18px
   &:hover,&.current
@@ -166,7 +166,7 @@ $nav-link
     display: inline-block
     border-width: 0 12px 12px 12px
     border-style: solid
-    border-color: #FFF transparent
+    border-color: color-block-background transparent
     left: 48%
     top: -10px
 
@@ -185,10 +185,10 @@ $nav-link
   .tips
     text-align: center
     .fa
-      font-size: 60px
-      color: #B3D2EF
+      font-size: 54px
+      color: color-shadow
   .item
-    border-top: 1px solid #d8e2eb
+    border-top: 1px solid color-border
     padding: 8px 0
     &:first-child
       border-top: none

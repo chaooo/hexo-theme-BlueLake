@@ -1,27 +1,48 @@
 // Config
 support-for-ie = false
 vendor-prefixes = webkit moz ms official
+theme-dark = hexo-config("dark")
 
 // Colors
-color-border = #ddd
-color-sidebar-text = #777
-color-widget-background = #ddd
-color-widget-border = #ccc
-color-footer-background = #262a30
-color-mobile-nav-background = #191919
-color-twitter = #00aced
-color-facebook = #3b5998
-color-pinterest = #cb2027
-color-linkedin = #0077B5
-
-
+color-background = #d8e2eb
 color-default = #555
 color-grey = #999
 color-link =  #40759b
-color-background = #d8e2eb
+color-link-shadow = #113f6e
+color-border = #d8e2eb
 color-nav = #FFF
+color-title = #000
+color-code = #d8e2eb
 color-shadow = #adc2d7
+block-shadow = 1px 2px 3px #adc2d7
+color-sidebar-text = #777
+color-block-background = #FFF
+color-footer = #555
+if theme-dark
+  color-background = #010302
+  color-footer = #aaa
+  // color-default = #eee
+  // color-grey = #aaa
+  // color-title = #FFF
+  // color-code = #19364b
+  // color-block-background = rgba(0,0,0,0.8)
+  // block-shadow = 0 0 20px #adc2d7 inset
 
+/* scrollbar */
+::-webkit-scrollbar
+  width: 12px
+  height: 10px
+/* 滚动槽 */
+::-webkit-scrollbar-track
+  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3)
+  border-radius:10px
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb
+  border-radius:10px
+  background:#113f6e
+  box-shadow: inset 0 0 5px #4169b9
+::-webkit-scrollbar-thumb:window-inactive
+  background:#113f6e
 
 // Fonts
 font-sans = -apple-system, BlinkMacSystemFont,
@@ -34,11 +55,15 @@ font-size = 14px
 line-height = 1.6em
 line-height-title = 1.1em
 
+
+
 // Header
 logo-size = 40px
 subtitle-size = 16px
 banner-height = 300px
 banner-url = hexo-config("banner")
+if theme-dark
+  banner-url = hexo-config("banner-dark")
 
 sidebar = hexo-config("sidebar")
 

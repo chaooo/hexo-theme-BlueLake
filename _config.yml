@@ -1,9 +1,15 @@
-# Header
-# menu:
-#   Home: /
-#   Archives: /archives
-#   About: 
-  
+##########################
+## Site Config Settings ##
+##########################
+
+# Theme version
+version: 3.0.0
+
+# Theme tone
+dark: true # true/false
+banner: "images/banner.jpg"
+banner-dark: "images/banner-dark.jpg"
+
 # Header
 menu:
   - page: home
@@ -20,7 +26,7 @@ menu:
     icon: fa-rss
   
 rss: /atom.xml
-banner: "images/banner.jpg"
+
 
 # Content
 excerpt_link: Read More
@@ -63,6 +69,18 @@ twitter:
 fb_admins:
 fb_app_id:
 
+
+# Cmments
+gitalk:
+  enable: false ## If you want to use Gitment comment system please set the value to true.
+  owner: ## Your GitHub ID, e.g. username
+  repo: ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
+  client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
+  admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
+  language: zh-CN ## Language
+  pagerDirection: last # Comment sorting direction, available values are last and first.
+
 # valine comment system. https://valine.js.org
 valine:
   enable: true # if you want use valine,please set this value is true
@@ -75,3 +93,4 @@ valine:
   lang: zh-cn # i18n: zh-cn/en
   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
   guest_info: nick,mail,link #valine comment header info
+

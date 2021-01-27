@@ -56,7 +56,7 @@ index_widgets:
 # - archive
 
 # Widget behavior
-archive_type: 'monthly'   # 'yearly'  ## defalut 'monthly'
+archive_type: 'yearly'   # defalut 'monthly'
 archive_format: 'YYYY年MM月'
 show_count: true
 recent_posts_limits: 5

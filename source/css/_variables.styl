@@ -12,17 +12,19 @@ color-link-shadow = #113f6e
 color-border = #d8e2eb
 color-nav = #FFF
 color-title = #000
-color-code = #d8e2eb
+color-code = #f1f8ff
 color-shadow = #adc2d7
 color-page-border = #adc2d7
 block-shadow = 1px 2px 3px #adc2d7
 color-sidebar-text = #777
 color-block-background = #FFF
 color-footer = #555
+color-thumb = #f1f8ff
 if theme-dark
   color-background = #010302
   color-footer = #aaa
   color-page-border = #40759b
+  color-thumb = #113f6e
   // color-default = #eee
   // color-grey = #aaa
   // color-title = #FFF
@@ -36,15 +38,16 @@ if theme-dark
   height: 10px
 /* 滚动槽 */
 ::-webkit-scrollbar-track
-  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3)
-  border-radius:10px
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+  border-radius: 10px
 /* 滚动条滑块 */
 ::-webkit-scrollbar-thumb
-  border-radius:10px
-  background:#113f6e
-  box-shadow: inset 0 0 5px #4169b9
+  border-radius: 10px
+  background: color-thumb
+  box-shadow: inset 0 0 5px color-page-border
 ::-webkit-scrollbar-thumb:window-inactive
-  background:#113f6e
+  background: color-thumb
+
 
 // Fonts
 font-sans = -apple-system, BlinkMacSystemFont,

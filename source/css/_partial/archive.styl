@@ -18,52 +18,22 @@
     vertical-align: bottom
 .archives
   padding: 1em
-  line-height: 2em
   .fa
     display: none
-  ul
-    list-style: square
-    list-style-position: inside
+.archive-article
+  list-style: square
+  list-style-position: inside
 .archive-article-inner
-  text-decoration: none
+  line-height: 1.2em
+  padding: 6px 0
   color: color-grey
-  font-size: 15px
-  time,span
-    margin:0 5px
-.archive-article-title
-  color: color-link
-
-
-
-
-
-
-
-
-//  avoid-column-break()
-//
-//.archive-article-inner
-//  @extend $block
-//  padding: 10px
-//  margin-bottom: 15px
-//
-//.archive-article-title
-//  text-decoration: none
-//  font-weight: bold
-//  color: color-default
-//  transition: color 0.2s
-//  line-height: line-height
-//  &:hover
-//    color: color-link
-//
-//.archive-article-footer
-//  margin-top: 1em
-//
-//.archive-article-date
-//  color: color-grey
-//  text-decoration: none
-//  font-size: 0.85em
-//  line-height: 1em
-//  margin-bottom: 0.5em
-//  display: block
-
+  a
+    text-decoration: none
+    color: color-grey
+    font-size: 15px
+    time,span
+      margin:0 5px
+    &:hover
+      text-decoration: underline
+  .archive-article-title
+    color: color-link

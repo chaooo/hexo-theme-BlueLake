@@ -1,10 +1,8 @@
-<article class="archive-article archive-type-<%= post.layout %>">
-  <ul>
-    <li>
-      <a class="archive-article-inner" href="<%- url_for(post.path) %>">
-        <time class="dt-published" datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, theme.date_formats.post) %></time>
-        | <span class="archive-article-title"><%= post.title %></span>
-      </a>
-    </li>
-  </ul>
-</article>
+<ul class="archive-article archive-type-<%= post.layout %>">
+  <li class="archive-article-inner">
+    <a href="<%- url_for(post.path) %>">
+      <time class="dt-published" datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, theme.date_formats.post) %></time>
+      | <span class="archive-article-title"><%= post.title %></span>
+    </a>
+  </li>
+</ul>

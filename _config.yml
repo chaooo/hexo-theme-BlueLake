@@ -24,7 +24,7 @@ menu:
   - page: rss
     directory: atom.xml
     icon: fa-rss
-  
+
 rss: /atom.xml
 
 
@@ -56,9 +56,15 @@ index_widgets:
 # - archive
 
 # Widget behavior
-archive_type: 'monthly'
+archive_type: 'monthly'   # 'yearly'  ## defalut 'monthly'
+archive_format: 'YYYY年MM月'
 show_count: true
 recent_posts_limits: 5
+
+# Date_formats
+date_formats:
+  post: "YYYY年MM月DD日"
+
 
 # Miscellaneous
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
@@ -76,7 +82,7 @@ about:
   photo_url: http://cdn.chaooo.top/blog/themeauthor.jpg ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
   items:
   - label: email
-    url: mailto:zhenggchaoo@gmail.com ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
+    url: mailto:zhenggchaoo@gmail.com  ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
     title: zhenggchaoo@gmail.com ## Your email e.g.  zhenggchaoo@gmail.com
   - label: github
     url: https://github.com/chaooo ## Your github'url e.g.  https://github.com/chaooo
@@ -119,7 +125,7 @@ comment:
   changyan: ## 畅言需在下方配置两个参数，此处不填。
     appid: ## 畅言(appid)
     appkey: ##畅言(appkey)
-    
+
 # MathJax Support
 mathjax:
   enable: false  #true/false.

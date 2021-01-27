@@ -1,27 +1,33 @@
-<% if (pagination == 2){ %>
-  <% page.posts.each(function(post){ %>
-    <%- partial('article', {post: post, index: true}) %>
-  <% }) %>
-<% } else { %>
-  <% var last; %>
-  <% page.posts.each(function(post, i){ %>
-    <% var year = post.date.year(); %>
-    <% if (last != year){ %>
-      <% if (last != null){ %>
-        </div></section>
-      <% } %>
-      <% last = year; %>
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
-        </div>
-        <div class="archives">
+<% var last; %>
+<% page.posts.each(function(post, i){ %>
+  <% var year = post.date.year(); %>
+  <% if (last != year){ %>
+    <% if (last != null){ %>
+      </div></section>
     <% } %>
-    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
-  <% }) %>
-  <% if (page.posts.length){ %>
-    </div></section>
+    <% last = year; %>
+    <section class="archives-wrap">
+      <div class="archive-title">
+        <% if (is_tag()){ %>
+          <i class="fa fa-tag"></i>
+          <%= page.tag %>
+        <% } else if (is_category()){ %>
+          <i class="fa fa-classify"></i>
+          <%= page.category %>
+        <% } else if (is_archive() && is_month()){ %>
+          <i class="fa fa-date"></i>
+          <%= date(page.year + '/' + page.month, theme.archive_format) %>
+        <% } else { %>
+          <i class="fa fa-date"></i>
+          <%= year %>
+        <% } %>
+      </div>
+      <div class="archives">
   <% } %>
+  <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+<% }) %>
+<% if (page.posts.length){ %>
+  </div></section>
 <% } %>
 <% if (page.total > 1){ %>
     <%- partial('pagination') %>

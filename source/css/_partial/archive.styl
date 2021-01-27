@@ -1,85 +1,69 @@
 .archives-wrap
-  margin: block-margin 0
-
-.archives
-  clearfix()
-
-.archive-year-wrap
-  margin-bottom: 1em
-
-.archive-year
-  @extend $block-caption
-  color: color-nav
-
-.archives
-  column-gap: 10px
-  @media mq-mobile
-    column-count: 2
-  @media mq-normal
-    column-count: 3
-
-.archive-article
-  avoid-column-break()
-
-.archive-article-inner
   @extend $block
-  padding: 10px
-  margin-bottom: 15px
+  margin: block-margin 0
+  padding: 10px 20px 20px 20px
 
-.archive-article-title
+.archive-title
+  border-bottom: 1px solid color-border
+  color: color-link
   text-decoration: none
+  font-size: 1.5em
   font-weight: bold
-  color: color-default
-  transition: color 0.2s
-  line-height: line-height
-  &:hover
+  height: 50px
+  line-height: 50px
+  .fa
     color: color-link
-
-.archive-article-footer
-  margin-top: 1em
-
-.archive-article-date
-  color: color-grey
+    font-size: 1.5em
+    font-weight: normal
+    vertical-align: bottom
+.archives
+  padding: 1em
+  line-height: 2em
+  .fa
+    display: none
+  ul
+    list-style: square
+    list-style-position: inside
+.archive-article-inner
   text-decoration: none
-  font-size: 0.85em
-  line-height: 1em
-  margin-bottom: 0.5em
-  display: block
-
-#page-nav
-  clearfix()
-  margin: block-margin auto
-  text-align: center
   color: color-grey
-  overflow: hidden
-  .page-number,.extend
-    display: inline-block
-    margin: 0 5px 5px 0
-  .space
-    border: none
-    padding: 5px 5px
-    margin: 0 5px 5px 0
-  a,.page-number
-    display: inline-block
-    height: 25px
-    line-height: 25px
-    padding: 5px 10px
-    text-align: center
-    color: color-link;
-    -webkit-box-shadow: 0 0 5px color-shadow inset
-    box-shadow: 0 0 5px color-shadow inset
-    border: 1px solid color-page-border
-    text-decoration: none
-    &.prev:before
-        font-family: "iconfont"!important
-        content: "\e00c"
-        padding-right: 0.3em
-    &.next:after
-        font-family: "iconfont"!important
-        content: "\e00b"
-        padding-left: 0.3em
-    &.current
-      background: color-nav
-  a:hover
-    //text-decoration: underline
-    border-bottom-color: color-block-background
+  font-size: 15px
+  time,span
+    margin:0 5px
+.archive-article-title
+  color: color-link
+
+
+
+
+
+
+
+
+//  avoid-column-break()
+//
+//.archive-article-inner
+//  @extend $block
+//  padding: 10px
+//  margin-bottom: 15px
+//
+//.archive-article-title
+//  text-decoration: none
+//  font-weight: bold
+//  color: color-default
+//  transition: color 0.2s
+//  line-height: line-height
+//  &:hover
+//    color: color-link
+//
+//.archive-article-footer
+//  margin-top: 1em
+//
+//.archive-article-date
+//  color: color-grey
+//  text-decoration: none
+//  font-size: 0.85em
+//  line-height: 1em
+//  margin-bottom: 0.5em
+//  display: block
+

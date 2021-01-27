@@ -10,7 +10,7 @@
       <% if (post.top){ %>
         <span class='article-top'>【<%- __('topped') %>】</span>
       <% } %>
-      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+      <%- partial('post/date', {class_name: 'article-date', date_format: theme.date_formats.post }) %>
       <%- partial('post/category') %>
       <% if (post.comments){ %>
         <a href="<%- url_for(post.path) %>#comments" class="article-comment-link">
@@ -55,13 +55,13 @@
       <% } else { %>
         <div class="article-tag-wrap">
           <%- partial('post/tag') %>
-          
+
           <% if (theme.share.local_share){ %>
             <div class="social-share">
               <span><%= __('shareto') %>:</span>
             </div>
           <% } %>
-          
+
           <% if (theme.share.baidu_share){ %>
             <div class="bdsharebuttonbox">
               <span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod"><%= __('shareto') %>:</span>
@@ -77,7 +77,7 @@
               <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
             </div>
           <% } %>
-          
+
         </div>
       <% } %>
     </footer>

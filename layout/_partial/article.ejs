@@ -44,6 +44,11 @@
         <%- post.excerpt %>
       <% } else { %>
         <%- post.content %>
+        <% if (!index){ %>
+            <div id="toc-article">
+                <%- partial('post/toc') %>
+            </div>
+        <% } %>
       <% } %>
     </div>
     <footer class="article-footer">
@@ -86,10 +91,6 @@
     <%- partial('post/nav') %>
   <% } %>
 </article>
-
-
-
-
 
 <% if (!index && post.comments){ %>
   <%- partial('post/comments') %>

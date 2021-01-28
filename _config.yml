@@ -6,7 +6,7 @@
 version: 3.0.0
 
 # Theme tone
-dark: true # true/false
+dark: false # true/false
 banner: "images/banner.jpg"
 banner-dark: "images/banner-dark.jpg"
 
@@ -65,6 +65,10 @@ recent_posts_limits: 5
 date_formats:
   post: "YYYY年MM月DD日"
 
+# Toc
+toc:
+  enable: true
+  list_number: false
 
 # Miscellaneous
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.

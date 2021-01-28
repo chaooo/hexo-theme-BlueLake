@@ -1,6 +1,6 @@
 (function() {
     var keyInput = document.getElementById('search-key'),
-        searchForm = document.getElementById('search-form'),
+        // searchForm = document.getElementById('search-form'),
         searchWrap = document.getElementById('result-wrap'),
         searchMask = document.getElementById('result-mask'),
         searchResult = document.getElementById('search-result'),

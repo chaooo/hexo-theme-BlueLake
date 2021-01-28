@@ -3,6 +3,7 @@ blog: Blog
 albums: Albums
 categories: Categories
 tags: Tags
+tagcloud: Tag Cloud
 archive: Archive
 links: Links
 about: About

@@ -191,7 +191,7 @@ links:
 ```
 
 - **version** - For automatic refresh of static files on CDN.
-- **menu** - Navigation menu,just follow the format of existied items.
+- **menu** - Navigation menu,just follow the format of existed items.
 - **widgets** - Widgets displaying in sidebar.
 - **Static files** - Static files directory, for convenience of CDN usage.
 - **Local search**
@@ -232,7 +232,7 @@ keywords: keywords1, keywords2, keywords3, ...
 You can control the abstract of a post shown at index, by either filling a `description:` item in `front-matter` of the `post.md`, or just inserting a `<!--more-->` before your hidden content.
 
 #### Page
-Create folders inlcuding `index.md` in `source` folder to add pages, and add a `layout: page` in `front-matter` of `index.md`.
+Create folders including `index.md` in `source` folder to add pages, and add a `layout: page` in `front-matter` of `index.md`.
 
 #### About Page
 If you want to add about page, just create a page:

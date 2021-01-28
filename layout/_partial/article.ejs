@@ -49,6 +49,12 @@
                 <%- partial('post/toc') %>
             </div>
         <% } %>
+        <% if (theme.copyright.enable){ %>
+          <blockquote id="copyright">
+              <p><%= __("copyright_link") %>: <a href="<%- url_for(config.url +'/'+ page.path) %>"><%- url_for(config.url +'/'+ page.path) %></a></p>
+              <p><%= __("copyright_notice") %>: <%= theme.copyright.content %></p>
+          </blockquote>
+        <% } %>
       <% } %>
     </div>
     <footer class="article-footer">

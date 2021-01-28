@@ -21,8 +21,8 @@
   <%- open_graph({twitter_id: theme.twitter, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
   <% if (config.feed) { %>
     <%- feed_tag() %>
-  <% } else if (theme.rss) { %>
-    <%- feed_tag(theme.rss) %>
+  <% } else { %>
+    <%- feed_tag('/atom.xml') %>
   <% } %>
   <% if (theme.favicon){ %>
     <%- favicon_tag(theme.favicon) %>

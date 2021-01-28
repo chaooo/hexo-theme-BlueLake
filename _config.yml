@@ -6,7 +6,7 @@
 version: 3.0.0
 
 # Theme tone
-dark: false # true/false
+dark: true # true/false
 banner: "images/banner.jpg"
 banner-dark: "images/banner-dark.jpg"
 
@@ -25,15 +25,22 @@ menu:
     directory: atom.xml
     icon: fa-rss
 
-rss: /atom.xml
+# RSS & Sitemap Plugins
+Plugins:
+  hexo-generator-feed
+  hexo-generator-sitemap
 
+# sitemap
+sitemap:
+  path: sitemap.xml
 
 # Content
 excerpt_link: Read More
 fancybox: true
 copyright:
   enable: true #display article copyright information, true/false.
-  describe: '转载请注明出处.' #copyright description
+  content: "转载请注明出处."
+
 share:
   local_share: true
   baidu_share: false

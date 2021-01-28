@@ -4,26 +4,26 @@
   <% } %>
   <div class="outer">
     <div id="footer-info" class="inner">
-      <p><span>Copyright &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>.</span></p>
+      <p>
+        <a href="<%= config.root %>sitemap.xml"><%- __('sitemap') %></a>
+        <span> | </span><a href="<%= config.root %>atom.xml"><%- __('footer_rss') %></a>
+        <span> | </span><a href="<%= config.root %>about/"><%- __('contact_author') %></a>
+      </p>
       <% if (theme.busuanzi){ %>
         <p>
-          <i class="fa fa-views"></i>
-          <i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>
-          ，
           <i class="fa fa-visitors"></i>
           <i id="busuanzi_container_site_uv"><i id="busuanzi_value_site_uv"></i></i>
+          ，
+          <i class="fa fa-views"></i>
+          <i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>
         </p>
       <% } %>
       <p>
+        <span>Copyright &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>.</span>
         <span>Theme by <a href="https://github.com/chaooo/hexo-theme-BlueLake/" target="_blank">BlueLake.</a></span>
         <span>Count by <a href="http://busuanzi.ibruce.info/" target="_blank">busuanzi.</a></span>
         <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo.</a></span>
       </p>
-      <!-- <% if (theme.copyright){ %>
-        <%- render(theme.copyright, 'pug'); %>
-      <% } %>
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      <%= __('powered_by') %> <a href="https://hexo.io/" target="_blank">Hexo</a> -->
     </div>
   </div>
 </footer>

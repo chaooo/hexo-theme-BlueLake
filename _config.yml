@@ -81,6 +81,15 @@ mathjax:
   enable: false  # true/false.
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
+# Reward
+reward:
+  enable: false  # true/false 是否开启 打赏功能
+  wechat: '/css/images/wechat-pay.jpg'
+  alipay: '/css/images/alipay-pay.jpg'
+  buttonTxt: '打赏'
+  title: "“感谢你的支持，我会继续努力！”"
+  content: "扫码打赏，感谢支持"
+
 # About page
 about:
   photo_url: 'http://cdn.chaooo.top/blog/themeauthor.jpg' ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg

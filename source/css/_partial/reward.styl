@@ -1,0 +1,61 @@
+.article-reward
+  text-align: center
+  margin: block-margin 0
+
+#reward-btn
+  display: inline-block
+  font-size: 16px
+  color: color-link
+  text-decoration: none
+  line-height: 1.2em
+  padding: 6px 16px
+  margin-bottom: 12px
+  border-radius: 20px
+  -webkit-box-shadow: 0 -1px 4px color-shadow inset
+  box-shadow: 0 -1px 4px color-shadow inset
+  &:hover
+    color: color-nav
+    background: color-link
+
+#reward-content
+  @extend $block
+  display: none
+  position: relative
+  overflow: visible
+  box-sizing: border-box
+  padding 20px
+  width: 624px
+  margin: 0 auto
+  @media mq-mobile
+    width: 100%
+  &:before,&:after
+    content ''
+    position: absolute
+    display: inline-block
+    border-width: 0 12px 12px 12px
+    border-style: solid
+    border-color: color-shadow transparent
+    left: 300px
+    @media mq-mobile
+      left: 48%
+  &:before
+    border-color: color-shadow transparent
+    top: -12px
+  &:after
+    border-color: color-block-background transparent
+    top: -10px
+
+.reward-code
+  display: inline-block
+  width: 240px
+  margin: 24px 15px 10px 15px
+  text-align: center
+  .er-code
+    display: inline-block
+    width: 240px
+    height: 240px
+.reward-tit
+  color: color-link
+  font-size: 16px
+.reward-desc
+  color: color-grey

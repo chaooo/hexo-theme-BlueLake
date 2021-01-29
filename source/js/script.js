@@ -19,10 +19,19 @@
   if ($.fancybox){
     $('.fancybox').fancybox();
   }
+
+  // reward
+  $('#reward-btn').on("click", function(){
+    $('#reward-content').slideToggle(500);
+    return false;
+  });
+
   var isPC = ($(window).width()>768);
   // toc
-  if(isPC && $('#toc-article').length>0){
-    $('#sidebar').prepend($('#toc-article').html());
+  if($('#toc-article').length>0){
+    if(isPC) {
+      $('#sidebar').prepend($('#toc-article').html());
+    }
     $('#toc-article').remove();
   }
 

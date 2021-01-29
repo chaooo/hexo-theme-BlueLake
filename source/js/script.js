@@ -19,17 +19,15 @@
   if ($.fancybox){
     $('.fancybox').fancybox();
   }
-
+  var isPC = ($(window).width()>768);
   // toc
-  if($('#toc-article').length>0){
+  if(isPC && $('#toc-article').length>0){
     $('#sidebar').prepend($('#toc-article').html());
     $('#toc-article').remove();
   }
 
   $(window).on("scroll", function(){
-    var scroll = document.documentElement.scrollTop || document.body.scrollTop || window.scrollY,
-        fixedToc = document.getElementById("toc"),
-        changeSize = document.getElementById("header").offsetHeight + document.getElementById("sidebar").offsetHeight;
+    var scroll = document.documentElement.scrollTop || document.body.scrollTop || window.scrollY;
     // go to top
     if (scroll >= 300) {
       $('#totop').addClass("show");
@@ -37,8 +35,9 @@
       $('#totop').removeClass("show").removeClass("launch");
     }
     //toc fixed
-    if($('#toc-wrap').length>0){
-      var tocWrap = $('#toc-wrap');
+    if(isPC && $('#toc-wrap').length>0){
+      var tocWrap = $('#toc-wrap'),
+          changeSize = document.getElementById("header").offsetHeight + document.getElementById("sidebar").offsetHeight;
       scroll >= changeSize ? tocWrap.addClass("fixed") : tocWrap.removeClass("fixed");
       if (tocWrap.hasClass("fixed")){
         tocWrap.css("width", $('#sidebar').width());

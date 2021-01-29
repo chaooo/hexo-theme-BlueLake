@@ -7,6 +7,7 @@ version: 3.0.0
 
 # Theme tone
 dark: true # true/false
+favicon: /favicon.png
 banner: "images/banner.jpg"
 banner-dark: "images/banner-dark.jpg"
 
@@ -25,12 +26,12 @@ menu:
     directory: atom.xml
     icon: fa-rss
 
-# RSS & Sitemap Plugins
+# RSS & Sitemap plugins
 Plugins:
   hexo-generator-feed
   hexo-generator-sitemap
 
-# sitemap
+# Sitemap
 sitemap:
   path: sitemap.xml
 
@@ -38,29 +39,17 @@ sitemap:
 excerpt_link: Read More
 fancybox: true
 copyright:
-  enable: true #display article copyright information, true/false.
+  enable: true # display article copyright information, true/false.
   content: "转载请注明出处."
 
-share:
-  local_share: true
-  baidu_share: false
-
-
 # Sidebar
-sidebar: right
+sidebar: right  # right/left/bottom
 widgets:
 - recent_posts
 - tagcloud
 - category
 - archive
 - tag
-
-
-# display widgets at the bottom of index pages (pagination == 2)
-index_widgets:
-# - category
-# - tagcloud
-# - archive
 
 # Widget behavior
 archive_type: 'yearly'   # defalut 'monthly'
@@ -77,20 +66,24 @@ toc:
   enable: true
   list_number: false
 
+# Article share
+share:
+  local_share: true
+  baidu_share: false
+
 # Miscellaneous
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 google_analytics:
 gauges_analytics:
-favicon: /favicon.png
-twitter:
-fb_admins:
-fb_app_id:
 
-
+# MathJax support
+mathjax:
+  enable: false  # true/false.
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # About page
 about:
-  photo_url: http://cdn.chaooo.top/blog/themeauthor.jpg ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
+  photo_url: 'http://cdn.chaooo.top/blog/themeauthor.jpg' ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
   items:
   - label: email
     url: 'mailto:zhenggchaoo@gmail.com'  ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
@@ -102,19 +95,18 @@ about:
     url: 'http://weibo.com/zhengchaooo' ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
     title: '秋过冬漫长' ## Your weibo's name e.g.  秋过冬漫长
 
-
-# Gitalk Cmments
+# Gitalk comment
 gitalk:
-  enable: false ## If you want to use Gitment comment system please set the value to true.
+  enable: false
   owner: ## Your GitHub ID, e.g. username
   repo: ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
   client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
   client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
   admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
-  language: zh-CN ## Language
+  language: 'zh-CN' ## Language
   pagerDirection: last # Comment sorting direction, available values are last and first.
 
-# valine comment system. https://valine.js.org
+# Valine comment. https://valine.js.org
 valine:
   enable: true # if you want use valine,please set this value is true
   appId: vLPzzKBu42xSePsXQ9SMFMnu-gzGzoHsz # leancloud application app id
@@ -127,17 +119,15 @@ valine:
   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
   guest_info: nick,mail,link #valine comment header info
 
-# Other Cmments
+# Changyan comment. 畅言
+changyan:
+  enable: false
+  appid: ## changyan appid
+  appkey: ## changyan appkey
+
+# Other comments
 comment:
   disqus: ## disqus_shortname
   livere: ## 来必力(data-uid)
   uyan: ## 友言(uid)
   cloudTie: ## 网易云跟帖(productKey)
-  changyan: ## 畅言需在下方配置两个参数，此处不填。
-    appid: ## 畅言(appid)
-    appkey: ##畅言(appkey)
-
-# MathJax Support
-mathjax:
-  enable: false  #true/false.
-  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML

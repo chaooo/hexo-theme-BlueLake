@@ -26,7 +26,7 @@
 .article-date
   display: inline-block
 
-.article-category
+.article-category,.article-views
   display: inline-block
   &:before
     content: "|"
@@ -165,7 +165,14 @@
     content: "#"
 
 .article-comment-link
-  float: right
+  @media mq-normal
+    float: right
+  @media mq-mobile
+    &:before
+      content: "|"
+      color: color-grey
+      display: inline-block
+      padding:0 10px
 
 #article-nav
   clearfix()

@@ -1,15 +1,17 @@
 .widget-wrap
+  @extend $block
+  margin: 0 !important
+  width: 100% !important
+  padding: 0 15px 15px
+  box-sizing: border-box
   margin-bottom: block-margin !important
   @media mq-normal
     column(main-column)
 
 .widget-title
-  color: color-title
-  text-transform: uppercase
-  letter-spacing: 2px
-  margin-bottom: .5em
-  line-height: 1em
-  font-weight: bold
+  @extend $block-caption
+  .fa
+    color: color-link
 
 .widget
   color: color-grey

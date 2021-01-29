@@ -28,7 +28,6 @@
 
   $(window).on("scroll", function(){
     var scroll = document.documentElement.scrollTop || document.body.scrollTop || window.scrollY,
-        winHeight,
         fixedToc = document.getElementById("toc"),
         changeSize = document.getElementById("header").offsetHeight + document.getElementById("sidebar").offsetHeight;
     // go to top
@@ -44,13 +43,15 @@
       if (tocWrap.hasClass("fixed")){
         tocWrap.css("width", $('#sidebar').width());
       }
+      var maxHeight;
       if ((document.body) && (document.body.clientHeight)) {
-        winHeight = document.body.clientHeight;
+        maxHeight = document.body.clientHeight - 50;
       }
       if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
-        winHeight = document.documentElement.clientHeight;
+        maxHeight = document.documentElement.clientHeight -50;
       }
-      if(tocWrap.height() > winHeight ) {
+      if(maxHeight && tocWrap.height() > maxHeight ) {
+        tocWrap.css("height", maxHeight);
         tocWrap.addClass("scroll");
       }
     }

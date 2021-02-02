@@ -1,0 +1,8 @@
+<% if (theme.toc.enable){ %>
+  <div class="widget-wrap" id="toc-wrap">
+    <h3 class="widget-title"><i class="fa fa-toc"></i> <%= __('contents') %></h3>
+    <div class="widget">
+      <%- toc(page.content, {list_number: theme.toc.list_number}) %>
+    </div>
+  </div>
+<% } %>

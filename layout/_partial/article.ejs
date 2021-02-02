@@ -1,0 +1,57 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="h-entry article article-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'p-name article-title'}) %>
+      </header>
+    <% } %>
+    <div class="article-meta">
+      <% if (post.top){ %>
+        <span class='article-top'>【<%- __('topped') %>】</span>
+      <% } %>
+      <%- partial('post/date', {class_name: 'article-date', date_format: theme.date_formats.post }) %>
+      <%- partial('post/category') %>
+      <%- partial('post/views-count') %>
+      <%- partial('post/comments-count') %>
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+      <% } else { %>
+        <%- post.content %>
+        <% if (!index){ %>
+            <div id="toc-article">
+                <%- partial('post/toc') %>
+            </div>
+        <% } %>
+        <% if (theme.copyright.enable){ %>
+          <blockquote id="copyright">
+              <p><%= __("copyright_link") %>: <a href="<%- url_for(config.url +'/'+ page.path) %>"><%- url_for(config.url +'/'+ page.path) %></a></p>
+              <p><%= __("copyright_notice") %>: <%= theme.copyright.content %></p>
+          </blockquote>
+        <% } %>
+      <% } %>
+    </div>
+    <footer class="article-footer">
+      <% if (post.excerpt && index && theme.excerpt_link){ %>
+        <%- partial('post/tag') %>
+        <p class="article-more-link">
+          <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+        </p>
+      <% } else { %>
+        <div class="article-tag-wrap">
+          <%- partial('post/reward') %>
+          <%- partial('post/tag') %>
+          <%- partial('post/share') %>
+        </div>
+      <% } %>
+    </footer>
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
+<% if (!index && post.comments){ %>
+  <%- partial('post/comments') %>
+<% } %>

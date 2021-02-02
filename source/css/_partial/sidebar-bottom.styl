@@ -1,0 +1,23 @@
+.widget-wrap
+  @extend $block
+  margin: 0 !important
+  width: 100% !important
+  padding: 0 15px 15px
+  box-sizing: border-box
+  margin-bottom: block-margin !important
+  @media mq-normal
+    column(main-column)
+
+.widget-title
+  @extend $block-caption
+  .fa
+    color: color-link
+
+.widget
+  color: color-grey
+  ul, ol
+    li
+      display: inline-block
+      zoom:1
+      *display:inline
+      padding-right: .75em

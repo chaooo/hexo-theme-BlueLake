@@ -1,0 +1,27 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="h-entry article article-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'p-name article-title'}) %>,
+      </header>
+    <% } %>
+    <div class="e-content article-entry" itemprop="articleBody">
+      <div class="author-page">
+        <div class="photo"><img src="<%= theme.about.photo_url %>"></div>
+        <div class="author">
+          <div><i class="fa fa-user">name：</i><%= config.author %></div>
+          <% theme.about.items.forEach(function(item, i){ %>
+            <div>
+              <i class="fa fa-<%= item.label %>"><%= item.label %>：</i>
+              <a href="<%= item.url %>" target="_blank"><%= item.title %></a>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+<% if (!index && post.comments){ %>
+  <%- partial('post/comments') %>
+<% } %>

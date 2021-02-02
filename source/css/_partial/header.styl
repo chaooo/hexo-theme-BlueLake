@@ -1,0 +1,221 @@
+#header
+  box-sizing: border-box
+  height: banner-height
+  position: relative
+  @media mq-mobile
+    float: none
+    padding-top: 100px
+    text-align: center
+
+#header-outer
+  height: 100%
+  position: relative
+  @media mq-mobile
+    padding: 0
+
+#header-inner
+  position: relative
+  overflow: hidden
+  @media mq-mobile
+    float: none
+    display: block
+
+#header-title
+  @media mq-normal
+    text-align: left
+    height: logo-size
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: logo-size * -0.5
+    box-sizing: border-box
+    padding: 0 30px
+  @media mq-mobile
+    float: none
+    display: block
+
+$logo-text
+  text-decoration: none
+  font: bold 42px/1.2 "宋体"
+  white-space nowrap
+  color: color-nav
+  text-shadow: 1px 3px 6px color-link-shadow
+
+#logo
+  @extend $logo-text
+  font-size: logo-size
+  line-height: logo-size
+  letter-spacing: 2px
+
+#subtitle
+  @extend $logo-text
+  font-size: subtitle-size
+  line-height: subtitle-size
+  letter-spacing: 1px
+
+#subtitle-wrap
+  margin-top: subtitle-size
+
+#main-nav
+  margin: 15px 0
+  @media mq-normal
+    float: right
+  @media mq-mobile
+    float: none
+    .main-nav-link 
+      padding: 0 10px 0 8px;
+
+
+$nav-link
+  display: inline-block
+  padding: 3px 18px 3px
+  line-height: 30px
+  color: color-nav
+  font-size: 16px
+  border: 1px solid transparent
+  text-decoration: none
+  text-shadow: 1px 3px 6px color-link-shadow
+  .fa 
+    font-size: 18px
+  &:hover,&.current
+    border-bottom: 1px solid color-nav
+    -webkit-box-shadow: 0 0 10px color-shadow inset
+    box-shadow: 0 0 10px color-shadow inset
+
+.main-nav-link
+  @extend $nav-link
+  font-weight: 300
+  letter-spacing: 1px
+
+#search-form
+  position: absolute
+  bottom: 35px
+  right: 0
+  @media mq-mobile
+    bottom: 0
+    right: 0
+    box-sizing: border-box
+    width: 100%;
+    padding: 0 mobile-gutter-width
+  label
+    position: absolute
+    right: 30px
+    width 380px
+    height 32px
+    font-size: 16px
+    color: color-nav
+    @media mq-mobile
+      position: relative
+      right: 0
+      width: 100%
+      display: block
+    &:before
+      font-family: "iconfont" !important
+      content: '\e007'
+      position: absolute
+      left: 15px
+      top: 9px
+  input
+    box-sizing: border-box
+    outline: none
+    height: 32px
+    padding: 7px 11px 7px 35px
+    line-height: 16px
+    width: 100%
+    color: color-nav
+    background: transparent
+    border: 1px solid transparent
+    border-bottom-color: color-nav
+    -webkit-box-shadow: 0 0 10px color-shadow inset
+    box-shadow: 0 0 10px color-shadow inset
+    &::-webkit-input-placeholder
+      color: color-nav
+    &::-moz-placeholder
+      color: color-nav
+    &:-moz-placeholder
+      color: color-nav
+    &:-ms-input-placeholder
+      color: color-nav
+
+#result-wrap
+  @extend $block
+  box-sizing: border-box
+  position: absolute
+  right: 30px
+  top: 42px
+  width: 380px
+  padding 20px
+  overflow: visible
+  z-index: 9999
+  text-align: left
+  @media mq-mobile
+    width: 100%;
+    right: 0
+  &:before
+    content ''
+    position: absolute
+    display: inline-block
+    border-width: 0 12px 12px 12px
+    border-style: solid
+    border-color: color-shadow transparent
+    left: 48%
+    top: -12px
+  &:after
+    content ''
+    position: absolute
+    display: inline-block
+    border-width: 0 12px 12px 12px
+    border-style: solid
+    border-color: color-block-background transparent
+    left: 48%
+    top: -10px
+
+#result-mask
+  position: fixed
+  left: 0
+  top: 0
+
+#search-result
+  width: 100%
+  box-sizing: content-box
+  padding-right: 20px
+  margin-right: -20px
+  max-height: 400px
+  overflow-y: auto
+  .tips
+    text-align: center
+    .fa
+      font-size: 54px
+      color: color-shadow
+  .item
+    border-top: 1px solid color-border
+    padding: 8px 0
+    &:first-child
+      border-top: none
+    a
+      text-decoration: none
+      color: color-default
+    .title
+      white-space: nowrap
+      line-height: 1.8
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      font-size: 14px
+      color: color-link
+      &:hover
+        text-decoration underline
+    .time
+      text-align: right
+      font-size 12px
+    .tags
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      span
+        display inline-block
+        margin-right 5px
+        font-size 12px
+        &:before
+          font-family: "iconfont" !important
+          content: '\e008'

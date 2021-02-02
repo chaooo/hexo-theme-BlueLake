@@ -1,0 +1,37 @@
+#page-nav
+  clearfix()
+  margin: block-margin auto
+  text-align: center
+  color: color-grey
+  overflow: hidden
+  .page-number,.extend
+    display: inline-block
+    margin: 0 5px 5px 0
+  .space
+    border: none
+    padding: 5px 5px
+    margin: 0 5px 5px 0
+  a,.page-number
+    display: inline-block
+    height: 25px
+    line-height: 25px
+    padding: 5px 10px
+    text-align: center
+    color: color-link;
+    -webkit-box-shadow: 0 0 5px color-shadow inset
+    box-shadow: 0 0 5px color-shadow inset
+    border: 1px solid color-page-border
+    text-decoration: none
+    &.prev:before
+        font-family: "iconfont"!important
+        content: "\e00c"
+        padding-right: 0.3em
+    &.next:after
+        font-family: "iconfont"!important
+        content: "\e00b"
+        padding-left: 0.3em
+    &.current
+      background: color-nav
+  a:hover
+    //text-decoration: underline
+    border-bottom-color: color-block-background

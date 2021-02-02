@@ -1,0 +1,149 @@
+<% if (theme.gitalk.enable && theme.gitalk.client_id && theme.gitalk.client_secret){ %>
+  <%- js('https://unpkg.com/gitalk/dist/gitalk.min.js') %>
+  <%- js('//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js') %>
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '<%= theme.gitalk.client_id %>',
+      clientSecret: '<%= theme.gitalk.client_secret %>',
+      repo: '<%= theme.gitalk.repo %>',
+      owner: '<%= theme.gitalk.owner %>',
+      admin: ['<%= theme.gitalk.admin %>'],
+      id: md5(window.location.pathname),
+      distractionFreeMode: false,
+      language: '<%= theme.gitalk.language %>',
+      pagerDirection: '<%= theme.gitalk.pagerDirection %>'
+    });
+    gitalk.render('comments');
+  </script>
+<% } %>
+
+<% if(theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
+  <%- js('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js') %>
+  <script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = '<%= theme.valine.guest_info %>'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = '<%= theme.valine.notify %>' == true;
+    var verify = '<%= theme.valine.verify %>' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "<%= theme.valine.appId %>",
+        appKey: "<%= theme.valine.appKey %>",
+        placeholder: "<%= theme.valine.placeholder %>",
+        pageSize:'<%= theme.valine.pageSize %>',
+        avatar:'<%= theme.valine.avatar %>',
+        lang:'<%= theme.valine.lang %>'
+    });
+  </script>
+<% } %>
+
+<% if (theme.comment.disqus){ %>
+  <script>
+    var disqus_shortname = '<%= theme.comment.disqus %>';
+    <% if (page.permalink){ %>
+      var disqus_url = '<%= page.permalink %>';
+    <% } %>
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+<% } %>
+
+<% if (theme.comment.livere){ %>
+  <script>
+    (function(d, s) {
+      var j, e = d.getElementsByTagName('body')[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.appendChild(j);
+    })(document, 'script');
+  </script>
+<% } %>
+
+<% if (theme.comment.uyan){ %>
+  <script src="/js/jquery-3.4.1.min.js?uid=<%= theme.comment.uyan %>"></script>
+<% } %>
+
+<% if (theme.comment.cloudTie){ %>
+  <script>
+    var cloudTieConfig = {
+      url: document.location.href,
+      sourceId: "",
+      productKey: '<%= theme.comment.cloudTie %>',
+      target: "cloud-tie-wrapper"
+    };
+  </script>
+  <%- js('https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js') %>
+<% } %>
+
+<% if (theme.changyan.enable && theme.changyan.appid && theme.changyan.appkey){ %>
+  <script>
+    window._config = { showScore: true };
+    (function(){
+      var appid = '<%= theme.changyan.appid %>';
+      var conf = '<%= theme.changyan.appkey %>';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var nodes =document.getElementsByTagName("head")[0]||document.head||document.documentElement;
+      if (/(Android|iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) && width < 750) {
+          window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+      }
+      else {
+        var loadJs=function(d,a){
+          var b=document.createElement("script");b.setAttribute("type","text/javascript");
+          b.setAttribute("charset","UTF-8");
+          b.setAttribute("src",d);
+          if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+          nodes.appendChild(b)
+        };
+        loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});
+      }
+      var loadCss = function(cssString){
+        var style=document.createElement("style");
+        style.setAttribute("type", "text/css");
+        if(style.styleSheet){// IE
+            style.styleSheet.cssText = cssString;
+        } else {// w3c
+            var cssText = document.createTextNode(cssString);
+            style.appendChild(cssText);
+        }
+        nodes.appendChild(style);
+      }
+    })();
+    function removeElement(_element){
+         var _parentElement = _element.parentNode;
+         if(_parentElement){
+                _parentElement.removeChild(_element);
+         }
+    }
+    var removeAD = document.createElement("div");
+    removeAD.id = 'removeAD';
+    var adInterval1 = setInterval(function() {
+      if(document.querySelector("#feedAv")){
+        document.querySelector("[node-type=cmt-list]").appendChild(removeAD);
+        document.querySelector("#removeAD").appendChild(document.querySelector("#feedAv"));
+        //- removeElement(document.querySelectorAll("#feedAv")[0]);
+        var feedAv = document.querySelector("#feedAv").children;
+        for( item of feedAv){
+          item.style.display = 'none'
+        }
+        document.querySelector("#removeAD").style.display="none"
+        clearInterval(adInterval1);
+      }
+    },1000);
+    var adInterval2 = setInterval(function() {
+      if(document.querySelector("#pop_ad")){
+        removeElement(document.querySelector("#pop_ad"));
+        clearInterval(adInterval2);
+      }
+    }, 1000);
+  </script>
+  <%- js('https://assets.changyan.sohu.com/upload/plugins/plugins.count.js') %>
+<% } %>

@@ -1,0 +1,34 @@
+#sidebar
+  @media mq-normal
+    column(sidebar-column)
+
+.widget-wrap
+  @extend $block
+  box-sizing: border-box
+  margin: 20px 0
+  padding: 10px 20px 20px 20px
+  &:first-child
+    margin-top: block-margin
+
+.widget-title
+  @extend $block-caption
+  .fa
+    color: color-link
+
+.widget
+  color: color-sidebar-text
+  text-shadow: 0 1px color-block-background
+  li
+    padding-top: 2px
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+  a
+    color: color-link
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  ul, ol, dl
+    ul, ol, dl
+      margin-left: 15px
+      list-style: disc

@@ -1,0 +1,21 @@
+<% if (theme.gitalk.enable && theme.gitalk.client_id && theme.gitalk.client_secret){ %>
+  <div id="comments"></div>
+<% } %>
+<% if (theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
+  <section id="comments" class="vcomment"></section>
+<% } %>
+<% if (theme.comment.disqus){ %>
+  <div id="disqus_thread"></div>
+<% } %>
+<% if (theme.comment.livere){ %>
+  <div id="lv-container" data-uid="<%= theme.comment.livere %>" data-id="city"></div>
+<% } %>
+<% if (theme.comment.uyan){ %>
+  <div id="uyan_frame"></div>
+<% } %>
+<% if (theme.comment.cloudTie){ %>
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<% } %>
+<% if (theme.changyan.enable && theme.changyan.appid && theme.changyan.appkey){ %>
+  <div id="SOHUCS" sid="<%= page.path %>"></div>
+<% } %>

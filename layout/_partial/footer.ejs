@@ -1,0 +1,31 @@
+<footer id="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <p>
+        <a href="<%= config.root %>sitemap.xml"><%- __('sitemap') %></a>
+        <span> | </span><a href="<%= config.root %>atom.xml"><%- __('footer_rss') %></a>
+        <span> | </span><a href="<%= config.root %>about/"><%- __('contact_author') %></a>
+      </p>
+      <% if (theme.busuanzi){ %>
+        <p>
+          <i class="fa fa-visitors"></i>
+          <i id="busuanzi_container_site_uv"><i id="busuanzi_value_site_uv"></i></i>
+          ，
+          <i class="fa fa-views"></i>
+          <i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>
+        </p>
+      <% } %>
+      <p>
+        <span>Copyright &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>.</span>
+        <span>Theme by <a href="https://github.com/chaooo/hexo-theme-BlueLake/" target="_blank">BlueLake.</a></span>
+        <% if (theme.busuanzi){ %>
+            <span>Count by <a href="http://busuanzi.ibruce.info/" target="_blank">busuanzi.</a></span>
+        <% } %>
+        <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo.</a></span>
+      </p>
+    </div>
+  </div>
+</footer>

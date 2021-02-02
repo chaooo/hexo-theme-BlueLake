@@ -1,0 +1,42 @@
+<head>
+  <meta charset="utf-8">
+  <%- partial('google-analytics') %>
+  <%
+    var title = page.title;
+    if (is_archive()){
+      title = __('archive');
+      if (is_month()){
+        title += ': ' + page.year + '/' + page.month;
+      } else if (is_year()){
+        title += ': ' + page.year;
+      }
+    } else if (is_category()){
+      title = __('category') + ': ' + page.category;
+    } else if (is_tag()){
+      title = __('tag') + ': ' + page.tag;
+    }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <% if (config.feed) { %>
+    <%- feed_tag() %>
+  <% } else { %>
+    <%- feed_tag('/atom.xml') %>
+  <% } %>
+  <% if (theme.favicon){ %>
+    <%- favicon_tag(theme.favicon) %>
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <%- css('https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css') %>
+  <% } %>
+  <%- css('css/style') %>
+  <% if (theme.fancybox){ %>
+    <%- css('fancybox/jquery.fancybox.min.css') %>
+  <% } %>
+  <% if (theme.share.local_share){ %>
+    <%- css('localshare/css/share.css') %>
+  <% } %>
+  <% if (theme.gitalk.enable){ %>
+    <%- css('https://unpkg.com/gitalk/dist/gitalk.css') %>
+  <% } %>
+</head>

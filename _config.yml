@@ -1,0 +1,152 @@
+##########################
+## Site Config Settings ##
+##########################
+
+# Theme version
+version: 3.0.0
+
+# Theme tone
+dark: true # true/false
+favicon: /favicon.png
+banner: "images/banner.jpg"
+banner-dark: "images/banner-dark.jpg"
+
+# Header
+menu:
+  - page: home
+    directory: .
+    icon: fa-home
+  - page: archive
+    directory: archives/
+    icon: fa-archive
+  - page: about
+    directory: about/
+    icon: fa-user
+  - page: rss
+    directory: atom.xml
+    icon: fa-rss
+
+# RSS & Sitemap plugins
+Plugins:
+  hexo-generator-feed
+  hexo-generator-sitemap
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+copyright:
+  enable: true # display article copyright information, true/false.
+  content: "转载请注明出处."
+
+# Date_formats
+date_formats:
+  post: "YYYY年MM月DD日"
+
+# Sidebar
+sidebar: right  # right/left/bottom
+widgets:
+  - recent_posts
+  - tagcloud
+  - category
+  - archive
+  - tag
+  - links
+
+# Widget behavior
+archive_type: 'yearly'   # defalut 'monthly'
+archive_format: 'YYYY年MM月'
+show_count: true
+recent_posts_limits: 5
+
+# Toc
+toc:
+  enable: true
+  list_number: false
+
+# Article share
+share:
+  local_share: true
+  baidu_share: false
+
+# Miscellaneous
+busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+google_analytics:
+gauges_analytics:
+
+# MathJax support
+mathjax:
+  enable: false  # true/false.
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+
+# Reward
+reward:
+  enable: false  # true/false 是否开启 打赏功能
+  wechat: '/css/images/wechat-pay.jpg'
+  alipay: '/css/images/alipay-pay.jpg'
+  buttonTxt: '打赏'
+  title: "“感谢你的支持，我会继续努力！”"
+  content: "扫码打赏，感谢支持"
+
+# About page
+about:
+  photo_url: 'http://cdn.chaooo.top/blog/themeauthor.jpg' ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
+  items:
+  - label: email
+    url: 'mailto:zhenggchaoo@gmail.com'  ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
+    title: 'zhenggchaoo@gmail.com' ## Your email e.g.  zhenggchaoo@gmail.com
+  - label: github
+    url: 'https://github.com/chaooo' ## Your github'url e.g.  https://github.com/chaooo
+    title: 'chaooo' ## Your github'name e.g.  chaooo
+  - label: weibo
+    url: 'http://weibo.com/zhengchaooo' ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
+    title: '秋过冬漫长' ## Your weibo's name e.g.  秋过冬漫长
+
+# Gitalk comment
+gitalk:
+  enable: false
+  owner: ## Your GitHub ID, e.g. username
+  repo: ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
+  client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
+  admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
+  language: 'zh-CN' ## Language
+  pagerDirection: last # Comment sorting direction, available values are last and first.
+
+# Valine comment. https://valine.js.org
+valine:
+  enable: true # if you want use valine,please set this value is true
+  appId: vLPzzKBu42xSePsXQ9SMFMnu-gzGzoHsz # leancloud application app id
+  appKey: SXT5mro1fOk42Qd9iF4lqApa # leancloud application app key
+  notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
+  verify: false # valine verify code (true/false)
+  pageSize: 10 # comment list page size
+  avatar: mm # gravatar style https://valine.js.org/#/avatar
+  lang: zh-cn # i18n: zh-cn/en
+  placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
+  guest_info: nick,mail,link #valine comment header info
+
+# Changyan comment. 畅言
+changyan:
+  enable: false
+  appid: ## changyan appid
+  appkey: ## changyan appkey
+
+# Other comments
+comment:
+  disqus: ## disqus_shortname
+  livere: ## 来必力(data-uid)
+  uyan: ## 友言(uid)
+  cloudTie: ## 网易云跟帖(productKey)
+
+# Friend Links widget. Empty links will hide widget.
+links:
+  - title: site-name1
+    url: http://www.example1.com/
+  - title: site-name2
+    url: http://www.example2.com/
+  - title: site-name3
+    url: http://www.example3.com/

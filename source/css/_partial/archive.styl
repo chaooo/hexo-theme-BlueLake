@@ -1,0 +1,39 @@
+.archives-wrap
+  @extend $block
+  margin: block-margin 0
+  padding: 10px 20px 20px 20px
+
+.archive-title
+  border-bottom: 1px solid color-border
+  color: color-link
+  text-decoration: none
+  font-size: 1.5em
+  font-weight: bold
+  height: 50px
+  line-height: 50px
+  .fa
+    color: color-link
+    font-size: 1.5em
+    font-weight: normal
+    vertical-align: bottom
+.archives
+  padding: 1em
+  .fa
+    display: none
+.archive-article
+  list-style: square
+  list-style-position: inside
+.archive-article-inner
+  line-height: 1.2em
+  padding: 6px 0
+  color: color-grey
+  a
+    text-decoration: none
+    color: color-grey
+    font-size: 15px
+    time,span
+      margin:0 5px
+    &:hover
+      text-decoration: underline
+  .archive-article-title
+    color: color-link

@@ -1,0 +1,19 @@
+<% if (theme.reward.enable){ %>
+    <div class="article-reward">
+        <a id="reward-btn" href="javascript:;"><%= theme.reward.buttonTxt %></a>
+        <div id="reward-content">
+            <h6 class="reward-tit"><%= theme.reward.title %></h6>
+            <div>
+                <div class="reward-code">
+                    <img class="type-code" src="<%- url_for('/css/images/wechat.jpg') %>" alt="微信支付">
+                    <img class="er-code" src="<%= theme.reward.wechat %>" alt="微信收款码">
+                </div>
+                <div class="reward-code">
+                    <img class="type-code" src="<%- url_for('/css/images/alipay.jpg') %>" alt="支付宝支付">
+                    <img class="er-code" src="<%= theme.reward.alipay %>" alt="支付宝收款码">
+                </div>
+            </div>
+            <p class="reward-desc"><%= theme.reward.content %></p>
+        </div>
+    </div>
+<% } %>

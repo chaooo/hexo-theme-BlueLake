@@ -1,0 +1,25 @@
+<% if (post.comments){ %>
+<a href="<%- url_for(post.path) %>#comments" class="article-comment-link">
+  <% if (!index){ %>
+    <% if (theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
+      <span class="post-comments-count valine-comment-count" data-xid="<%- url_for(post.path) %>" itemprop="commentCount"></span>
+    <% } %>
+    <% if (theme.comment.disqus){ %>
+      <i class="disqus-comment-count" data-disqus-identifier="<%- url_for(post.path) %>"></i>
+    <% } %>
+    <% if (theme.comment.uyan){ %>
+      <a href="<%- url_for(post.path) %>" id="uyan_count_unit"></a>
+    <% } %>
+    <% if (theme.comment.cloudTie){ %>
+      <i class="cloud-tie-join-count">
+        <i class="join-count"></i>
+      </i>
+    <% } %>
+    <% if (theme.changyan.enable && theme.changyan.appid && theme.changyan.appkey){ %>
+      <i id="changyan_count_unit" data-xid="<%- url_for(post.path) %>"></i>
+    <% } %>
+  <% } %>
+  <i class="fa fa-commt"></i>
+  <%= __('guestbook') %>
+</a>
+<% } %>

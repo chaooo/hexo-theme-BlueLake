@@ -1,0 +1,58 @@
+#footer
+  padding: 30px 0
+  color: color-footer
+  a
+    color: color-link
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+#footer-info
+  line-height: line-height
+  text-align: center
+  font-size: 0.85em
+  p
+    margin: 5px 0
+  i 
+    font-style: normal
+    &.fa
+      font-size: 12px
+  span
+    padding: 0 5px
+    
+/* back-to-top */
+#totop
+  position: fixed
+  right: 50px
+  bottom: 50px
+  display: block
+  visibility: hidden
+  width: 54px
+  height: 54px
+  line-height: 54px
+  overflow: hidden
+  color: color-link
+  text-align center
+  text-decoration: none
+  font-weight: normal
+  opacity: 0
+  -webkit-transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335)
+  -moz-transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -moz-transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335)
+  transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335)
+  &:hover
+    text-shadow: 1px 2px 6px color-link-shadow
+  &:before
+    font-family: "iconfont"!important
+    content '\e009'
+    font-size 54px
+    //margin-left: -10px
+  &.launch
+    opacity: 0
+    -webkit-transform: translateY(-500px)
+    -moz-transform: translateY(-500px)
+    -ms-transform: translateY(-500px)
+    transform: translateY(-500px)
+    pointer-events: none
+  &.show
+    visibility: visible
+    opacity: 1

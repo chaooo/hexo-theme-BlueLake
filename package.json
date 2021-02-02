@@ -1,0 +1,12 @@
+{
+  "name": "hexo-theme-BlueLake",
+  "version": "2.0.0",
+  "description": "Hexo Theme BlueLake, a responsive and simple theme",
+  "repository": "chaooo/hexo-theme-BlueLake",
+  "keywords": [
+    "hexo",
+    "theme",
+    "bluelake"
+  ],
+  "license": "MIT"
+}

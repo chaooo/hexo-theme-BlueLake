@@ -42,6 +42,10 @@ copyright:
   enable: true # display article copyright information, true/false.
   content: "转载请注明出处."
 
+# Date_formats
+date_formats:
+  post: "YYYY年MM月DD日"
+
 # Sidebar
 sidebar: right  # right/left/bottom
 widgets:
@@ -57,10 +61,6 @@ archive_type: 'yearly'   # defalut 'monthly'
 archive_format: 'YYYY年MM月'
 show_count: true
 recent_posts_limits: 5
-
-# Date_formats
-date_formats:
-  post: "YYYY年MM月DD日"
 
 # Toc
 toc:
@@ -142,7 +142,7 @@ comment:
   uyan: ## 友言(uid)
   cloudTie: ## 网易云跟帖(productKey)
 
-# Links widget. Empty links will hide widget.
+# Friend Links widget. Empty links will hide widget.
 links:
   - title: site-name1
     url: http://www.example1.com/

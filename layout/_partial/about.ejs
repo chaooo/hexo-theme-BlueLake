@@ -19,9 +19,9 @@
           <% }) %>
         </div>
       </div>
+      <% if (!index && post.comments){ %>
+        <%- partial('post/comments') %>
+      <% } %>
     </div>
   </div>
 </article>
-<% if (!index && post.comments){ %>
-  <%- partial('post/comments') %>
-<% } %>

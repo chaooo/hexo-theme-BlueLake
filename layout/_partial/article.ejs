@@ -46,12 +46,12 @@
           <%- partial('post/share') %>
         </div>
       <% } %>
+      <% if (!index){ %>
+        <%- partial('post/nav') %>
+      <% } %>
+      <% if (!index && post.comments){ %>
+        <%- partial('post/comments') %>
+      <% } %>
     </footer>
   </div>
-  <% if (!index){ %>
-    <%- partial('post/nav') %>
-  <% } %>
 </article>
-<% if (!index && post.comments){ %>
-  <%- partial('post/comments') %>
-<% } %>

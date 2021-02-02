@@ -45,11 +45,12 @@ copyright:
 # Sidebar
 sidebar: right  # right/left/bottom
 widgets:
-- recent_posts
-- tagcloud
-- category
-- archive
-- tag
+  - recent_posts
+  - tagcloud
+  - category
+  - archive
+  - tag
+  - links
 
 # Widget behavior
 archive_type: 'yearly'   # defalut 'monthly'
@@ -140,3 +141,12 @@ comment:
   livere: ## 来必力(data-uid)
   uyan: ## 友言(uid)
   cloudTie: ## 网易云跟帖(productKey)
+
+# Links widget. Empty links will hide widget.
+links:
+  - title: site-name1
+    url: http://www.example1.com/
+  - title: site-name2
+    url: http://www.example2.com/
+  - title: site-name3
+    url: http://www.example3.com/

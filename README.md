@@ -216,7 +216,6 @@ links:
 
 ### 自定义page页面
 在`source`文件夹中创建文件夹`index.md`来添加页面，并在`index.md`的`front-matter'中添加`layout：page`。
-Create folders inlcuding `index.md` in `source` folder to add pages, and add a `layout: page` in `front-matter` of `index.md`.
 
 ### About页面
 此主题默认page页面是关于我页面的布局，生成一个关于我页面：

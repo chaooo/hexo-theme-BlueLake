@@ -93,17 +93,17 @@ reward:
 
 # About page
 about:
-  photo_url: 'http://cdn.chaooo.top/blog/themeauthor.jpg' ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
+  photo_url: ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
   items:
   - label: email
-    url: 'mailto:zhenggchaoo@gmail.com'  ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
-    title: 'zhenggchaoo@gmail.com' ## Your email e.g.  zhenggchaoo@gmail.com
+    url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
+    title: ## Your email e.g.  zhenggchaoo@gmail.com
   - label: github
-    url: 'https://github.com/chaooo' ## Your github'url e.g.  https://github.com/chaooo
-    title: 'chaooo' ## Your github'name e.g.  chaooo
+    url: ## Your github'url e.g.  https://github.com/chaooo
+    title: ## Your github'name e.g.  chaooo
   - label: weibo
-    url: 'http://weibo.com/zhengchaooo' ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
-    title: '秋过冬漫长' ## Your weibo's name e.g.  秋过冬漫长
+    url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
+    title: ## Your weibo's name e.g.  秋过冬漫长
 
 # Gitalk comment
 gitalk:
@@ -118,9 +118,9 @@ gitalk:
 
 # Valine comment. https://valine.js.org
 valine:
-  enable: true # if you want use valine,please set this value is true
-  appId: vLPzzKBu42xSePsXQ9SMFMnu-gzGzoHsz # leancloud application app id
-  appKey: SXT5mro1fOk42Qd9iF4lqApa # leancloud application app key
+  enable: false # if you want use valine,please set this value is true
+  appId: # leancloud application app id
+  appKey: # leancloud application app key
   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
   verify: false # valine verify code (true/false)
   pageSize: 10 # comment list page size

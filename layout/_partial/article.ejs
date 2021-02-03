@@ -12,7 +12,9 @@
       <% } %>
       <%- partial('post/date', {class_name: 'article-date', date_format: theme.date_formats.post }) %>
       <%- partial('post/category') %>
-      <%- partial('post/views-count') %>
+      <% if (!index){ %>
+        <%- partial('post/views-count') %>
+      <% } %>
       <%- partial('post/comments-count') %>
     </div>
     <div class="e-content article-entry" itemprop="articleBody">

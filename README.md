@@ -103,6 +103,7 @@ share:
 
 # Miscellaneous
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+baidu_analytics:
 google_analytics:
 gauges_analytics:
 

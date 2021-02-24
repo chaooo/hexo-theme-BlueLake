@@ -243,7 +243,7 @@ about:
 ### 本地搜索
 如果要使用本地站点搜索，您必须安装插件[hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content)来创建JSON搜索文件 ，然后将配置添加到`hexo/_config.yml`：
 ```shell
-$ npm install hexo-generator-json-content@2.2.0 --save
+$ npm install hexo-generator-json-content --save
 ```
 然后在`hexo/_config.yml(站点根配置，非主题配置)`添加配置：
 ```YAML
@@ -272,7 +272,9 @@ jsonContent:
 
 
 ## 更多配置
-更多详细配置请移步：[【Hexo博客折腾】BlueLake博客主题的详细配置](https://chaooo.github.io/article/20161229.html)
+更多详细配置请移步：
+- [https://chaoo.oschina.io/2016/12/29/BlueLake博客主题的详细配置.html](https://chaoo.oschina.io/2016/12/29/BlueLake博客主题的详细配置.html)
+- 或[https://chaooo.github.io/article/20161229.html](https://chaooo.github.io/article/20161229.html)
 
 
 ## Solutions

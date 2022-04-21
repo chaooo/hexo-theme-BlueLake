@@ -2,9 +2,9 @@
 
 一个简洁轻量化的响应式[Hexo](https://hexo.io/)博客主题。
 
-- 点击预览[【深色主题】](https://chaooo.github.io/)、[【浅色主题】](https://chaoo.oschina.io/)
+- 点击预览[【深色主题】](https://chaooo.github.io/)、[【浅色主题】](https://chaoo.gitee.io/)
 
-[![BlueLake template preview](http://cdn.chaooo.top/hexo/BlueLake.jpg)](https://chaooo.github.io/)
+[![BlueLake template preview](https://chaooo.github.io/2016/12/29/bluelake/BlueLake.jpg)](https://chaooo.github.io/)
 
 ## 安装
 
@@ -123,11 +123,11 @@ reward:
 
 # About page
 about:
-  photo_url: 'http://cdn.chaooo.top/blog/themeauthor.jpg' ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
+  photo_url: '/themeauthor.jpg' ## Your photo e.g. /themeauthor.jpg
   items:
   - label: email
-    url: 'mailto:zhenggchaoo@gmail.com'  ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
-    title: 'zhenggchaoo@gmail.com' ## Your email e.g.  zhenggchaoo@gmail.com
+    url: 'mailto:chaoles@foxmail.com'  ## Your email with mailto: e.g.  mailto:chaoles@foxmail.com
+    title: 'chaoles@foxmail.com' ## Your email e.g.  chaoles@foxmail.com
   - label: github
     url: 'https://github.com/chaooo' ## Your github'url e.g.  https://github.com/chaooo
     title: 'chaooo' ## Your github'name e.g.  chaooo
@@ -145,6 +145,15 @@ gitalk:
   admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
   language: 'zh-CN' ## Language
   pagerDirection: last # Comment sorting direction, available values are last and first.
+
+# giteement评论（基于Gitee issues）【！！！慎用，Gitee接口调用时好像有次数限制，导致后面无法调试，若要使用请自行研究】
+giteement:
+  enable: false
+  owner: #'chaoo'  # 你的码云账号英文名
+  repo: #'blog-comments' # 存储评论的仓库的仓库名称(需要在码云仓库创建公开仓库)
+  redirect_uri: #'https://chaoo.gitee.io'   # 应用回调地址(请和配置的第三方应用保持一致)
+  client_id: #4ec96c34e83a4767d762a5a321ae15d9b8456d552c146afda829b815d51abfd2 ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret: #d2cf268817c7099b010f4ff7053f79dca3e32105da449318d8ae87f82782d531 ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
 
 # Valine comment. https://valine.js.org
 valine:
@@ -227,11 +236,11 @@ $ hexo new page 'about'
 ```YAML
 # About page
 about:
-  photo_url: 'http://cdn.chaooo.top/blog/themeauthor.jpg' ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
+  photo_url: '/themeauthor.jpg' ## Your photo e.g. /themeauthor.jpg
   items:
   - label: email
-    url: 'mailto:zhenggchaoo@gmail.com'  ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
-    title: 'zhenggchaoo@gmail.com' ## Your email e.g.  zhenggchaoo@gmail.com
+    url: 'mailto:chaoles@foxmail.com'  ## Your email with mailto: e.g.  mailto:chaoles@foxmail.com
+    title: 'chaoles@foxmail.com' ## Your email e.g.  chaoles@foxmail.com
   - label: github
     url: 'https://github.com/chaooo' ## Your github'url e.g.  https://github.com/chaooo
     title: 'chaooo' ## Your github'name e.g.  chaooo
@@ -279,7 +288,7 @@ jsonContent:
 
 ## Solutions
 - 检查您当前的hexo的根目录，是否包含`source /`，`themes /`等。
-- 如果你在使用这个主题有任何问题，请随时打开一个[issue](https://github.com/chaooo/hexo-theme-BlueLake/issues)，或者给我发邮件[zhenggchaoo@gmail.com](zhenggchaoo@gmail.com)。
+- 如果你在使用这个主题有任何问题，请随时打开一个[issue](https://github.com/chaooo/hexo-theme-BlueLake/issues)，或者给我发邮件[chaoles@foxmail.com](chaoles@foxmail.com)。
 
 ## 浏览器支持
 ![Imgur](http://i.imgur.com/iO9L5ty.png)

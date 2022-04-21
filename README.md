@@ -282,8 +282,8 @@ jsonContent:
 
 ## 更多配置
 更多详细配置请移步：
-- [BlueLake博客主题的详细配置](https://chaooo.github.io/2016/12/29/bluelake.html)
-- 或[BlueLake博客主题的详细配置](https://chaoo.gitee.io/2016/12/29/bluelake.html)
+- [BlueLake博客主题的详细配置https://chaooo.github.io/2016/12/29/bluelake.html](https://chaooo.github.io/2016/12/29/bluelake.html)
+- 或[BlueLake博客主题的详细配置https://chaoo.gitee.io/2016/12/29/bluelake.html](https://chaoo.gitee.io/2016/12/29/bluelake.html)
 
 
 ## Solutions

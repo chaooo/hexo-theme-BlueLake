@@ -58,8 +58,8 @@ widgets:
   - links
 
 # Widget behavior
-archive_type: 'yearly'   # defalut 'monthly'
-archive_format: 'YYYY年MM月'
+archive_type: 'yearly' # 'yearly','monthly'
+archive_format: 'YYYY年' # 'YYYY年','YYYY年MM月'
 show_count: true
 recent_posts_limits: 5
 

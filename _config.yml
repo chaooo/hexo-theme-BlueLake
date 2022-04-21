@@ -44,7 +44,8 @@ copyright:
 
 # Date_formats
 date_formats:
-  post: "YYYY年MM月DD日"
+  post: 'YYYY年MM月DD日'
+  idStr: 'YYYYMMDDHHmmss'
 
 # Sidebar
 sidebar: right  # right/left/bottom
@@ -94,11 +95,11 @@ reward:
 
 # About page
 about:
-  photo_url: ## Your photo e.g. http://cdn.chaooo.top/blog/themeauthor.jpg
+  photo_url: ## Your photo e.g. /themeauthor.jpg
   items:
   - label: email
-    url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
-    title: ## Your email e.g.  zhenggchaoo@gmail.com
+    url: ## Your email with mailto: e.g.  mailto:chaoles@foxmail.com
+    title: ## Your email e.g.  chaoles@foxmail.com
   - label: github
     url: ## Your github'url e.g.  https://github.com/chaooo
     title: ## Your github'name e.g.  chaooo
@@ -116,6 +117,15 @@ gitalk:
   admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
   language: 'zh-CN' ## Language
   pagerDirection: last # Comment sorting direction, available values are last and first.
+
+# giteement评论（基于Gitee issues）【！！！慎用，Gitee接口调用时好像有次数限制，导致后面无法调试，若要使用请自行研究】
+giteement:
+  enable: false
+  owner: #'chaoo'  # 你的码云账号英文名
+  repo: #'blog-comments' # 存储评论的仓库的仓库名称(需要在码云仓库创建公开仓库)
+  redirect_uri: #'https://chaoo.gitee.io'   # 应用回调地址(请和配置的第三方应用保持一致)
+  client_id: #4ec96c34e83a4767d762a5a321ae15d9b8456d552c146afda829b815d51abfd2 ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret: #d2cf268817c7099b010f4ff7053f79dca3e32105da449318d8ae87f82782d531 ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
 
 # Valine comment. https://valine.js.org
 valine:
